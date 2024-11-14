@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="before.body.end">
+            <block template="Yireo_LokiCheckoutDemo::tourguide-start.phtml"/>
+            <block template="Yireo_LokiCheckoutDemo::tourguide-js.phtml"/>
+            <block template="Yireo_LokiCheckoutDemo::tourguide-css.phtml"/>
+        </referenceContainer>
+
+        <referenceBlock name="loki.checkout.progressbar">
+            <arguments>
+                <argument name="html_attributes" xsi:type="array">
+                    <item name="data-tg-tour" xsi:type="string">Each step is a child-block to the main block loki.checkout plus a Magewire component that implements a StepInterface. The step is added automatically to the progress bar. Reversing the steps means reversing the ordering of the blocks in the layout.</item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+
+        <referenceBlock name="loki.checkout.shipping-step.shipping-address.region">
+            <arguments>
+                <argument name="html_attributes" xsi:type="array">
+                    <item name="data-tg-tour" xsi:type="string">Whenever the country changes, the region is refreshed. The region either uses an input template or a select template, depending on whether pre-filled regions exist.</item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+
+        <referenceBlock name="loki.checkout.shipping-step.shipping-address.postcode">
+            <arguments>
+                <argument name="html_attributes" xsi:type="array">
+                    <item name="data-tg-tour" xsi:type="string">Postcodes are validated with the Magento core its regex system. Additionally, an extension exists to validate Dutch postcodes using the Postcode NL API. Additional validators are easily developed.</item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+
+        <referenceBlock name="loki.checkout.shipping-step.shipping-address.vat_id">
+            <arguments>
+                <argument name="html_attributes" xsi:type="array">
+                    <item name="data-tg-tour" xsi:type="string">Whenever the company field or the VAT ID field changes, the VAT ID will be saved. When the country is within the EU, the VAT ID will be automatically checked with the EU VIES service.</item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+
+        <referenceBlock name="loki.checkout.shipping-step.shipping-methods">
+            <arguments>
+                <argument name="html_attributes" xsi:type="array">
+                    <item name="data-tg-tour" xsi:type="string">Each shipping method that is supported by the Magento core is automatically added here as well. With the selection of a shipping method, custom child templates are easily rendered. And with a custom JavaScript event, things can easily be extended on the JavaScript-side as well.</item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

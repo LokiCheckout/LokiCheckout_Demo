@@ -1,0 +1,18 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\View\Element\Template;
+/** @var Template $block */
+?>
+<script src="<?= $block->getViewFileUrl("Yireo_LokiCheckoutDemo::js/tour.js") ?>" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    // @todo: https://tourguidejs.com/#guide
+    // @todo: Add CSP compliance
+    let tg = null;
+    document.addEventListener('DOMContentLoaded', function() {
+        tg = new tourguide.TourGuideClient({
+            backdropColor: "rgba(20,20,21,0.24)"
+        });
+    });
+</script>
