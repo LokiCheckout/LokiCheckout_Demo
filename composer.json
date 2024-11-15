@@ -1,20 +1,27 @@
 {
-  "name": "yireo/magento2-loki-checkout-demo",
-  "version": "1.0.0",
-  "description": "N/A",
-  "type": "magento2-module",
-  "require": {
-    "magento/framework": "*"
-  },
-  "license": [
-    "Open Software License (OSL)"
-  ],
-  "autoload": {
-    "files": [
-      "registration.php"
+    "name": "yireo/magento2-loki-checkout-demo",
+    "version": "0.0.1",
+    "description": "N/A",
+    "homepage": "https://loki-checkout.com/",
+    "authors": [
+        {
+            "name": "Jisse Reitsma (Yireo)",
+            "email": "jisse@yireo.com"
+        }
     ],
-    "psr-4": {
-      "Yireo\\LokiCheckoutDemo\\": ""
+    "type": "magento2-module",
+    "require": {
+        "magento/framework": "*"
+    },
+    "license": [
+        "Open Software License (OSL)"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Yireo\\LokiCheckoutDemo\\": ""
+        }
     }
-  }
 }
