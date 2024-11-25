@@ -6,7 +6,7 @@
                    template="Yireo_LokiCheckoutDemo::tourguide-start.phtml"
             />
             <block name="loki-checkout-demo.tourguide-js"
-                template="Yireo_LokiCheckoutDemo::tourguide-js.phtml"
+                template="Yireo_LokiCheckoutDemo::luma/tourguide-js.phtml"
             />
             <block name="loki-checkout-demo.tourguide-css"
                 template="Yireo_LokiCheckoutDemo::tourguide-css.phtml"

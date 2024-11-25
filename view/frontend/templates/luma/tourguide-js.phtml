@@ -1,0 +1,13 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\View\Element\Template;
+/** @var Template $block */
+?>
+<script>
+    require(['Yireo_LokiCheckoutDemo/js/tour'], function(tourguide) {
+        window.tg = new tourguide.TourGuideClient({
+            backdropColor: "rgba(20,20,21,0.24)"
+        });
+    });
+</script>
