@@ -11,7 +11,8 @@
     ],
     "type": "magento2-module",
     "require": {
-        "magento/framework": "*"
+        "magento/framework": "*",
+        "yireo/magento2-additional-block-template": "^0.0.3"
     },
     "license": [
         "Open Software License (OSL)"

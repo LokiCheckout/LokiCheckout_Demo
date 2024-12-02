@@ -2,6 +2,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
     <body>
         <referenceContainer name="main" remove="true"/>
+
         <referenceContainer name="columns">
             <block template="Yireo_LokiCheckoutDemo::homepage.phtml"/>
         </referenceContainer>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="customer.login.container">
+            <block name="demo_notice" template="Yireo_LokiCheckoutDemo::hyva/demo-login.phtml"/>
+        </referenceContainer>
+
+        <referenceBlock name="loki-checkout.login.form">
+            <arguments>
+                <argument name="additional_templates" xsi:type="array">
+                    <item name="demo_notice" xsi:type="array">
+                        <item name="template" xsi:type="string">Yireo_LokiCheckoutDemo::hyva/demo-login.phtml</item>
+                        <item name="position" xsi:type="string">after</item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>
