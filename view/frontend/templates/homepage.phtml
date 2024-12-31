@@ -8,10 +8,12 @@ use Magento\Framework\View\Element\Template;
 <div class="loki-checkout-demo">
     <div class="heading">
         <h1>Yireo Loki Checkout</h1>
-        <h2>A low-key Magewire-based checkout</h2>
-        <p>With Magewire, you can build rapidly UI components. However, building a checkout is a burden. That's where we
-            do the heavy lifting. With our Loki Checkout, you get your hands on a developer-friendly Magewire-driven
-            checkout, that is easy to extend. And it is beautiful out-of-the-box too!
+        <h2>A low-key checkout for developers</h2>
+        <h3>Bloody fast, easy to extend, component-based</h3>
+        <p>
+            With the Loki Checkout, you get a checkout that is bloody fast and easy to extend by developers.
+            Using Loki Components, you can quickly customize things on numerous levels.
+            However, we do the heafy lifting: The right features are supported out-of-the-box.
         </p>
     </div>
 
@@ -20,15 +22,18 @@ use Magento\Framework\View\Element\Template;
         <h3>Technology stack</h3>
         <ul>
             <li>Supporting both Luma Theme and Hyvä Theme</li>
-            <li>Built on top of Magewire 1, Alpine 3 and Tailwind 3</li>
-            <li>Requires Magento 2.4.7 or newer. Requires PHP 8.3 or newer</li>
+            <li>Based on <code>Yireo_LokiComponents</code></li>
+            <li>Built on top of Alpine 3 and Tailwind 3</li>
+            <li>CSP & PCI compliance (without needing <code>unsafe-eval</code> and <code>unsafe-inline</code>)</li>
+            <li>Requires Magento 2.4.7+ and PHP 8.3+</li>
             <li>Playwright tests & Integration Tests covering most if not all features</li>
         </ul>
 
         <h3>Benefits</h3>
         <ul>
             <li>Granular components and templates for everything, to keep down legacy</li>
-            <li>If you know XML layout, Magewire, Blocks and ViewModels, you will know Loki</li>
+            <li>If you know XML layout, Blocks and ViewModels, you will know Loki</li>
+            <li>No requirement to know AlpineJS, even though you can extensively modify things on the JS-level</li>
             <li>Theming error messages, adding PHP or JS validation rules - it is all made easy</li>
             <li>And all forms are ready for accessibility</li>
         </ul>
@@ -46,9 +51,9 @@ use Magento\Framework\View\Element\Template;
         <h3>Release plan</h3>
         <ul>
             <li>Today the core works and support for Dutch payment providers is underway</li>
-            <li>In November 2024, we will be running the first 2 projects</li>
-            <li>In December 2024, private betas follow</li>
-            <li>In Q1 2025, we are opening up for a wider public</li>
+            <li>In January 2025, we will be running the first 2 projects</li>
+            <li>We are now open for private betas</li>
+            <li>In February 2025, we are opening up for a wider public</li>
         </ul>
         <p>However, we are not aiming to take over the market. You will need to work with us to make this work.</p>
         </div>
@@ -100,6 +105,13 @@ use Magento\Framework\View\Element\Template;
 
     .loki-checkout-demo h2 {
         font-size: 2rem;
+        font-weight: 700;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .loki-checkout-demo h3 {
+        font-size: 1.4rem;
         font-weight: 700;
         margin-top: 20px;
         margin-bottom: 40px;

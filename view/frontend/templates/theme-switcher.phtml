@@ -1,0 +1,20 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\View\Element\Template;
+use Yireo\LokiCheckoutDemo\Component\Theme\ThemeViewModel;
+use Yireo\LokiComponents\Factory\ViewModelFactory;
+
+/**
+ * @var Template $block
+ * @var ViewModelFactory $viewModelFactory
+ * @var ThemeViewModel $viewModel
+ */
+?>
+<div>
+    <select x-model="value" @change="post">
+        <?php foreach ($viewModel->getThemes() as $theme) : ?>
+        <option value="<?= $theme->getName() ?>"><?= $theme->getLabel() ?></option>
+        <?php endforeach; ?>
+    </select>
+</div>
