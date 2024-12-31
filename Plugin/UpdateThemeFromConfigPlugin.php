@@ -5,10 +5,10 @@ namespace Yireo\LokiCheckoutDemo\Plugin;
 use Magento\Checkout\Model\Session as CheckoutSession;
 use Yireo\LokiCheckout\Config\Config;
 
-class ThemeSwitcherPlugin
+class UpdateThemeFromConfigPlugin
 {
     public function __construct(
-        private readonly CheckoutSession $checkoutSession
+        private readonly CheckoutSession $checkoutSession,
     ) {
     }
 

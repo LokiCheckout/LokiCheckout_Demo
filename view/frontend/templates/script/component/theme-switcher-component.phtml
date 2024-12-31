@@ -1,0 +1,13 @@
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('LokiCheckoutDemoThemeSwitcher', () => ({
+            ...LokiCheckoutBaseComponentType,
+            submit() {
+                this.post();
+                setTimeout(() => {
+                    location.reload();
+                }, 500);
+            }
+        }));
+    });
+</script>

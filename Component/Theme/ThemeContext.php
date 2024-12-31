@@ -2,6 +2,8 @@
 
 namespace Yireo\LokiCheckoutDemo\Component\Theme;
 
+use Magento\Framework\App\ResponseFactory;
+use Magento\Framework\UrlFactory;
 use Yireo\LokiCheckout\Component\Base\Generic\GenericContext;
 use Yireo\LokiCheckout\Config\XmlConfig;
 
@@ -10,5 +12,15 @@ class ThemeContext extends GenericContext
     public function getXmlConfig(): XmlConfig
     {
         return $this->get(XmlConfig::class);
+    }
+
+    public function getResponseFactory(): ResponseFactory
+    {
+        return $this->get(ResponseFactory::class);
+    }
+
+    public function getUrlFactory(): UrlFactory
+    {
+        return $this->get(UrlFactory::class);
     }
 }

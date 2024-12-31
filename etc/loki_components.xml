@@ -6,8 +6,6 @@
             context="Yireo\LokiCheckoutDemo\Component\Theme\ThemeContext"
             viewModel="Yireo\LokiCheckoutDemo\Component\Theme\ThemeViewModel"
             repository="Yireo\LokiCheckoutDemo\Component\Theme\ThemeRepository"
-        >
-            <target name="loki-checkout"/>
-        </component>
+        />
     </componentGroup>
 </components>

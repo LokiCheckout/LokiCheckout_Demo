@@ -11,10 +11,11 @@ use Yireo\LokiComponents\Factory\ViewModelFactory;
  * @var ThemeViewModel $viewModel
  */
 ?>
-<div>
-    <select x-model="value" @change="post">
+<div class="order-12 pl-4">
+    <select x-model="value" @change="submit">
         <?php foreach ($viewModel->getThemes() as $theme) : ?>
-        <option value="<?= $theme->getName() ?>"><?= $theme->getLabel() ?></option>
+        <?php $selected = ($viewModel->getValue() === $theme->getName()) ? 'selected' : ''; ?>
+        <option <?= $selected ?> value="<?= $theme->getName() ?>"><?= $theme->getLabel() ?></option>
         <?php endforeach; ?>
     </select>
 </div>

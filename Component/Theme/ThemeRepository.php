@@ -16,6 +16,7 @@ class ThemeRepository extends ComponentRepository
 
     protected function saveData(mixed $data): void
     {
-        $this->getContext()->getCheckoutSession()->setCurrentTheme((string)$data);
+        $theme = (string)$data;
+        $this->getContext()->getCheckoutSession()->setCurrentTheme($theme);
     }
 }
