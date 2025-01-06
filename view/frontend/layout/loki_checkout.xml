@@ -5,6 +5,10 @@
             <block name="loki-checkout-demo.theme-switcher"
                    template="Yireo_LokiCheckoutDemo::theme-switcher.phtml"
             />
+
+            <block name="loki-checkout-demo.tourguide-start"
+                   template="Yireo_LokiCheckoutDemo::tourguide-start.phtml"
+            />
         </referenceContainer>
 
         <referenceContainer name="loki-components">
@@ -14,9 +18,6 @@
         </referenceContainer>
 
         <referenceContainer name="before.body.end">
-            <block name="loki-checkout-demo.tourguide-start"
-                   template="Yireo_LokiCheckoutDemo::tourguide-start.phtml"
-            />
             <block name="loki-checkout-demo.tourguide-js"
                 template="Yireo_LokiCheckoutDemo::luma/tourguide-js.phtml"
             />
