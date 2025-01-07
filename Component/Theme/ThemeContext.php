@@ -2,25 +2,39 @@
 
 namespace Yireo\LokiCheckoutDemo\Component\Theme;
 
+use Magento\Checkout\Model\Session as CheckoutSession;
 use Magento\Framework\App\ResponseFactory;
 use Magento\Framework\UrlFactory;
-use Yireo\LokiCheckout\Component\Base\Generic\GenericContext;
 use Yireo\LokiCheckout\Config\XmlConfig;
+use Yireo\LokiComponents\Component\ComponentContextInterface;
 
-class ThemeContext extends GenericContext
+class ThemeContext implements ComponentContextInterface
 {
+    public function __construct(
+        private readonly CheckoutSession $checkoutSession,
+        private readonly XmlConfig $xmlConfig,
+        private readonly ResponseFactory $responseFactory,
+        private readonly UrlFactory $urlFactory,
+    ) {
+    }
+
     public function getXmlConfig(): XmlConfig
     {
-        return $this->get(XmlConfig::class);
+        return $this->xmlConfig;
     }
 
     public function getResponseFactory(): ResponseFactory
     {
-        return $this->get(ResponseFactory::class);
+        return $this->responseFactory;
     }
 
     public function getUrlFactory(): UrlFactory
     {
-        return $this->get(UrlFactory::class);
+        return $this->urlFactory;
+    }
+
+    public function getCheckoutSession(): CheckoutSession
+    {
+        return $this->checkoutSession;
     }
 }
