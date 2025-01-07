@@ -9,12 +9,12 @@ use Yireo\LokiComponents\Component\ComponentRepository;
  */
 class ThemeRepository extends ComponentRepository
 {
-    protected function getValue(): mixed
+    public function getValue(): mixed
     {
         return (string)$this->getContext()->getCheckoutSession()->getCurrentTheme();
     }
 
-    protected function saveValue(mixed $data): void
+    public function saveValue(mixed $data): void
     {
         $theme = (string)$data;
         $this->getContext()->getCheckoutSession()->setCurrentTheme($theme);
