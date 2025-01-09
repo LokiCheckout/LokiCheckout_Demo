@@ -12,7 +12,6 @@
     "type": "magento2-module",
     "require": {
         "magento/framework": "*",
-        "yireo-training/magento2-example-loki-components": "@dev",
         "yireo/magento2-additional-block-template": "^0.0.3"
     },
     "license": [
