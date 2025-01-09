@@ -6,4 +6,11 @@
         viewModel="Yireo\LokiCheckoutDemo\Component\Theme\ThemeViewModel"
         repository="Yireo\LokiCheckoutDemo\Component\Theme\ThemeRepository"
     />
+
+    <component
+        name="loki-checkout-demo.theme-switcher-mobile"
+        context="Yireo\LokiCheckoutDemo\Component\Theme\ThemeContext"
+        viewModel="Yireo\LokiCheckoutDemo\Component\Theme\ThemeViewModel"
+        repository="Yireo\LokiCheckoutDemo\Component\Theme\ThemeRepository"
+    />
 </components>

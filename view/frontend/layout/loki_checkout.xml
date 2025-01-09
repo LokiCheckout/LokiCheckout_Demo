@@ -2,13 +2,24 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
     <body>
         <referenceContainer name="header-content.additional">
-            <block name="loki-checkout-demo.theme-switcher"
-                   template="Yireo_LokiCheckoutDemo::theme-switcher.phtml"
-            />
+            <block template="Yireo_LokiCheckoutDemo::theme-switcher-container.phtml">
+                <block name="loki-checkout-demo.theme-switcher" as="switcher"
+                       template="Yireo_LokiCheckoutDemo::theme-switcher.phtml"
+                />
+            </block>
 
             <block name="loki-checkout-demo.tourguide-start"
                    template="Yireo_LokiCheckoutDemo::tourguide-start.phtml"
             />
+        </referenceContainer>
+
+        <referenceContainer name="content">
+            <container htmlTag="div" htmlClass="block md:hidden" before="-">
+                <block
+                    name="loki-checkout-demo.theme-switcher-mobile"
+                    template="Yireo_LokiCheckoutDemo::theme-switcher.phtml"
+                />
+            </container>
         </referenceContainer>
 
         <referenceContainer name="loki-components">
@@ -19,17 +30,21 @@
 
         <referenceContainer name="before.body.end">
             <block name="loki-checkout-demo.tourguide-js"
-                template="Yireo_LokiCheckoutDemo::luma/tourguide-js.phtml"
+                   template="Yireo_LokiCheckoutDemo::luma/tourguide-js.phtml"
             />
             <block name="loki-checkout-demo.tourguide-css"
-                template="Yireo_LokiCheckoutDemo::tourguide-css.phtml"
+                   template="Yireo_LokiCheckoutDemo::tourguide-css.phtml"
             />
         </referenceContainer>
 
         <referenceBlock name="loki-checkout.steps">
             <arguments>
                 <argument name="html_attributes" xsi:type="array">
-                    <item name="data-tg-tour" xsi:type="string">Each step is a child-block to the main block loki-checkout.steps with a Loki Component implementing specific interfaces. The step is added automatically to the progress bar. Reversing the steps means reversing the ordering of the blocks in the layout.</item>
+                    <item name="data-tg-tour" xsi:type="string">Each step is a child-block to the main block
+                        loki-checkout.steps with a Loki Component implementing specific interfaces. The step is added
+                        automatically to the progress bar. Reversing the steps means reversing the ordering of the
+                        blocks in the layout.
+                    </item>
                 </argument>
             </arguments>
         </referenceBlock>
@@ -37,7 +52,10 @@
         <referenceBlock name="loki-checkout.shipping.address.region">
             <arguments>
                 <argument name="html_attributes" xsi:type="array">
-                    <item name="data-tg-tour" xsi:type="string">Whenever the country changes, the region is refreshed. The region either uses an input template or a select template, depending on whether pre-filled regions exist. Everything is refreshed in a single HTTP request. Bam.</item>
+                    <item name="data-tg-tour" xsi:type="string">Whenever the country changes, the region is refreshed.
+                        The region either uses an input template or a select template, depending on whether pre-filled
+                        regions exist. Everything is refreshed in a single HTTP request. Bam.
+                    </item>
                 </argument>
             </arguments>
         </referenceBlock>
@@ -45,7 +63,11 @@
         <referenceBlock name="loki-checkout.shipping.address.postcode">
             <arguments>
                 <argument name="html_attributes" xsi:type="array">
-                    <item name="data-tg-tour" xsi:type="string">Postcodes are validated with the Magento core its regex system. Nothing else needed. The regex is handled both server-side (PHP validator) and client-side (JS validator). Additionally, an extension exists to validate Dutch postcodes using the Postcode NL API. Additional validators are easily developed.</item>
+                    <item name="data-tg-tour" xsi:type="string">Postcodes are validated with the Magento core its regex
+                        system. Nothing else needed. The regex is handled both server-side (PHP validator) and
+                        client-side (JS validator). Additionally, an extension exists to validate Dutch postcodes using
+                        the Postcode NL API. Additional validators are easily developed.
+                    </item>
                 </argument>
             </arguments>
         </referenceBlock>
@@ -53,7 +75,10 @@
         <referenceBlock name="loki-checkout.shipping.address.vat_id">
             <arguments>
                 <argument name="html_attributes" xsi:type="array">
-                    <item name="data-tg-tour" xsi:type="string">Whenever the company field or the VAT ID field changes, the VAT ID will be saved. When the country is within the EU, the VAT ID will be automatically checked with the EU VIES service.</item>
+                    <item name="data-tg-tour" xsi:type="string">Whenever the company field or the VAT ID field changes,
+                        the VAT ID will be saved. When the country is within the EU, the VAT ID will be automatically
+                        checked with the EU VIES service.
+                    </item>
                 </argument>
             </arguments>
         </referenceBlock>
@@ -61,7 +86,11 @@
         <referenceBlock name="loki-checkout.shipping.methods">
             <arguments>
                 <argument name="html_attributes" xsi:type="array">
-                    <item name="data-tg-tour" xsi:type="string">Each shipping method that is supported by the Magento core is automatically added here as well. With the selection of a shipping method, custom child templates are easily rendered. And with a custom JavaScript event, things can easily be extended on the JavaScript-side as well.</item>
+                    <item name="data-tg-tour" xsi:type="string">Each shipping method that is supported by the Magento
+                        core is automatically added here as well. With the selection of a shipping method, custom child
+                        templates are easily rendered. And with a custom JavaScript event, things can easily be extended
+                        on the JavaScript-side as well.
+                    </item>
                 </argument>
             </arguments>
         </referenceBlock>
