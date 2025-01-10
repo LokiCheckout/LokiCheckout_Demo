@@ -14,7 +14,7 @@ class ThemeRepository extends ComponentRepository
         return (string)$this->getContext()->getCheckoutSession()->getCurrentTheme();
     }
 
-    public function saveValue(mixed $data): void
+    public function saveValue(mixed $value): void
     {
         $theme = (string)$data;
         $this->getContext()->getCheckoutSession()->setCurrentTheme($theme);
