@@ -17,9 +17,4 @@ class ThemeViewModel extends ComponentViewModel
     {
         return $this->getContext()->getXmlConfig()->getThemes();
     }
-
-    public function getJsComponentName(): ?string
-    {
-        return 'LokiCheckoutDemoThemeSwitcher';
-    }
 }

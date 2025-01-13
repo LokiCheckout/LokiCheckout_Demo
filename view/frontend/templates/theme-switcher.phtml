@@ -12,7 +12,7 @@ use Yireo\LokiComponents\Factory\ViewModelFactory;
  */
 ?>
 <div>
-    <select x-model="value" @change="submit">
+    <select x-model="value" @change="post">
         <option> -- Select a checkout theme --</option>
         <?php foreach ($viewModel->getThemes() as $theme) : ?>
         <?php $selected = ($viewModel->getValue() === $theme->getName()) ? 'selected' : ''; ?>

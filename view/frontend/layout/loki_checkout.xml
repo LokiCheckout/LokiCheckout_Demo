@@ -22,12 +22,6 @@
             </container>
         </referenceContainer>
 
-        <referenceContainer name="loki-components">
-            <block name="loki-checkout-demo.theme-switcher-component"
-                   template="Yireo_LokiCheckoutDemo::script/component/theme-switcher-component.phtml"
-            />
-        </referenceContainer>
-
         <referenceContainer name="before.body.end">
             <block name="loki-checkout-demo.tourguide-js"
                    template="Yireo_LokiCheckoutDemo::luma/tourguide-js.phtml"
