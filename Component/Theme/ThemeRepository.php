@@ -2,6 +2,7 @@
 
 namespace Yireo\LokiCheckoutDemo\Component\Theme;
 
+use Magento\Framework\Message\ManagerInterface as MessageManager;
 use Yireo\LokiComponents\Component\ComponentRepository;
 use Yireo\LokiComponents\Exception\RedirectException;
 
@@ -10,6 +11,11 @@ use Yireo\LokiComponents\Exception\RedirectException;
  */
 class ThemeRepository extends ComponentRepository
 {
+    public function __construct(
+        private readonly MessageManager $messageManager
+    ) {
+    }
+
     public function getValue(): mixed
     {
         return (string)$this->getContext()->getCheckoutSession()->getCurrentTheme();
@@ -17,9 +23,14 @@ class ThemeRepository extends ComponentRepository
 
     public function saveValue(mixed $value): void
     {
+        if (empty($value)) {
+            return;
+        }
+
         $theme = (string)$value;
         $this->getContext()->getCheckoutSession()->setCurrentTheme($theme);
-        $this->getGlobalMessageRegistry()->addNotice('Switching to '.$theme.'.');
+
+        $this->messageManager->addNoticeMessage('Switching to '.$theme.' theme');
 
         $url = $this->getContext()->getUrlFactory()->create()->getUrl('checkout');
         throw new RedirectException($url);
