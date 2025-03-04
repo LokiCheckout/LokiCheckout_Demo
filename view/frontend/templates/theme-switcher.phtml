@@ -12,8 +12,8 @@ use Yireo\LokiComponents\Factory\ViewModelFactory;
  */
 ?>
 <div>
-    <select x-model="value" @change="post">
-        <option value=""> -- Select a checkout theme --</option>
+    <select aria-label="<?= __('Select a checkout theme') ?>" name="theme-switcher" x-model="value" @change="post">
+        <option value=""> -- <?= __('Select a checkout theme') ?> --</option>
         <?php foreach ($viewModel->getThemes() as $theme) : ?>
         <?php $selected = ($viewModel->getValue() === $theme->getName()) ? 'selected' : ''; ?>
         <option <?= $selected ?> value="<?= $theme->getName() ?>"><?= $theme->getLabel() ?></option>
