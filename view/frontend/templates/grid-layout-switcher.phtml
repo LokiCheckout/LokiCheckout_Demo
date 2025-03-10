@@ -1,0 +1,22 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\View\Element\Template;
+use Yireo\LokiCheckoutDemo\Component\GridLayout\GridLayoutViewModel;
+use Yireo\LokiComponents\Factory\ViewModelFactory;
+
+/**
+ * @var Template $block
+ * @var ViewModelFactory $viewModelFactory
+ * @var GridLayoutViewModel $viewModel
+ */
+?>
+<div>
+    <select aria-label="<?= __('Select a checkout grid layout') ?>" name="grid-layout-switcher" x-model="value" @change="post">
+        <option value=""> -- <?= __('Select a checkout grid layout') ?> --</option>
+        <?php foreach ($viewModel->getGridLayouts() as $gridLayoutName => $gridLayout) : ?>
+        <?php $selected = ($viewModel->getValue() === $gridLayoutName) ? 'selected' : ''; ?>
+        <option <?= $selected ?> value="<?= $gridLayoutName ?>"><?= $gridLayoutName ?></option>
+        <?php endforeach; ?>
+    </select>
+</div>

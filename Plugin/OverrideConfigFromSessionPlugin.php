@@ -5,11 +5,21 @@ namespace Yireo\LokiCheckoutDemo\Plugin;
 use Magento\Checkout\Model\Session as CheckoutSession;
 use Yireo\LokiCheckout\Config\Config;
 
-class UpdateThemeFromConfigPlugin
+class OverrideConfigFromSessionPlugin
 {
     public function __construct(
         private readonly CheckoutSession $checkoutSession,
     ) {
+    }
+
+    public function afterGetGridLayout(Config $subject, string $result): string
+    {
+        $gridLayout = (string)$this->checkoutSession->getCurrentGridLayout();
+        if (!empty($gridLayout)) {
+            return $gridLayout;
+        }
+
+        return $result;
     }
 
     public function afterGetTheme(Config $subject, string $result): string

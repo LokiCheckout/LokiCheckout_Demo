@@ -3,8 +3,14 @@
     <body>
         <referenceContainer name="header-content.additional">
             <block template="Yireo_LokiCheckoutDemo::theme-switcher-container.phtml">
-                <block name="loki-checkout-demo.theme-switcher" as="switcher"
+                <block name="loki-checkout-demo.theme-switcher" as="theme-switcher"
                        template="Yireo_LokiCheckoutDemo::theme-switcher.phtml"
+                />
+            </block>
+
+            <block template="Yireo_LokiCheckoutDemo::grid-layout-switcher-container.phtml">
+                <block name="loki-checkout-demo.grid-layout-switcher" as="grid-layout-switcher"
+                       template="Yireo_LokiCheckoutDemo::grid-layout-switcher.phtml"
                 />
             </block>
 
@@ -18,6 +24,13 @@
                 <block
                     name="loki-checkout-demo.theme-switcher-mobile"
                     template="Yireo_LokiCheckoutDemo::theme-switcher.phtml"
+                />
+            </container>
+
+            <container htmlTag="div" htmlClass="block md:hidden" before="-">
+                <block
+                    name="loki-checkout-demo.grid-layout-switcher-mobile"
+                    template="Yireo_LokiCheckoutDemo::grid-layout-switcher.phtml"
                 />
             </container>
         </referenceContainer>
