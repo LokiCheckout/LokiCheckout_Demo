@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.3] - 11 March 2025
+### Fixed
+- Move GridLayout from XML layout to config
+- Add styling of shipping methods
+- Accessibiity fixes
+
 ## [0.0.2] - 22 February 2025
 - Change deps
 
