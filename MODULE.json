@@ -1,0 +1,12 @@
+{
+    "modules": [
+        "Yireo_LokiCheckout"
+    ],
+    "components": [
+        "loki-checkout-demo.theme-switcher",
+        "loki-checkout-demo.theme-switcher-mobile",
+        "loki-checkout-demo.grid-layout-switcher",
+        "loki-checkout-demo.grid-layout-switcher-mobile"
+    ],
+    "config": []
+}
