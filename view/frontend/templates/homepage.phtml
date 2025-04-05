@@ -6,62 +6,86 @@ use Magento\Framework\View\Element\Template;
 /** @var Template $block */
 ?>
 <div class="loki-checkout-demo">
-    <div class="heading">
-        <h1>Yireo Loki Checkout</h1>
-        <h2>A low-key checkout for developers</h2>
-        <h3>Bloody fast, easy to extend, component-based</h3>
-        <p>
-            With the Loki Checkout, you get a checkout that is bloody fast and easy to extend by developers.
-            Using Loki Components, you can quickly customize things on numerous levels.
-            However, we do the heafy lifting: The right features are supported out-of-the-box.
+    <div class="rounded-lg heading relative bg-cover bg-gradient-to-r from-indigo-900 to-orange-500 text-white">
+        <div class="rounded-lg absolute z-0 top-0 left-0 right-0 bottom-0 bg-no-repeat bg-cover opacity-50"
+             style="background-image: url('<?= $block->getViewFileUrl(
+                 'Yireo_LokiCheckoutDemo::images/loki-checkout.jpg'
+             ) ?>')"></div>
+        <div class="relative z-20 p-8 md:p-32 text-center">
+            <h1 class="text-3xl md:text-7xl font-bold mb-8">Yireo Loki Checkout</h1>
+            <h2 class="text-xl md:text-3xl font-bold mb-8">A low-key checkout for developers</h2>
+            <h3 class="text-lg md:text-2xl font-light mb-8">Bloody fast, easy to extend, component-based</h3>
+            <p>
+                With the Loki Checkout, you get a checkout that is bloody fast and easy to extend by developers.
+                Using Loki Components, you can quickly customize things on numerous levels.
+                However, we do the heavy lifting: The right features are supported out-of-the-box.
+                So you can focus on the customizations needed.
+            </p>
+        </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 md:gap-8 py-8">
+        <div class="md:p-8">
+            <h3 class="text-2xl mb-4">Technology stack</h3>
+            <ul class="mb-4 marker:text-orange-600 list-outside list-disc ml-6">
+                <li>Supporting Luma, Breeze and Hyvä</li>
+                <li>Based on LokiComponents with alpine.js and TailwindCSS</li>
+                <li>CSP & PCI compliance (<code>no-eval</code> and <code>no-inline</code>)</li>
+                <li>Coverage with Playwright Tests & Integration Tests</li>
+            </ul>
+
+            <p class="my-8 md:mb-16">
+                <a href="https://loki-checkout.com/docs/02-dev"
+                   class="border border-orange-800 bg-orange-600 text-white rounded-sm p-3">Dive into our dev-docs</a>
+            </p>
+
+            <h3 class="text-2xl mb-4">Your benefits</h3>
+            <ul class="mb-4 marker:text-orange-600 list-outside list-disc ml-6">
+                <li>Granular components and templates to keep legacy low</li>
+                <li>A familiar Magento stack (XML layout, Blocks and ViewModels)</li>
+                <li>Easier JS-layer with alpine.js (incl component types and stores)</li>
+                <li>True flexibility when it comes to customization</li>
+            </ul>
+
+            <p class="my-8 md:mb-16">
+                <a href="https://loki-checkout.com/#benefits"
+                   class="border border-orange-800 bg-orange-600 text-white rounded-sm p-3">Inspect more benefits</a>
+            </p>
+        </div>
+        <div class="md:p-8">
+            <h3 class="text-2xl mb-4">Existing integrations</h3>
+            <ul class="mb-4 marker:text-orange-600 list-outside list-disc ml-6">
+                <li>Mollie, Buckaroo, PAY, MultiSafepay and more</li>
+                <li>Post NL, DHL, Sendcloud, MyParcel and more</li>
+                <li>Postcode NL, EU VAT, CoC, Geissweb and more</li>
+                <li>And numerous core features</li>
+            </ul>
+
+            <p class="my-8 md:mb-16">
+                <a href="https://loki-checkout.com/docs/03-modules"
+                   class="border border-orange-800 bg-orange-600 text-white rounded-sm p-3">Review all modules</a>
+            </p>
+
+            <h3 class="text-2xl my-4">Our release plan</h3>
+            <ul class="mb-4 marker:text-orange-600 list-outside list-disc ml-6">
+                <li>Things have been stable since February 2025</li>
+                <li>These days, we are heading towards Milestone 1.0</li>
+                <li>In the summer of 2025, Milestone 1.1 will be reached</li>
+                <li>Every licensee is a partner to develop things with</li>
+            </ul>
+
+            <p class="my-8 md:mb-16">
+                <a href="https://loki-checkout.com/docs/02-roadmap"
+                   class="border border-orange-800 bg-orange-600 text-white rounded-sm p-3">See our roadmap</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="rounded-lg bg-gradient-to-r from-indigo-900 to-orange-500 text-white text-center py-8 md:py-24">
+        <h1 class="text-2xl md:text-6xl py-4">We all benefit from a better checkout</h1>
+        <p class="py-4 md:py-16">
+            <a href="https://loki-checkout.com/" class="border border-white rounded-sm md:text-xl p-4">Get started now</a>
         </p>
-    </div>
-
-    <div class="prose">
-        <div class="column1">
-        <h3>Technology stack</h3>
-        <ul>
-            <li>Supporting both Luma Theme and Hyvä Theme</li>
-            <li>Based on <code>Yireo_LokiComponents</code></li>
-            <li>Built on top of Alpine 3 and Tailwind 3</li>
-            <li>CSP & PCI compliance (without needing <code>unsafe-eval</code> and <code>unsafe-inline</code>)</li>
-            <li>Requires Magento 2.4.7+ and PHP 8.3+</li>
-            <li>Playwright tests & Integration Tests covering most if not all features</li>
-        </ul>
-
-        <h3>Benefits</h3>
-        <ul>
-            <li>Granular components and templates for everything, to keep down legacy</li>
-            <li>If you know XML layout, Blocks and ViewModels, you will know Loki</li>
-            <li>No requirement to know AlpineJS, even though you can extensively modify things on the JS-level</li>
-            <li>Theming error messages, adding PHP or JS validation rules - it is all made easy</li>
-            <li>And all forms are ready for accessibility</li>
-        </ul>
-        </div>
-        <div class="column2">
-        <h3>Integrations</h3>
-        <ul>
-            <li>Mollie, Buckaroo, MultiSafepay and more to follow</li>
-            <li>Post NL, Postcode NL, DHL, Geissweb</li>
-        </ul>
-        <small class="text-sm">
-            More integrations will follow, but the above is the current focus.
-        </small>
-
-        <h3>Release plan</h3>
-        <ul>
-            <li>Today the core works and support for Dutch payment providers is underway</li>
-            <li>In January 2025, we will be running the first 2 projects</li>
-            <li>We are now open for private betas</li>
-            <li>In February 2025, we are opening up for a wider public</li>
-        </ul>
-        <p>However, we are not aiming to take over the market. You will need to work with us to make this work.</p>
-        </div>
-    </div>
-
-    <div class="cta">
-        <h1 class="text-5xl py-4">A new checkout</h1>
-        <h2 class="text-3xl py-4">loki-checkout.com</h2>
     </div>
 
 
@@ -73,78 +97,11 @@ use Magento\Framework\View\Element\Template;
         font-style: normal;
         font-weight: 200 700;
         font-display: swap;
-        src: url(<?= $block->getViewFileUrl('Yireo_LokiCheckoutDemo::fonts/oswald-latin-ext.woff2') ?>) format('woff2');
-        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
-
-    @font-face {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 200 700;
-        font-display: swap;
         src: url(<?= $block->getViewFileUrl('Yireo_LokiCheckoutDemo::fonts/oswald-latin.woff2') ?>) format('woff2');
         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
     }
 
-    .loki-checkout-demo .heading {
-        position: relative;
-        background-image: url(<?= $block->getViewFileUrl('Yireo_LokiCheckoutDemo::images/loki-checkout.jpg') ?>);
-        background-size: cover;
-        padding: 200px 150px 200px 150px;
-        margin-bottom: 50px;
-        text-align: center;
-        box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .5);
-    }
-
     .loki-checkout-demo h1 {
         font-family: "Oswald", serif;
-        font-size: 4.5rem;
-        font-weight: 700;
-        color: white;
-    }
-
-    .loki-checkout-demo h2 {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-top: 20px;
-        margin-bottom: 40px;
-        color: white;
-    }
-
-    .loki-checkout-demo h3 {
-        font-size: 1.4rem;
-        font-weight: 700;
-        margin-top: 20px;
-        margin-bottom: 40px;
-        color: white;
-    }
-
-    .loki-checkout-demo h3 {
-        color: white;
-    }
-
-    .loki-checkout-demo .prose {
-        max-width: 100% !important;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin-bottom: 100px;
-    }
-
-    .loki-checkout-demo .cta {
-        background: rgb(19, 75, 15);
-        background: linear-gradient(90deg, rgb(62, 91, 59) 0%, rgb(80, 91, 80) 100%);
-        color: white;
-        padding: 100px;
-        margin-bottom: 50px;
-        text-align: center;
-    }
-
-    .loki-checkout-demo .cta > .button {
-        display: inline-flex;
-        border-width: 2px;
-        border-color: orange;
-        color: #222;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
     }
 </style>
