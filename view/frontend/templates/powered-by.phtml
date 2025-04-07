@@ -1,0 +1,21 @@
+<?php
+declare(strict_types=1);
+
+use Yireo\LokiComponents\Factory\ViewModelFactory;
+use Yireo\LokiFieldComponents\ViewModel\ImageOutput;
+
+/**
+ * @var ViewModelFactory $viewModelFactory
+ * @var ImageOutput $imageOutput
+ */
+$imageOutput = $viewModelFactory->create(ImageOutput::class);
+?>
+
+<div class="card my-4">
+    <div class="w-6 fill-amber-500 float-left mr-4">
+        <?= $imageOutput->get('Yireo_LokiCheckoutDemo::images/snake.svg') ?>
+    </div>
+    <span class="text-lg font-bold">
+        Powered by the Yireo <a class="text-amber-600" href="https://loki-checkout.com/">LokiCheckout</a>
+    </span>
+</div>

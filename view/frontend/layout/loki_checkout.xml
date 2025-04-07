@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
     <body>
+        <referenceContainer name="loki-checkout.sidebar">
+            <block template="Yireo_LokiCheckoutDemo::powered-by.phtml" before="-"/>
+        </referenceContainer>
+
         <referenceContainer name="header-content.additional">
             <block template="Yireo_LokiCheckoutDemo::theme-switcher-container.phtml">
                 <block name="loki-checkout-demo.theme-switcher" as="theme-switcher"
