@@ -1,10 +1,20 @@
 @layer components {
-    .loki-checkout-shipping-shipping-methods-item.active {
-        @apply border rounded-md border-sky-300 bg-sky-50;
+    .loki-checkout-shipping-shipping-methods-item {
+        @apply rounded-md border border-sky-200;
+
+        &.active {
+            @apply border rounded-md border-sky-300 bg-sky-50;
+        }
     }
 
-    .loki-checkout-payment-payment-methods-item.active {
-        @apply border rounded-md border-sky-300 bg-sky-50;
+    .loki-checkout-payment-payment-methods-item {
+        &.active {
+            @apply border rounded-md border-sky-300 bg-sky-50;
+        }
+
+        &:hover {
+            @apply border rounded-md border-sky-200;
+        }
     }
 }
 
