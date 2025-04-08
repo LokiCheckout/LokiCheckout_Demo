@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.4] - 08 April 2025
+### Fixed
+- Add little powered-by block
+- Fix hover
+- Adjust homepage styling
+- Resolving of shipping method icons
+- Housekeeping changes
+- Restyling in Breeze
+
 ## [0.0.3] - 11 March 2025
 ### Fixed
 - Move GridLayout from XML layout to config
