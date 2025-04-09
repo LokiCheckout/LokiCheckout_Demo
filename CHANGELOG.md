@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.6] - 09 April 2025
+### Fixed
+- Fix font on homepage
+- Fix look and feel of demo module
+- Restructure loki classes for Luma
+- Remove unneeded identifier
+- Handle error better
+
 ## [0.0.5] - 09 April 2025
 ### Fixed
 - Add Tailwind to Luma homepage
