@@ -4,19 +4,22 @@ declare(strict_types=1);
 use Magento\Framework\View\Element\Template;
 use Yireo\LokiCheckoutDemo\Component\Theme\ThemeViewModel;
 use Yireo\LokiComponents\Factory\ViewModelFactory;
+use Yireo\LokiComponents\Util\Block\CssClass;
 
 /**
  * @var Template $block
  * @var ViewModelFactory $viewModelFactory
  * @var ThemeViewModel $viewModel
+ * @var CssClass $css
  */
 ?>
 <div>
-    <select aria-label="<?= __('Select a checkout theme') ?>" name="theme-switcher" x-model="value" @change="post">
+    <select aria-label="<?= __('Select a checkout theme') ?>" name="theme-switcher" x-model="value" @change="post"
+            class="<?= $css('form-select w-full disabled:bg-zinc-100') ?>">
         <option value=""> -- <?= __('Select a checkout theme') ?> --</option>
         <?php foreach ($viewModel->getThemes() as $theme) : ?>
-        <?php $selected = ($viewModel->getValue() === $theme->getName()) ? 'selected' : ''; ?>
-        <option <?= $selected ?> value="<?= $theme->getName() ?>"><?= $theme->getLabel() ?></option>
+            <?php $selected = ($viewModel->getValue() === $theme->getName()) ? 'selected' : ''; ?>
+            <option <?= $selected ?> value="<?= $theme->getName() ?>"><?= $theme->getLabel() ?></option>
         <?php endforeach; ?>
     </select>
 </div>
