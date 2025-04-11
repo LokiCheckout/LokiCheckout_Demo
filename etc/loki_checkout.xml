@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Yireo_LokiCheckout:etc/loki_checkout.xsd">
     <grid_layouts>
-        <grid_layout name="dutch_demo_grid" label="Dutch grid" countryId="NL">
+        <grid_layout name="dutch_demo_grid" label="Dutch demo grid" countryId="NL">
             <block alias="prefix" sortOrder="1" />
             <block alias="firstname" sortOrder="2" />
             <block alias="middlename" sortOrder="3" />
