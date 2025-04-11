@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header-wrapper">
+            <container htmlTag="div" htmlClass="loki flex float-right">
+                <container htmlTag="div" htmlClass="flex float-right">
+                    <block template="Yireo_LokiCheckoutDemo::theme-switcher-container.phtml">
+                        <block name="loki-checkout-demo.theme-switcher" as="theme-switcher"
+                               template="Yireo_LokiCheckoutDemo::theme-switcher.phtml"
+                        />
+                    </block>
+
+                    <block template="Yireo_LokiCheckoutDemo::grid-layout-switcher-container.phtml">
+                        <block name="loki-checkout-demo.grid-layout-switcher" as="grid-layout-switcher"
+                               template="Yireo_LokiCheckoutDemo::grid-layout-switcher.phtml"
+                        />
+                    </block>
+
+                    <block name="loki-checkout-demo.tourguide-start"
+                           template="Yireo_LokiCheckoutDemo::tourguide-start.phtml"
+                    />
+                </container>
+            </container>
+        </referenceContainer>
+    </body>
+</page>
