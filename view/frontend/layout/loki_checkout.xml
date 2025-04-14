@@ -24,9 +24,6 @@
         </referenceContainer>
 
         <referenceContainer name="before.body.end">
-            <block name="loki-checkout-demo.tourguide-js"
-                   template="Yireo_LokiCheckoutDemo::luma/tourguide-js.phtml"
-            />
             <block name="loki-checkout-demo.tourguide-css"
                    template="Yireo_LokiCheckoutDemo::tourguide-css.phtml"
             />
