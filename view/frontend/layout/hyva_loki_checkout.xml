@@ -21,7 +21,7 @@
             </container>
         </referenceContainer>
 
-        <referenceContainer name="before.body.end">
+        <referenceContainer name="loki-scripts">
             <block
                 name="loki-checkout-demo.tourguide-js"
                 template="Yireo_LokiCheckoutDemo::hyva/tourguide-js.phtml"
