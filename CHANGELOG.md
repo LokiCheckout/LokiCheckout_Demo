@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.7] - 16 April 2025
+### Fixed
+- Move scripts from "before.body.end" to new "loki-scripts" container
+- Fix Luma loading of scripts in Hyva
+- Implement label for gridlayouts
+- Add optional countryId to grid XML
+- Add label to grid
+- Move `loki_checkout.xml` of Nl and PostcodeNl module to Demo module
+
 ## [0.0.6] - 09 April 2025
 ### Fixed
 - Fix font on homepage
