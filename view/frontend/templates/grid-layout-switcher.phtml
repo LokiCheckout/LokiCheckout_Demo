@@ -16,9 +16,9 @@ use Yireo\LokiComponents\Util\Block\CssClass;
 <div>
     <select aria-label="<?= __('Select a checkout grid layout') ?>" name="grid-layout-switcher" x-model="value" @change="post" class="<?= $css('form-select w-full disabled:bg-zinc-100') ?>">
         <option value=""> -- <?= __('Select a checkout grid layout') ?> --</option>
-        <?php foreach ($viewModel->getGridLayouts() as $gridLayoutName => $gridLayout) : ?>
-        <?php $selected = ($viewModel->getValue() === $gridLayoutName) ? 'selected' : ''; ?>
-        <option <?= $selected ?> value="<?= $gridLayoutName ?>"><?= $gridLayoutName ?></option>
+        <?php foreach ($viewModel->getGridLayouts() as $gridLayout) : ?>
+        <?php $selected = ($viewModel->getValue() === $gridLayout->getName()) ? 'selected' : ''; ?>
+        <option <?= $selected ?> value="<?= $gridLayout->getName() ?>"><?= $gridLayout->getLabel() ?></option>
         <?php endforeach; ?>
     </select>
 </div>
