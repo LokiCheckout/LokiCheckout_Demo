@@ -6,13 +6,13 @@
             <block alias="firstname" sortOrder="2" />
             <block alias="middlename" sortOrder="3" />
             <block alias="lastname" sortOrder="4" />
-            <block alias="country_id" sortOrder="5" gridClass="col-span-12"/>
+            <block alias="country_id" sortOrder="5" colSpan="12"/>
             <block alias="postcode" sortOrder="6" />
-            <block alias="street1" sortOrder="7" gridClass="col-span-12 md:col-span-3"/>
-            <block alias="street2" sortOrder="8" gridClass="col-span-12 md:col-span-3"/>
+            <block alias="street1" sortOrder="7" colSpan="12" mdColSpan="3"/>
+            <block alias="street2" sortOrder="8" colSpan="12" mdColSpan="3"/>
             <block alias="street3" sortOrder="9" />
-            <block alias="postcode_nl_toggle" sortOrder="10" gridClass="col-span-12"/>
-            <block alias="postcode_nl_debug" sortOrder="11" gridClass="col-span-12"/>
+            <block alias="postcode_nl_toggle" sortOrder="10" colSpan="12"/>
+            <block alias="postcode_nl_debug" sortOrder="11" colSpan="12"/>
             <block alias="street0" sortOrder="12" />
             <block alias="city" sortOrder="13" />
             <block alias="region" sortOrder="14" />
