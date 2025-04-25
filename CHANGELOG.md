@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.8] - 25 April 2025
+### Fixed
+- Remove x-model because of CSP compliance
+- Remove gridClass, add colSpan and mdColSpan in grid layouts
+- Allow switching of grid layout per country ID
+- Fix demo selectors not working for Hyva
+
 ## [0.0.7] - 16 April 2025
 ### Fixed
 - Move scripts from "before.body.end" to new "loki-scripts" container
