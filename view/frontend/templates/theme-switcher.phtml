@@ -14,8 +14,12 @@ use Yireo\LokiComponents\Util\Block\CssClass;
  */
 ?>
 <div>
-    <select aria-label="<?= __('Select a checkout theme') ?>" name="theme-switcher" x-model="value" @change="post"
-            class="<?= $css('form-select w-full disabled:bg-zinc-100') ?>">
+    <select
+        aria-label="<?= __('Select a checkout theme') ?>"
+        name="theme-switcher"
+        :value="value"
+        @change="submitValue"
+        class="<?= $css('form-select w-full disabled:bg-zinc-100') ?>">
         <option value=""> -- <?= __('Select a checkout theme') ?> --</option>
         <?php foreach ($viewModel->getThemes() as $theme) : ?>
             <?php $selected = ($viewModel->getValue() === $theme->getName()) ? 'selected' : ''; ?>

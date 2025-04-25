@@ -3,12 +3,12 @@
 namespace Yireo\LokiCheckoutDemo\Component\Theme;
 
 use Yireo\LokiCheckout\Config\XmlConfig\Value\Theme;
-use Yireo\LokiComponents\Component\ComponentViewModel;
+use Yireo\LokiFieldComponents\Component\Base\Field\FieldViewModel;
 
 /**
  * @method ThemeContext getContext()
  */
-class ThemeViewModel extends ComponentViewModel
+class ThemeViewModel extends FieldViewModel
 {
     /**
      * @return Theme[]
@@ -16,5 +16,10 @@ class ThemeViewModel extends ComponentViewModel
     public function getThemes(): array
     {
         return $this->getContext()->getXmlConfig()->getThemes();
+    }
+
+    public function getFieldLabel(): string
+    {
+        return 'Theme';
     }
 }
