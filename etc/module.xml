@@ -2,6 +2,10 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
     <module name="Yireo_LokiCheckoutDemo">
         <sequence>
+            <module name="Magento_Checkout"/>
+            <module name="Magento_Store"/>
+            <module name="Yireo_LokiComponents"/>
+            <module name="Yireo_LokiFieldComponents"/>
             <module name="Yireo_LokiCheckout"/>
         </sequence>
     </module>
