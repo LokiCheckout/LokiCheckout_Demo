@@ -6,20 +6,16 @@
         </referenceContainer>
 
         <referenceContainer name="content">
-            <container htmlTag="div" htmlClass="loki" before="-">
-                <container htmlTag="div" htmlClass="block md:hidden" before="-">
-                    <block
-                        name="loki-checkout-demo.theme-switcher-mobile"
-                        template="Yireo_LokiCheckoutDemo::theme-switcher.phtml"
-                    />
-                </container>
+            <container name="loki-checkout-demo.mobile-actions" htmlTag="div" htmlClass="loki block md:hidden" before="-">
+                <block
+                    name="loki-checkout-demo.theme-switcher-mobile"
+                    template="Yireo_LokiCheckoutDemo::theme-switcher.phtml"
+                />
 
-                <container htmlTag="div" htmlClass="block md:hidden" before="-">
-                    <block
-                        name="loki-checkout-demo.grid-layout-switcher-mobile"
-                        template="Yireo_LokiCheckoutDemo::grid-layout-switcher.phtml"
-                    />
-                </container>
+                <block
+                    name="loki-checkout-demo.grid-layout-switcher-mobile"
+                    template="Yireo_LokiCheckoutDemo::grid-layout-switcher.phtml"
+                />
             </container>
         </referenceContainer>
 
