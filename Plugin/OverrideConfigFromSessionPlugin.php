@@ -12,7 +12,7 @@ class OverrideConfigFromSessionPlugin
     ) {
     }
 
-    public function afterGetGridLayout(Config $subject, string $result): string
+    public function afterGetGridLayoutName(Config $subject, string $result): string
     {
         $gridLayout = (string)$this->checkoutSession->getCurrentGridLayout();
         if (!empty($gridLayout)) {
