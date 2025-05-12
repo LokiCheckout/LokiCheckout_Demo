@@ -1,5 +1,9 @@
 {
     "modules": [
+        "Magento_Checkout",
+        "Magento_Store",
+        "Yireo_LokiComponents",
+        "Yireo_LokiFieldComponents",
         "Yireo_LokiCheckout"
     ],
     "components": [
@@ -8,5 +12,10 @@
         "loki-checkout-demo.grid-layout-switcher",
         "loki-checkout-demo.grid-layout-switcher-mobile"
     ],
-    "config": []
+    "config": [],
+    "tests": {
+        "unit": 1,
+        "integration": 0,
+        "functional": 0
+    }
 }
