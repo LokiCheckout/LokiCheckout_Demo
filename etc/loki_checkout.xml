@@ -18,8 +18,9 @@
             <block alias="region" sortOrder="14" />
             <block alias="telephone" sortOrder="15" />
             <block alias="fax" sortOrder="16" />
-            <block alias="company" sortOrder="17" />
-            <block alias="vat_id" sortOrder="18" />
+            <block alias="account_type" sortOrder="17" />
+            <block alias="company" sortOrder="18" />
+            <block alias="vat_id" sortOrder="19" />
         </grid_layout>
     </grid_layouts>
 </config>
