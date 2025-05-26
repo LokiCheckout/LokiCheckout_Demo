@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 26 May 2025
+### Fixed
+- Add `account_type` to grid
+- Generate new MODULE.json with simple test count
+- Add LokiCheckout as page title
+- Spread Postcode NL fields properly
+- Make sure to hook into right method getGridLayoutName
+- Allow PHP 8.4 in CI
+- Optimize layout for Hyva
+- Update composer and module deps
+
 ## [0.0.8] - 25 April 2025
 ### Fixed
 - Remove x-model because of CSP compliance

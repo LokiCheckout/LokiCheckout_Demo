@@ -1,0 +1,6 @@
+{
+  "ignore": [
+    "Yireo_AdditionalBlockTemplate",
+    "yireo/magento2-additional-block-template"
+  ]
+}

@@ -1,6 +1,6 @@
 {
     "name": "yireo/magento2-loki-checkout-demo",
-    "version": "0.0.8",
+    "version": "1.0.0",
     "description": "N/A",
     "keywords": ["loki-dev"],
     "homepage": "https://loki-checkout.com/",
@@ -17,6 +17,7 @@
         "yireo/magento2-loki-checkout": "~0.0 | ^1.0",
         "yireo/magento2-loki-components": "~0.0 | ^1.0",
         "yireo/magento2-loki-field-components": "~0.0 | ^1.0",
+        "yireo/magento2-integration-test-helper": "~0.0",
         "yireo/magento2-additional-block-template": "^0.0.3"
     },
     "license": "OSL-3.0",
