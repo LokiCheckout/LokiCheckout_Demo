@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Yireo_LokiCheckout:etc/loki_checkout.xsd">
     <grid_layouts>
-        <grid_layout name="dutch_demo_grid" label="Dutch demo grid" countryId="NL">
-            <block alias="prefix" sortOrder="1" />
-            <block alias="firstname" sortOrder="2" />
-            <block alias="middlename" sortOrder="3" />
-            <block alias="lastname" sortOrder="4" />
-            <block alias="country_id" sortOrder="5" colSpan="12" mdColSpan="12"/>
-            <block alias="postcode" sortOrder="6" />
-            <block alias="street1" sortOrder="7" colSpan="12" mdColSpan="3"/>
-            <block alias="street2" sortOrder="8" colSpan="12" mdColSpan="3"/>
-            <block alias="street3" sortOrder="9" />
-            <block alias="postcode_nl_toggle" sortOrder="10" colSpan="12" mdColSpan="12"/>
-            <block alias="postcode_nl_debug" sortOrder="11" colSpan="12" mdColSpan="12"/>
-            <block alias="street0" sortOrder="12" />
-            <block alias="city" sortOrder="13" />
-            <block alias="region" sortOrder="14" />
-            <block alias="telephone" sortOrder="15" />
-            <block alias="fax" sortOrder="16" />
-            <block alias="account_type" sortOrder="17" />
-            <block alias="company" sortOrder="18" />
-            <block alias="vat_id" sortOrder="19" />
+        <grid_layout name="dutch_demo_grid" label="Dutch demo grid">
+            <grid name="NL" countryId="NL">
+                <block alias="prefix" sortOrder="1"/>
+                <block alias="firstname" sortOrder="2"/>
+                <block alias="middlename" sortOrder="3"/>
+                <block alias="lastname" sortOrder="4"/>
+                <block alias="country_id" sortOrder="5" colSpan="12" mdColSpan="12"/>
+                <block alias="postcode" sortOrder="6"/>
+                <block alias="street1" sortOrder="7" colSpan="12" mdColSpan="3"/>
+                <block alias="street2" sortOrder="8" colSpan="12" mdColSpan="3"/>
+                <block alias="street3" sortOrder="9"/>
+                <block alias="postcode_nl_toggle" sortOrder="10" colSpan="12" mdColSpan="12"/>
+                <block alias="postcode_nl_debug" sortOrder="11" colSpan="12" mdColSpan="12"/>
+                <block alias="street0" sortOrder="12"/>
+                <block alias="city" sortOrder="13"/>
+                <block alias="region" sortOrder="14"/>
+                <block alias="telephone" sortOrder="15"/>
+                <block alias="fax" sortOrder="16"/>
+                <block alias="account_type" sortOrder="17"/>
+                <block alias="company" sortOrder="18"/>
+                <block alias="vat_id" sortOrder="19"/>
+            </grid>
         </grid_layout>
     </grid_layouts>
 </config>
