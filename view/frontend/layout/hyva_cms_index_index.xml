@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
     <head>
-        <remove src="Yireo_LokiCheckoutLuma/css/tailwind.css"/>
+        <remove src="LokiCheckout_Luma/css/tailwind.css"/>
     </head>
 </page>

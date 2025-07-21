@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace Yireo\LokiCheckoutDemo\Component\Theme;
+namespace LokiCheckout\Demo\Component\Theme;
 
 use Magento\Framework\Message\ManagerInterface as MessageManager;
-use Yireo\LokiComponents\Component\ComponentRepository;
-use Yireo\LokiComponents\Exception\RedirectException;
+use Loki\Components\Component\ComponentRepository;
+use Loki\Components\Exception\RedirectException;
 
 /**
  * @method ThemeContext getContext()

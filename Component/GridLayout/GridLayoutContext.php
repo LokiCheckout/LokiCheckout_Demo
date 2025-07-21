@@ -1,12 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace Yireo\LokiCheckoutDemo\Component\GridLayout;
+namespace LokiCheckout\Demo\Component\GridLayout;
 
 use Magento\Checkout\Model\Session as CheckoutSession;
 use Magento\Framework\App\ResponseFactory;
 use Magento\Framework\UrlFactory;
-use Yireo\LokiCheckout\Config\XmlConfig;
-use Yireo\LokiComponents\Component\ComponentContextInterface;
+use LokiCheckout\Core\Config\XmlConfig;
+use Loki\Components\Component\ComponentContextInterface;
 
 class GridLayoutContext implements ComponentContextInterface
 {

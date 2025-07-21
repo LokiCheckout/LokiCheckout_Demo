@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace Yireo\LokiCheckoutDemo\Component\GridLayout;
+namespace LokiCheckout\Demo\Component\GridLayout;
 
 use Magento\Framework\Message\ManagerInterface as MessageManager;
-use Yireo\LokiComponents\Component\ComponentRepository;
-use Yireo\LokiComponents\Exception\RedirectException;
+use Loki\Components\Component\ComponentRepository;
+use Loki\Components\Exception\RedirectException;
 
 /**
  * @method GridLayoutContext getContext()

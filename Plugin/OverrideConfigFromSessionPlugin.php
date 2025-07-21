@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace Yireo\LokiCheckoutDemo\Plugin;
+namespace LokiCheckout\Demo\Plugin;
 
 use Magento\Checkout\Model\Session as CheckoutSession;
-use Yireo\LokiCheckout\Config\Config;
+use LokiCheckout\Core\Config\Config;
 
 class OverrideConfigFromSessionPlugin
 {

@@ -8,26 +8,26 @@
         </referenceBlock>
 
         <referenceContainer name="loki-checkout.sidebar">
-            <block template="Yireo_LokiCheckoutDemo::powered-by.phtml" before="-"/>
+            <block template="LokiCheckout_Demo::powered-by.phtml" before="-"/>
         </referenceContainer>
 
         <referenceContainer name="content">
             <container name="loki-checkout-demo.mobile-actions" htmlTag="div" htmlClass="loki block md:hidden" before="-">
                 <block
                     name="loki-checkout-demo.theme-switcher-mobile"
-                    template="Yireo_LokiCheckoutDemo::theme-switcher.phtml"
+                    template="LokiCheckout_Demo::theme-switcher.phtml"
                 />
 
                 <block
                     name="loki-checkout-demo.grid-layout-switcher-mobile"
-                    template="Yireo_LokiCheckoutDemo::grid-layout-switcher.phtml"
+                    template="LokiCheckout_Demo::grid-layout-switcher.phtml"
                 />
             </container>
         </referenceContainer>
 
         <referenceContainer name="loki-scripts">
             <block name="loki-checkout-demo.tourguide-css"
-                   template="Yireo_LokiCheckoutDemo::tourguide-css.phtml"
+                   template="LokiCheckout_Demo::tourguide-css.phtml"
             />
         </referenceContainer>
 

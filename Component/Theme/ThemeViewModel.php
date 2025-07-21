@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace Yireo\LokiCheckoutDemo\Component\Theme;
+namespace LokiCheckout\Demo\Component\Theme;
 
-use Yireo\LokiCheckout\Config\XmlConfig\Value\Theme;
-use Yireo\LokiFieldComponents\Component\Base\Field\FieldViewModel;
+use LokiCheckout\Core\Config\XmlConfig\Value\Theme;
+use Loki\Field\Component\Base\Field\FieldViewModel;
 
 /**
  * @method ThemeContext getContext()

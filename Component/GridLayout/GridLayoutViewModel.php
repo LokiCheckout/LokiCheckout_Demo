@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace Yireo\LokiCheckoutDemo\Component\GridLayout;
+namespace LokiCheckout\Demo\Component\GridLayout;
 
-use Yireo\LokiCheckout\Config\XmlConfig\Value\GridLayout;
-use Yireo\LokiFieldComponents\Component\Base\Field\FieldViewModel;
+use LokiCheckout\Core\Config\XmlConfig\Value\GridLayout;
+use Loki\Field\Component\Base\Field\FieldViewModel;
 
 /**
  * @method GridLayoutContext getContext()

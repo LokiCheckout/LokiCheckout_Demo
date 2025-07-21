@@ -1,5 +1,5 @@
 {
-    "name": "yireo/magento2-loki-checkout-demo",
+    "name": "loki-checkout/magento2-demo",
     "version": "1.0.0",
     "description": "N/A",
     "keywords": ["loki-dev"],
@@ -14,9 +14,9 @@
     "require": {
         "magento/framework": "^103.0",
         "magento/module-checkout": "^100.0",
-        "yireo/magento2-loki-checkout": "~0.0 | ^1.0",
-        "yireo/magento2-loki-components": "~0.0 | ^1.0",
-        "yireo/magento2-loki-field-components": "~0.0 | ^1.0",
+        "loki-checkout/magento2-core": "~0.0 | ^1.0",
+        "loki/magento2-components": "~0.0 | ^1.0",
+        "loki/magento2-field-components": "~0.0 | ^1.0",
         "yireo/magento2-integration-test-helper": "~0.0",
         "yireo/magento2-additional-block-template": "^0.0.3"
     },
@@ -26,7 +26,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "Yireo\\LokiCheckoutDemo\\": ""
+            "LokiCheckout\\Demo\\": ""
         }
     }
 }

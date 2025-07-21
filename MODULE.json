@@ -2,9 +2,9 @@
     "modules": [
         "Magento_Checkout",
         "Magento_Store",
-        "Yireo_LokiComponents",
-        "Yireo_LokiFieldComponents",
-        "Yireo_LokiCheckout",
+        "Loki_Components",
+        "Loki_FieldComponents",
+        "LokiCheckout_Core",
         "Yireo_IntegrationTestHelper",
         "Yireo_AdditionalBlockTemplate"
     ],

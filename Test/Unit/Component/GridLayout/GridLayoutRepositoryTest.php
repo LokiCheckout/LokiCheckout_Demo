@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yireo\LokiCheckoutDemo\Test\Unit\Component\GridLayout;
+namespace LokiCheckout\Demo\Test\Unit\Component\GridLayout;
 
 use Magento\Checkout\Model\Session;
 use Magento\Framework\Message\ManagerInterface;
@@ -10,11 +10,11 @@ use Magento\Framework\UrlFactory;
 use Magento\Framework\UrlInterface;
 use PHPUnit\Framework\TestCase;
 use Yireo\IntegrationTestHelper\Test\Integration\Traits\GetObjectManager;
-use Yireo\LokiCheckout\Test\Unit\Stub\CheckoutSessionStub;
-use Yireo\LokiCheckoutDemo\Component\GridLayout\GridLayoutContext;
-use Yireo\LokiCheckoutDemo\Component\GridLayout\GridLayoutRepository;
-use Yireo\LokiComponents\Component\ComponentInterface;
-use Yireo\LokiComponents\Exception\RedirectException;
+use LokiCheckout\Core\Test\Unit\Stub\CheckoutSessionStub;
+use LokiCheckout\Demo\Component\GridLayout\GridLayoutContext;
+use LokiCheckout\Demo\Component\GridLayout\GridLayoutRepository;
+use Loki\Components\Component\ComponentInterface;
+use Loki\Components\Exception\RedirectException;
 
 final class GridLayoutRepositoryTest extends TestCase
 {
