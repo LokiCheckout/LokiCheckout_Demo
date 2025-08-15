@@ -35,5 +35,11 @@
         <referenceContainer name="before.body.end">
             <block template="LokiCheckout_Demo::theme/demo/style.phtml"/>
         </referenceContainer>
+
+        <referenceBlock name="loki-checkout.newsletter">
+            <arguments>
+                <argument name="field_type" xsi:type="string">switch</argument>
+            </arguments>
+        </referenceBlock>
     </body>
 </page>
