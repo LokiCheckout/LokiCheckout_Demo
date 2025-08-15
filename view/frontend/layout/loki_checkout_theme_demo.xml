@@ -41,5 +41,11 @@
                 <argument name="field_type" xsi:type="string">switch</argument>
             </arguments>
         </referenceBlock>
+
+        <referenceBlock name="loki-checkout.shipping.address.postcode_nl_toggle">
+            <arguments>
+                <argument name="field_type" xsi:type="string">switch</argument>
+            </arguments>
+        </referenceBlock>
     </body>
 </page>
