@@ -16,8 +16,4 @@
             @apply border rounded-md border-sky-200;
         }
     }
-
-    [data-type="field"][data-valid] {
-        border: 2px green solid;
-    }
 }

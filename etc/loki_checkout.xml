@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:LokiCheckout_Core:etc/loki_checkout.xsd">
+    <themes>
+        <theme name="demo" label="Multi Step Checkout (demo)">
+            <steps>
+                <step name="shipping" blockName="loki-checkout.steps.shipping"/>
+                <step name="billing" blockName="loki-checkout.steps.billing"/>
+            </steps>
+        </theme>
+    </themes>
+
     <grid_layouts>
         <grid_layout name="dutch_demo_grid" label="Dutch demo grid">
             <grid name="NL" countryId="NL">

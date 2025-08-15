@@ -1,0 +1,39 @@
+<?php
+declare(strict_types=1);
+
+use Loki\Components\Factory\ViewModelFactory;
+use Loki\Components\Util\Block\BlockRenderer;
+use LokiCheckout\Core\ViewModel\CheckoutState;
+use Magento\Framework\View\Element\Template;
+
+/** @var Template $block */
+/** @var BlockRenderer $blockRenderer */
+/** @var ViewModelFactory $viewModelFactory */
+/** @var CheckoutState $checkoutState */
+
+$checkoutState = $viewModelFactory->create(CheckoutState::class);
+
+if ($checkoutState->getCustomerSession()->isLoggedIn()) {
+    echo $blockRenderer->html($block, 'loki-checkout.login.logged-in', [
+        'show_logout_link' => false,
+        'show_customer_email' => true,
+    ]);
+    return;
+}
+?>
+<div class="col-span-12 flex">
+    <div class="grow m-3">
+        <?= $blockRenderer->html(
+            $block,
+            'loki-checkout.customer.customer_email', [
+                'show_field_label' => false,
+            ]
+        ) ?>
+    </div>
+    <div class="grow-0 m-4 text-2xl">
+        <?= __('or') ?>
+    </div>
+    <div class="grow">
+        <?= $block->getChildHtml('login') ?>
+    </div>
+</div>
