@@ -1,5 +1,10 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
+    <head>
+        <meta name="keywords" content="magento,luma,hyva,checkout,mage-os,yireo,loki,lokicheckout"/>
+        <meta name="description" content="A better Magento 2 checkout"/>
+    </head>
+
     <body>
         <referenceBlock name="page.main.title">
             <action method="setPageTitle">
