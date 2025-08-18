@@ -15,15 +15,16 @@ use Loki\Components\Util\Block\CssClass;
 ?>
 <div class="mb-2">
     <select
-        aria-label="<?= __('Select a theme') ?>"
+        aria-label="<?= $escaper->escapeHtml(__('Select a theme')) ?>"
         name="theme-switcher"
         :value="value"
         @change="submitValue"
-        class="<?= $css('form-select w-full disabled:bg-zinc-100') ?>">
-        <option value=""> -- <?= __('Select a theme') ?> --</option>
+        class="<?= /* @noEscape */
+$css('form-select w-full disabled:bg-zinc-100') ?>">
+        <option value=""> -- <?= $escaper->escapeHtml(__('Select a theme')) ?> --</option>
         <?php foreach ($viewModel->getThemes() as $theme) : ?>
             <?php $selected = ($viewModel->getValue() === $theme->getName()) ? 'selected' : ''; ?>
-            <option <?= $selected ?> value="<?= $theme->getName() ?>"><?= $theme->getLabel() ?></option>
+            <option <?= $escaper->escapeHtml($selected) ?> value="<?= $escaper->escapeHtml($theme->getName()) ?>"><?= $escaper->escapeHtml($theme->getLabel()) ?></option>
         <?php endforeach; ?>
     </select>
 </div>

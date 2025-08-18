@@ -4,4 +4,5 @@ declare(strict_types=1);
 use Magento\Framework\View\Element\Template;
 /** @var Template $block */
 ?>
-<link rel="stylesheet" href="<?= $block->getViewFileUrl("LokiCheckout_Demo::css/tour.css") ?>">
+<link rel="stylesheet" href="<?= /* @noEscape */
+$block->getViewFileUrl("LokiCheckout_Demo::css/tour.css") ?>">

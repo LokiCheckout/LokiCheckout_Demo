@@ -13,9 +13,9 @@ $imageOutput = $viewModelFactory->create(ImageOutput::class);
 
 <div class="card my-4">
     <div class="w-6 float-left mr-4">
-        <?= $imageOutput->get('LokiCheckout_Demo::images/snake.svg') ?>
+        <?= $escaper->escapeHtml($imageOutput->get('LokiCheckout_Demo::images/snake.svg')) ?>
     </div>
     <span class="text-lg font-bold">
-        <?= __('Powered by') ?> <a href="https://loki-checkout.com/">LokiCheckout</a>
+        <?= $escaper->escapeHtml(__('Powered by')) ?> <a href="https://loki-checkout.com/">LokiCheckout</a>
     </span>
 </div>
