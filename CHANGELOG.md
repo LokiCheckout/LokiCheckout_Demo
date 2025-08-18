@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.3] - 18 August 2025
+### Fixed
+- Lower requirements to PHP 8.1
+- Implement optimized login-logout flow
+- Rename "Multi Step Checkout" to "Optimized Checkout (demo)"
+- Do not show newsletter box as switch, but as checkbox
+- Set META tags in demo
+- Add Dutch translation
+- Remove colors in favor of a11y
+- Fixes for radio buttons
+- Use switch for newsletter
+- Override login and email field
+
 ## [2.0.2] - 15 August 2025
 ### Fixed
 - Mark input field with [data-valid] also on page load when it is valid and not-empty
