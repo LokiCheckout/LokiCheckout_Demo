@@ -8,8 +8,7 @@ use Magento\Framework\View\Element\Template;
 <div class="loki">
     <div class="rounded-lg heading relative bg-cover bg-gradient-to-r from-indigo-900 to-orange-500 text-white">
         <div class="rounded-lg absolute z-0 top-0 left-0 right-0 bottom-0 bg-no-repeat bg-cover opacity-50"
-             style="background-image: url('<?= /* @noEscape */
-$block->getViewFileUrl(
+             style="background-image: url('<?= /* @noEscape */ $block->getViewFileUrl(
                  'LokiCheckout_Demo::images/loki-checkout.jpg'
              ) ?>')"></div>
         <div class="relative z-20 p-8 md:p-32 text-center">
@@ -98,8 +97,7 @@ $block->getViewFileUrl(
         font-style: normal;
         font-weight: 200 700;
         font-display: swap;
-        src: url(<?= /* @noEscape */
-             $block->getViewFileUrl('LokiCheckout_Demo::fonts/oswald-latin.woff2') ?>) format('woff2');
+        src: url(<?= /* @noEscape */ $block->getViewFileUrl('LokiCheckout_Demo::fonts/oswald-latin.woff2') ?>) format('woff2');
         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
     }
 

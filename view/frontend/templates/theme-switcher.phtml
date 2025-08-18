@@ -19,8 +19,7 @@ use Loki\Components\Util\Block\CssClass;
         name="theme-switcher"
         :value="value"
         @change="submitValue"
-        class="<?= /* @noEscape */
-$css('form-select w-full disabled:bg-zinc-100') ?>">
+        class="<?= /* @noEscape */ $css('form-select w-full disabled:bg-zinc-100') ?>">
         <option value=""> -- <?= $escaper->escapeHtml(__('Select a theme')) ?> --</option>
         <?php foreach ($viewModel->getThemes() as $theme) : ?>
             <?php $selected = ($viewModel->getValue() === $theme->getName()) ? 'selected' : ''; ?>
