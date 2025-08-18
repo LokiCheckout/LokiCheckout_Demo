@@ -1,0 +1,50 @@
+<?php
+declare(strict_types=1);
+
+use Loki\Components\Util\Block\TemplateRenderer;
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+use Loki\Components\Factory\ViewModelFactory;
+use Loki\Components\Util\Block\CssClass;
+use LokiCheckout\Core\ViewModel\CheckoutState;
+use Loki\Field\ViewModel\ImageOutput;
+
+/** @var Escaper $escaper */
+/** @var Template $block */
+/** @var ViewModelFactory $viewModelFactory */
+/** @var CheckoutState $checkoutState */
+/** @var CssClass $css */
+/** @var ImageOutput $imageOutput */
+/** @var TemplateRenderer $templateRenderer */
+
+$imageOutput = $viewModelFactory->create(ImageOutput::class);
+$checkoutState = $viewModelFactory->create(CheckoutState::class);
+$customerSession = $checkoutState->getCustomerSession();
+$isLoggedIn = $customerSession->isLoggedIn();
+
+$logoutUrl = $block->getUrl('customer/account/logout');
+$showCustomerEmail = (bool)$block->getShowCustomerEmail();
+$showLogoutLink = (bool)$block->getShowLogoutLink();
+
+$customerName = $escaper->escapeHtml($customerSession->getCustomer()->getName());
+$customerEmail = $escaper->escapeHtml($customerSession->getCustomer()->getEmail());
+?>
+<p class="<?= /* @noEscape */ $css('') ?>">
+    <?= $escaper->escapeHtml(__('You are logged in as %1', $customerName)) ?>
+
+    <?php if ($showCustomerEmail) : ?>
+        <em class="<?= /* @noEscape */ $css('', 'email') ?>">
+            (<?= $customerEmail ?>)
+        </em>
+    <?php endif; ?>
+</p>
+
+<?php if ($showLogoutLink) : ?>
+    <p class="<?= /* @noEscape */ $css('mr-1', 'logout') ?>">
+        <?= $escaper->escapeHtml(__('Are you not %1?', $customerName)) ?>,
+
+        <a href="<?= $escaper->escapeHtml($logoutUrl) ?>">
+            (<?= $escaper->escapeHtml(__('Sign Out')) ?>)
+        </a>
+    </p>
+<?php endif; ?>

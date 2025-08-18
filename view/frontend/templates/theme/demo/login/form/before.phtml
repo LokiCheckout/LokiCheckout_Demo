@@ -1,0 +1,15 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+use Loki\Components\Util\Block\CssClass;
+
+/** @var Escaper $escaper */
+/** @var Template $block */
+/** @var CssClass $css */
+
+?>
+<span class="<?= /* @noEscape */ $css('', 'span') ?>">
+    <?= $escaper->escapeHtml(__('Are you a regular shopper?')) ?>
+</span>

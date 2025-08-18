@@ -1,0 +1,37 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+use Loki\Components\Factory\ViewModelFactory;
+use Loki\Components\Util\Block\CssClass;
+use LokiCheckout\Core\ViewModel\CheckoutState;
+
+/** @var Escaper $escaper */
+/** @var Template $block */
+/** @var ViewModelFactory $viewModelFactory */
+/** @var CheckoutState $checkoutState */
+/** @var CssClass $css */
+
+$checkoutState = $viewModelFactory->create(CheckoutState::class);
+$customerSession = $checkoutState->getCustomerSession();
+$customerName = $escaper->escapeHtml(
+    $customerSession->getCustomer()->getName()
+);
+
+$showLogoutLink = (bool)$block->getShowLogoutLink();
+$logoutUrl = $block->getUrl('customer/account/logout');
+
+if (false === $showLogoutLink) {
+    return;
+}
+?>
+<p class="<?= /* @noEscape */ $css('mr-1', '') ?>">
+    <?= $escaper->escapeHtml(__('Are you not %1?', $customerName)) ?>
+
+    <a
+        class="<?= /* @noEscape */ $css('underline font-medium hover:no-underline', 'logout') ?>"
+        href="<?= $escaper->escapeHtml($logoutUrl) ?>">
+        <?= $escaper->escapeHtml(__('Sign Out')) ?>
+    </a>
+</p>

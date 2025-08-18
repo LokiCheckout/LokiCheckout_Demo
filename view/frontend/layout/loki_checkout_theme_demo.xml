@@ -19,17 +19,17 @@
         <!-- Move newsletter to below email field -->
         <move element="loki-checkout.newsletter" destination="loki-checkout.customer" as="newsletter"/>
 
-        <!-- Combine email field and login option in one block -->
-        <referenceBlock name="loki-checkout.customer">
-            <block
-                name="loki-checkout.customer.customer_email_container"
-                template="LokiCheckout_Demo::theme/demo/email-login.phtml"
-                before="-"
-            />
+        <referenceBlock name="loki-checkout.login">
+            <arguments>
+                <argument name="css_classes" xsi:type="array">
+                    <item name="block" xsi:type="array">
+                        <item name="default" xsi:type="string">foobar</item>
+                    </item>
+                </argument>
+            </arguments>
         </referenceBlock>
 
-        <move element="loki-checkout.customer.customer_email" destination="loki-checkout.customer.customer_email_container" as="email" before="-" />
-        <move element="loki-checkout.login" destination="loki-checkout.customer.customer_email_container" as="login" after="-" />
+        <move element="loki-checkout.login" destination="loki-checkout.customer" as="login" after="customer_email" />
 
         <!-- Additional styling -->
         <referenceContainer name="before.body.end">
@@ -41,5 +41,22 @@
                 <argument name="field_type" xsi:type="string">switch</argument>
             </arguments>
         </referenceBlock>
+
+        <referenceBlock name="loki-checkout.login.logged-in.logout" template="LokiCheckout_Demo::theme/demo/login/logged-in/logout.phtml"/>
+
+        <referenceBlock name="loki-checkout.login.form">
+            <arguments>
+                <argument name="button_label" xsi:type="string">Sign in for a faster checkout</argument>
+                    <argument name="css_classes" xsi:type="array">
+                        <item name="button" xsi:type="array">
+                            <item name="default" xsi:type="string">underline font-medium hover:no-underline</item>
+                        </item>
+                    </argument>
+            </arguments>
+
+            <block name="loki-checkout-demo.login.form.before" as="before"
+            template="LokiCheckout_Demo::theme/demo/login/form/before.phtml"/>
+        </referenceBlock>
     </body>
 </page>
+
