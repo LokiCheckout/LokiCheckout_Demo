@@ -7,8 +7,6 @@ use Magento\Framework\View\Element\Template;
 <script src="<?= /* @noEscape */ $block->getViewFileUrl("LokiCheckout_Demo::js/tour.js") ?>" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
-    // @todo: https://tourguidejs.com/#guide
-    // @todo: Add CSP compliance
     let tg = null;
     document.addEventListener('DOMContentLoaded', function() {
         tg = new tourguide.TourGuideClient({
