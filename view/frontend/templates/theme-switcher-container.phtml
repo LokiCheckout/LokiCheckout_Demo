@@ -5,9 +5,8 @@ declare(strict_types=1);
 
 use Magento\Framework\View\Element\Template;
 
-/**
- * @var Template $block
- */
+/** @var Template $block */
+
 ?>
 <div class="<?= $css('hidden md:block order-12 mx-2') ?>">
     <?= /* @noEscape */ $block->getChildHtml() ?>
