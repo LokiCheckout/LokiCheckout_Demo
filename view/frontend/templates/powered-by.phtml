@@ -3,6 +3,11 @@ declare(strict_types=1);
 
 /** @version 2.0.4 */
 
+use Magento\Framework\View\Element\Template;
+use Magento\Framework\Escaper;
+
+/** @var Template $block */
+/** @var Escaper $escaper */
 use Loki\Components\Factory\ViewModelFactory;
 use Loki\Field\ViewModel\ImageOutput;
 
@@ -13,11 +18,11 @@ use Loki\Field\ViewModel\ImageOutput;
 $imageOutput = $viewModelFactory->create(ImageOutput::class);
 ?>
 
-<div class="card my-4">
-    <div class="w-6 float-left mr-4">
+<div class="<?= $css('card my-4', '@todo') ?>">
+    <div class="<?= $css('w-6 float-left mr-4', '@todo') ?>">
         <?= /** @noEscape */ $imageOutput->get('LokiCheckout_Demo::images/snake.svg') ?>
     </div>
-    <span class="text-lg font-bold">
+    <span class="<?= $css('text-lg font-bold', '@todo') ?>">
         <?= $escaper->escapeHtml(__('Powered by')) ?> <a href="https://loki-checkout.com/">LokiCheckout</a>
     </span>
 </div>

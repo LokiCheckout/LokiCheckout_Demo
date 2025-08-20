@@ -7,16 +7,16 @@ use Magento\Framework\View\Element\Template;
 
 /** @var Template $block */
 ?>
-<div class="loki">
-    <div class="rounded-lg heading relative bg-cover bg-gradient-to-r from-indigo-900 to-orange-500 text-white">
-        <div class="rounded-lg absolute z-0 top-0 left-0 right-0 bottom-0 bg-no-repeat bg-cover opacity-50"
+<div class="<?= $css('loki', '@todo') ?>">
+    <div class="<?= $css('rounded-lg heading relative bg-cover bg-gradient-to-r from-indigo-900 to-orange-500 text-white', '@todo') ?>">
+        <div class="<?= $css('rounded-lg absolute z-0 top-0 left-0 right-0 bottom-0 bg-no-repeat bg-cover opacity-50', '@todo') ?>"
              style="background-image: url('<?= /* @noEscape */ $block->getViewFileUrl(
                  'LokiCheckout_Demo::images/loki-checkout.jpg'
              ) ?>')"></div>
-        <div class="relative z-20 p-8 md:p-32 text-center">
-            <h1 class="text-3xl md:text-7xl font-bold mb-8">Loki Checkout</h1>
-            <h2 class="text-xl md:text-3xl font-bold mb-8">A low-key checkout for developers</h2>
-            <h3 class="text-lg md:text-2xl font-light mb-8">Bloody fast, easy to extend, component-based</h3>
+        <div class="<?= $css('relative z-20 p-8 md:p-32 text-center', '@todo') ?>">
+            <h1 class="<?= $css('text-3xl md:text-7xl font-bold mb-8', '@todo') ?>">Loki Checkout</h1>
+            <h2 class="<?= $css('text-xl md:text-3xl font-bold mb-8', '@todo') ?>">A low-key checkout for developers</h2>
+            <h3 class="<?= $css('text-lg md:text-2xl font-light mb-8', '@todo') ?>">Bloody fast, easy to extend, component-based</h3>
             <p>
                 With the Loki Checkout, you get a checkout that is bloody fast and easy to extend by developers.
                 Using Loki Components, you can quickly customize things on numerous levels.
@@ -26,67 +26,67 @@ use Magento\Framework\View\Element\Template;
         </div>
     </div>
 
-    <div class="grid md:grid-cols-2 md:gap-8 py-8">
-        <div class="md:p-8">
-            <h3 class="text-2xl mb-4">Technology stack</h3>
-            <ul class="mb-4 marker:text-orange-600 list-outside list-disc ml-6">
+    <div class="<?= $css('grid md:grid-cols-2 md:gap-8 py-8', '@todo') ?>">
+        <div class="<?= $css('md:p-8', '@todo') ?>">
+            <h3 class="<?= $css('text-2xl mb-4', '@todo') ?>">Technology stack</h3>
+            <ul class="<?= $css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', '@todo') ?>">
                 <li>Supporting Luma, Breeze and Hyvä</li>
                 <li>Based on LokiComponents with alpine.js and TailwindCSS</li>
                 <li>CSP & PCI compliance (<code>no-eval</code> and <code>no-inline</code>)</li>
                 <li>Coverage with Playwright Tests & Integration Tests</li>
             </ul>
 
-            <p class="my-8 md:mb-16">
+            <p class="<?= $css('my-8 md:mb-16', '@todo') ?>">
                 <a href="https://loki-checkout.com/docs/02-dev"
-                   class="border border-orange-800 bg-orange-600 text-white rounded-sm p-3">Dive into our dev-docs</a>
+                   class="<?= $css('border border-orange-800 bg-orange-600 text-white rounded-sm p-3', '@todo') ?>">Dive into our dev-docs</a>
             </p>
 
-            <h3 class="text-2xl mb-4">Your benefits</h3>
-            <ul class="mb-4 marker:text-orange-600 list-outside list-disc ml-6">
+            <h3 class="<?= $css('text-2xl mb-4', '@todo') ?>">Your benefits</h3>
+            <ul class="<?= $css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', '@todo') ?>">
                 <li>Granular components and templates to keep legacy low</li>
                 <li>A familiar Magento stack (XML layout, Blocks and ViewModels)</li>
                 <li>Easier JS-layer with alpine.js (incl component types and stores)</li>
                 <li>True flexibility when it comes to customization</li>
             </ul>
 
-            <p class="my-8 md:mb-16">
+            <p class="<?= $css('my-8 md:mb-16', '@todo') ?>">
                 <a href="https://loki-checkout.com/#benefits"
-                   class="border border-orange-800 bg-orange-600 text-white rounded-sm p-3">Inspect more benefits</a>
+                   class="<?= $css('border border-orange-800 bg-orange-600 text-white rounded-sm p-3', '@todo') ?>">Inspect more benefits</a>
             </p>
         </div>
-        <div class="md:p-8">
-            <h3 class="text-2xl mb-4">Existing integrations</h3>
-            <ul class="mb-4 marker:text-orange-600 list-outside list-disc ml-6">
+        <div class="<?= $css('md:p-8', '@todo') ?>">
+            <h3 class="<?= $css('text-2xl mb-4', '@todo') ?>">Existing integrations</h3>
+            <ul class="<?= $css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', '@todo') ?>">
                 <li>Mollie, Buckaroo, PAY, MultiSafepay and more</li>
                 <li>Post NL, DHL, Sendcloud, MyParcel and more</li>
                 <li>Postcode NL, EU VAT, CoC, Geissweb and more</li>
                 <li>And numerous core features</li>
             </ul>
 
-            <p class="my-8 md:mb-16">
+            <p class="<?= $css('my-8 md:mb-16', '@todo') ?>">
                 <a href="https://loki-checkout.com/docs/03-modules"
-                   class="border border-orange-800 bg-orange-600 text-white rounded-sm p-3">Review all modules</a>
+                   class="<?= $css('border border-orange-800 bg-orange-600 text-white rounded-sm p-3', '@todo') ?>">Review all modules</a>
             </p>
 
-            <h3 class="text-2xl my-4">Our release plan</h3>
-            <ul class="mb-4 marker:text-orange-600 list-outside list-disc ml-6">
+            <h3 class="<?= $css('text-2xl my-4', '@todo') ?>">Our release plan</h3>
+            <ul class="<?= $css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', '@todo') ?>">
                 <li>Things have been stable since February 2025</li>
                 <li>These days, we are heading towards Milestone 1.0</li>
                 <li>In the summer of 2025, Milestone 1.1 will be reached</li>
                 <li>Every licensee is a partner to develop things with</li>
             </ul>
 
-            <p class="my-8 md:mb-16">
+            <p class="<?= $css('my-8 md:mb-16', '@todo') ?>">
                 <a href="https://loki-checkout.com/docs/02-roadmap"
-                   class="border border-orange-800 bg-orange-600 text-white rounded-sm p-3">See our roadmap</a>
+                   class="<?= $css('border border-orange-800 bg-orange-600 text-white rounded-sm p-3', '@todo') ?>">See our roadmap</a>
             </p>
         </div>
     </div>
 
-    <div class="rounded-lg bg-gradient-to-r from-indigo-900 to-orange-500 text-white text-center py-8 md:py-24">
-        <h1 class="text-2xl md:text-6xl py-4">We all benefit from a better checkout</h1>
-        <p class="py-4 md:py-16">
-            <a href="https://loki-checkout.com/" class="border border-white rounded-sm md:text-xl p-4">Get started now</a>
+    <div class="<?= $css('rounded-lg bg-gradient-to-r from-indigo-900 to-orange-500 text-white text-center py-8 md:py-24', '@todo') ?>">
+        <h1 class="<?= $css('text-2xl md:text-6xl py-4', '@todo') ?>">We all benefit from a better checkout</h1>
+        <p class="<?= $css('py-4 md:py-16', '@todo') ?>">
+            <a href="https://loki-checkout.com/" class="<?= $css('border border-white rounded-sm md:text-xl p-4', '@todo') ?>">Get started now</a>
         </p>
     </div>
 
