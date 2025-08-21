@@ -6,6 +6,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.6] - 21 August 2025
+### Fixed
+- Add dependency with loki/magento2-css-utils
+- Re-ordering blocks
+- Re-ordering blocks
+- Formatting
+- Declare used PHP namespaces
+- Convert multi-line phpdoc block into single blocks
+- Convert multi-line phpdoc block into single blocks
+- Formatting
+- Convert multi-line phpdoc block into single blocks
+- Convert multi-line phpdoc block into single blocks
+- Convert multi-line phpdoc block into single blocks
+- Replace LokiComponentsUtilBlockCssClass with LokiCssUtilsUtilCssClass
+- Declare used PHP namespaces
+- Document latest version of template
+- Add missing strict_types declaration
+
 ## [2.0.5] - 19 August 2025
 ### Fixed
 - Remove obsolete todos
