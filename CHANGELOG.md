@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.7] - 26 August 2025
+### Fixed
+- 419dfb7 Additional translations
+- 3d762e4 Add Gitlab CI/CD files
+- c0e173c Fix gap for mobile
+
 ## [2.0.6] - 21 August 2025
 ### Fixed
 - Add dependency with loki/magento2-css-utils
