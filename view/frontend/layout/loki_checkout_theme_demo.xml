@@ -29,6 +29,14 @@
             </arguments>
         </referenceBlock>
 
+        <referenceBlock name="loki-checkout.customer.customer_dob">
+            <arguments>
+                <argument name="field_attributes" xsi:type="array">
+                    <item name="x-flatpickr" xsi:type="boolean">true</item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+
         <move element="loki-checkout.login" destination="loki-checkout.customer" as="login" after="customer_email" />
 
         <!-- Additional styling -->

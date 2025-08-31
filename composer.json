@@ -15,6 +15,7 @@
         "magento/framework": "^103.0",
         "magento/module-checkout": "^100.0",
         "loki-checkout/magento2-core": "^2.0",
+        "loki/magento2-flatpickr": "^1.0",
         "loki/magento2-css-utils": "^1.0",
         "loki/magento2-components": "^2.0",
         "yireo/magento2-additional-block-template": "^0.0.3"
