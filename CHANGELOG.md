@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.10] - 02 September 2025
+### Fixed
+- Make sure default theme and grid layout are selected in toggle-boxes
+
 ## [2.0.9] - 02 September 2025
 ### Fixed
 - Add optimized images
