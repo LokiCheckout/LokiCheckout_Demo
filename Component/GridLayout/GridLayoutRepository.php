@@ -2,6 +2,7 @@
 
 namespace LokiCheckout\Demo\Component\GridLayout;
 
+use LokiCheckout\Core\Config\Config;
 use Magento\Framework\Message\ManagerInterface as MessageManager;
 use Loki\Components\Component\ComponentRepository;
 use Loki\Components\Exception\RedirectException;
@@ -12,13 +13,19 @@ use Loki\Components\Exception\RedirectException;
 class GridLayoutRepository extends ComponentRepository
 {
     public function __construct(
-        private readonly MessageManager $messageManager
+        private readonly MessageManager $messageManager,
+        private readonly Config $config
     ) {
     }
 
     public function getValue(): mixed
     {
-        return (string)$this->getContext()->getCheckoutSession()->getCurrentGridLayout();
+        $currentGridLayout = (string)$this->getContext()->getCheckoutSession()->getCurrentGridLayout();
+        if (!empty($currentGridLayout)) {
+            return $currentGridLayout;
+        }
+
+        return $this->config->getGridLayoutName();
     }
 
     public function saveValue(mixed $value): void

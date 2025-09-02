@@ -2,6 +2,7 @@
 
 namespace LokiCheckout\Demo\Component\Theme;
 
+use LokiCheckout\Core\Config\Config;
 use Magento\Framework\Message\ManagerInterface as MessageManager;
 use Loki\Components\Component\ComponentRepository;
 use Loki\Components\Exception\RedirectException;
@@ -12,13 +13,19 @@ use Loki\Components\Exception\RedirectException;
 class ThemeRepository extends ComponentRepository
 {
     public function __construct(
-        private readonly MessageManager $messageManager
+        private readonly MessageManager $messageManager,
+        private readonly Config $config
     ) {
     }
 
     public function getValue(): mixed
     {
-        return (string)$this->getContext()->getCheckoutSession()->getCurrentTheme();
+        $currentTheme = (string)$this->getContext()->getCheckoutSession()->getCurrentTheme();
+        if (!empty($currentTheme)) {
+            return $currentTheme;
+        }
+
+        return $this->config->getTheme();
     }
 
     public function saveValue(mixed $value): void
