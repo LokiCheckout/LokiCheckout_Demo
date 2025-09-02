@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace LokiCheckout\Demo\Test\Unit\Component\GridLayout;
 
+use LokiCheckout\Core\Config\Config;
 use Magento\Checkout\Model\Session;
 use Magento\Framework\Message\ManagerInterface;
 use Magento\Framework\UrlFactory;
 use Magento\Framework\UrlInterface;
 use PHPUnit\Framework\TestCase;
-use Yireo\IntegrationTestHelper\Test\Integration\Traits\GetObjectManager;
 use LokiCheckout\Core\Test\Unit\Stub\CheckoutSessionStub;
 use LokiCheckout\Demo\Component\GridLayout\GridLayoutContext;
 use LokiCheckout\Demo\Component\GridLayout\GridLayoutRepository;
@@ -18,8 +18,6 @@ use Loki\Components\Exception\RedirectException;
 
 final class GridLayoutRepositoryTest extends TestCase
 {
-    use GetObjectManager;
-
     final public function testGetValue()
     {
         $checkoutSession = $this->createMock(CheckoutSessionStub::class);
@@ -32,7 +30,8 @@ final class GridLayoutRepositoryTest extends TestCase
         $component->method('getContext')->willReturn($context);
 
         $messageManager = $this->createMock(ManagerInterface::class);
-        $repository = new GridLayoutRepository($messageManager);
+        $config = $this->createMock(Config::class);
+        $repository = new GridLayoutRepository($messageManager, $config);
         $repository->setComponent($component);
 
         $this->assertEquals('foobar', $repository->getValue());
@@ -56,7 +55,8 @@ final class GridLayoutRepositoryTest extends TestCase
         $component->method('getContext')->willReturn($context);
 
         $messageManager = $this->createMock(ManagerInterface::class);
-        $repository = new GridLayoutRepository($messageManager);
+        $config = $this->createMock(Config::class);
+        $repository = new GridLayoutRepository($messageManager, $config);
         $repository->setComponent($component);
 
         $this->expectException(RedirectException::class);
