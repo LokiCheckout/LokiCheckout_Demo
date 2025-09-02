@@ -3,6 +3,7 @@
         "Magento_Checkout",
         "Magento_Store",
         "Loki_Components",
+        "Loki_Flatpickr",
         "LokiCheckout_Core",
         "Yireo_IntegrationTestHelper",
         "Yireo_AdditionalBlockTemplate"
