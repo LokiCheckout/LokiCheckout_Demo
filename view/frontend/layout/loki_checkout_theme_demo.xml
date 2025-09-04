@@ -50,6 +50,7 @@
             </arguments>
         </referenceBlock>
 
+        <!--
         <referenceBlock name="loki-checkout.payment.methods">
             <arguments>
                 <argument name="css_classes" xsi:type="array">
@@ -59,6 +60,7 @@
                 </argument>
             </arguments>
         </referenceBlock>
+        -->
 
         <referenceBlock name="loki-checkout.login.logged-in.logout" template="LokiCheckout_Demo::theme/demo/login/logged-in/logout.phtml"/>
 
