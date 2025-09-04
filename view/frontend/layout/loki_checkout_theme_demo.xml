@@ -54,7 +54,7 @@
             <arguments>
                 <argument name="css_classes" xsi:type="array">
                     <item name="list" xsi:type="array">
-                        <item name="default" xsi:type="string">grid grid-cols-2</item>
+                        <item name="default" xsi:type="string">grid md:grid-cols-2</item>
                     </item>
                 </argument>
             </arguments>
