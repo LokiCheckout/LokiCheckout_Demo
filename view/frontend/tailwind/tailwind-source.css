@@ -7,7 +7,7 @@
         }
     }
 
-    .loki-checkout-payment-payment-methods-item {
+    .loki-checkout-payment-methods-item {
         &.active {
             @apply border rounded-md border-sky-300 bg-sky-50;
         }
