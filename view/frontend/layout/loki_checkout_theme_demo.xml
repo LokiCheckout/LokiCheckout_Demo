@@ -37,7 +37,7 @@
             </arguments>
         </referenceBlock>
 
-        <move element="loki-checkout.login" destination="loki-checkout.customer" as="login" after="customer_email" />
+        <move element="loki-checkout.login" destination="loki-checkout.customer" as="login" after="customer_email"/>
 
         <!-- Additional styling -->
         <referenceContainer name="before.body.end">
@@ -50,20 +50,30 @@
             </arguments>
         </referenceBlock>
 
+        <referenceBlock name="loki-checkout.payment.methods">
+            <arguments>
+                <argument name="css_classes" xsi:type="array">
+                    <item name="list" xsi:type="array">
+                        <item name="default" xsi:type="string">grid grid-cols-2</item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+
         <referenceBlock name="loki-checkout.login.logged-in.logout" template="LokiCheckout_Demo::theme/demo/login/logged-in/logout.phtml"/>
 
         <referenceBlock name="loki-checkout.login.form">
             <arguments>
                 <argument name="button_label" xsi:type="string">Sign in for a faster checkout</argument>
-                    <argument name="css_classes" xsi:type="array">
-                        <item name="button" xsi:type="array">
-                            <item name="default" xsi:type="string">underline font-medium hover:no-underline</item>
-                        </item>
-                    </argument>
+                <argument name="css_classes" xsi:type="array">
+                    <item name="button" xsi:type="array">
+                        <item name="default" xsi:type="string">underline font-medium hover:no-underline</item>
+                    </item>
+                </argument>
             </arguments>
 
             <block name="loki-checkout-demo.login.form.before" as="before"
-            template="LokiCheckout_Demo::theme/demo/login/form/before.phtml"/>
+                   template="LokiCheckout_Demo::theme/demo/login/form/before.phtml"/>
         </referenceBlock>
     </body>
 </page>
