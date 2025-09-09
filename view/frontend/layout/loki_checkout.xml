@@ -18,16 +18,18 @@
         </referenceContainer>
 
         <referenceContainer name="content">
-            <container name="loki-checkout-demo.mobile-actions" htmlTag="div" htmlClass="loki block md:hidden" before="-">
-                <block
-                    name="loki-checkout-demo.theme-switcher-mobile"
-                    template="LokiCheckout_Demo::theme-switcher.phtml"
-                />
+            <container name="loki-checkout-demo.mobile-actions" htmlTag="div" htmlClass="loki" before="-">
+                <container name="loki-checkout-demo.mobile-actions-inner" htmlTag="div" htmlClass="block md:hidden">
+                    <block
+                        name="loki-checkout-demo.theme-switcher-mobile"
+                        template="LokiCheckout_Demo::theme-switcher.phtml"
+                    />
 
-                <block
-                    name="loki-checkout-demo.grid-layout-switcher-mobile"
-                    template="LokiCheckout_Demo::grid-layout-switcher.phtml"
-                />
+                    <block
+                        name="loki-checkout-demo.grid-layout-switcher-mobile"
+                        template="LokiCheckout_Demo::grid-layout-switcher.phtml"
+                    />
+                </container>
             </container>
         </referenceContainer>
 

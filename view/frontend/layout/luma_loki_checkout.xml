@@ -2,7 +2,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
     <body>
         <referenceContainer name="header-wrapper">
-            <container htmlTag="div" htmlClass="loki flex float-right">
+            <container htmlTag="div" htmlClass="loki">
                 <container htmlTag="div" htmlClass="flex float-right">
                     <block template="LokiCheckout_Demo::theme-switcher-container.phtml">
                         <block name="loki-checkout-demo.theme-switcher" as="theme-switcher"
