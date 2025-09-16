@@ -1,24 +1,52 @@
 {
-    "modules": [
-        "Magento_Checkout",
-        "Magento_Store",
+    "sequence": [
+        "LokiCheckout_Core",
         "Loki_Components",
         "Loki_Flatpickr",
+        "Magento_Checkout",
+        "Magento_Store",
+        "Yireo_AdditionalBlockTemplate",
+        "Yireo_IntegrationTestHelper"
+    ],
+    "modules": [
         "LokiCheckout_Core",
-        "Yireo_IntegrationTestHelper",
-        "Yireo_AdditionalBlockTemplate"
+        "Loki_Base",
+        "Loki_Components",
+        "Loki_CssUtils",
+        "Loki_FieldComponents",
+        "Loki_Flatpickr",
+        "Loki_MapComponents",
+        "Magento_Backend",
+        "Magento_Catalog",
+        "Magento_CatalogInventory",
+        "Magento_Checkout",
+        "Magento_CheckoutAgreements",
+        "Magento_Config",
+        "Magento_Customer",
+        "Magento_Directory",
+        "Magento_Eav",
+        "Magento_Newsletter",
+        "Magento_Payment",
+        "Magento_Quote",
+        "Magento_Sales",
+        "Magento_Shipping",
+        "Magento_Store",
+        "Magento_Vault",
+        "Yireo_AdditionalBlockTemplate",
+        "Yireo_CspUtilities",
+        "Yireo_HyvaThemeAutoRegistration",
+        "Yireo_IntegrationTestHelper"
     ],
     "components": [
-        "loki-checkout-demo.theme-switcher",
-        "loki-checkout-demo.theme-switcher-mobile",
         "loki-checkout-demo.grid-layout-switcher",
-        "loki-checkout-demo.grid-layout-switcher-mobile"
+        "loki-checkout-demo.grid-layout-switcher-mobile",
+        "loki-checkout-demo.theme-switcher",
+        "loki-checkout-demo.theme-switcher-mobile"
     ],
     "config": [],
     "tests": {
         "unit": 2,
         "integration": 0,
         "functional": 0
-    },
-    "phpstan_level": "5"
+    }
 }
