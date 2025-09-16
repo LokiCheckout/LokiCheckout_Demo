@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.11] - 16 September 2025
+### Fixed
+- Split up loki-container from utilities below
+- Add PHPStan levels
+- Undo grid
+- Reapply blue border to current payment method
+- Mobile fix
+- Show payment methods in grid of 2 for optimized theme
+- Fix unit test
+- Copy generic CI/CD files
+
 ## [2.0.10] - 02 September 2025
 ### Fixed
 - Make sure default theme and grid layout are selected in toggle-boxes
