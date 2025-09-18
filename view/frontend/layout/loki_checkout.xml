@@ -33,7 +33,7 @@
             </container>
         </referenceContainer>
 
-        <referenceContainer name="loki-scripts">
+        <referenceContainer name="loki.script">
             <block name="loki-checkout-demo.tourguide-css"
                    template="LokiCheckout_Demo::tourguide-css.phtml"
             />
