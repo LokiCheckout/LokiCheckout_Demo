@@ -4,25 +4,24 @@ declare(strict_types=1);
 use Loki\CssUtils\Util\CssClass;
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\Escaper;
+use Loki\Components\Factory\ViewModelFactory;
+use Loki\Components\Util\ImageOutput;
 
+/** @version 2.0.11 */
 /** @var CssClass $css */
 /** @var Template $block */
 /** @var Escaper $escaper */
-use Loki\Components\Factory\ViewModelFactory;
-use Loki\Field\ViewModel\ImageOutput;
-
-/** @version 2.0.11 */
 /** @var ViewModelFactory $viewModelFactory */
 /** @var ImageOutput $imageOutput */
 
 $imageOutput = $viewModelFactory->create(ImageOutput::class);
 ?>
 
-<div class="<?= $css('card my-4', '@todo') ?>">
-    <div class="<?= $css('w-6 float-left mr-4', '@todo') ?>">
-        <?= /** @noEscape */ $imageOutput->get('LokiCheckout_Demo::images/snake.svg') ?>
+<div class="<?= $css('card my-4', '') ?>">
+    <div class="<?= $css('float-left mr-4', 'image') ?>">
+        <?= /** @noEscape */ $imageOutput->get('LokiCheckout_Demo::images/snake.svg', ['width' => 20, 'height' => 20]) ?>
     </div>
-    <span class="<?= $css('text-lg font-bold', '@todo') ?>">
+    <span class="<?= $css('text-lg font-bold', 'text') ?>">
         <?= $escaper->escapeHtml(__('Powered by')) ?> <a href="https://loki-checkout.com/">LokiCheckout</a>
     </span>
 </div>
