@@ -33,11 +33,11 @@
             </container>
         </referenceContainer>
 
-        <referenceContainer name="loki.script">
+        <referenceBlock name="loki.script">
             <block name="loki-checkout-demo.tourguide-css"
                    template="LokiCheckout_Demo::tourguide-css.phtml"
             />
-        </referenceContainer>
+        </referenceBlock>
 
         <referenceBlock name="loki-checkout.steps">
             <arguments>

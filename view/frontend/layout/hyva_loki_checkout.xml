@@ -21,11 +21,11 @@
             </container>
         </referenceContainer>
 
-        <referenceContainer name="loki.script">
+        <referenceBlock name="loki.script">
             <block
                 name="loki-checkout-demo.tourguide-js"
                 template="LokiCheckout_Demo::hyva/tourguide-js.phtml"
             />
-        </referenceContainer>
+        </referenceBlock>
     </body>
 </page>
