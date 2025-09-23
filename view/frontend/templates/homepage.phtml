@@ -3,23 +3,23 @@ declare(strict_types=1);
 
 use Loki\Components\Factory\ViewModelFactory;
 use Loki\CssUtils\Util\CssClass;
-use Loki\Components\Util\ImageOutput;
+use Loki\Components\Util\Block\ImageRenderer;
 use Magento\Framework\View\Element\Template;
 
 /** @version 2.0.11 */
 /** @var Template $block */
 /** @var CssClass $css */
 /** @var ViewModelFactory $viewModelFactory */
-/** @var ImageOutput $imageOutput */
+/** @var ImageRenderer $imageRenderer */
 
-$imageOutput = $viewModelFactory->create(ImageOutput::class);
-$icon = $imageOutput->get('LokiCheckout_Demo::images/loki.svg');
+
+$icon = $imageRenderer->get('LokiCheckout_Demo::images/loki.svg');
 
 ?>
 <div class="<?= $css('loki') ?>">
     <div class="<?= $css('rounded-lg heading relative bg-stone-800 text-white', 'heading') ?>">
         <div class="<?= $css('absolute z-0 top-0 left-0 right-0 bottom-0 overflow-hidden opacity-30 rounded-lg', 'heading-overlay') ?>">
-            <?= $imageOutput->get('LokiCheckout_Demo::images/ocean.png', [
+            <?= $imageRenderer->get('LokiCheckout_Demo::images/ocean.png', [
                 'class' => $css('w-full h-full object-cover', 'overlay-image'),
                 'alt' => 'Header image'
             ]) ?>
