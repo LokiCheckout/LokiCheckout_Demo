@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.12] - 24 September 2025
+### Fixed
+- Add proper ID
+- Implement new imageRenderer
+- Autoswitch imageRenderer::get() for SVG or other image
+- Output SVG with given XML attributes properly
+- Move sort order of steps from XML layout into `loki_checkout.xml`
+- Rename loki-scripts to loki.script
+
 ## [2.0.11] - 16 September 2025
 ### Fixed
 - Split up loki-container from utilities below
