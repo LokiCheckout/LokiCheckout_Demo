@@ -27,11 +27,11 @@ if (false === $showLogoutLink) {
     return;
 }
 ?>
-<p class="<?= /* @noEscape */ $css('mr-1', '') ?>">
+<p class="<?= $escaper->escapeHtmlAttr($css('mr-1', '')) ?>">
     <?= $escaper->escapeHtml(__('Are you not %1?', $customerName)) ?>
 
     <a
-        class="<?= /* @noEscape */ $css('underline font-medium hover:no-underline', 'logout') ?>"
+        class="<?= $escaper->escapeHtmlAttr($css('underline font-medium hover:no-underline', 'logout')) ?>"
         href="<?= $escaper->escapeHtml($logoutUrl) ?>">
         <?= $escaper->escapeHtml(__('Sign Out')) ?>
     </a>

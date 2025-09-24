@@ -21,7 +21,7 @@ use Loki\Components\Factory\ViewModelFactory;
         name="grid-layout-switcher"
         :value="value"
         @change="submitValue"
-        class="<?= /* @noEscape */ $css('form-select w-full disabled:bg-zinc-100') ?>">
+        class="<?= $escaper->escapeHtmlAttr($css('form-select w-full disabled:bg-zinc-100')) ?>">
         <option value=""> -- <?= $escaper->escapeHtml(__('Select a grid layout')) ?> --</option>
         <?php foreach ($viewModel->getGridLayouts() as $gridLayout) : ?>
         <?php $selected = ($viewModel->getValue() === $gridLayout->getName()) ? 'selected' : ''; ?>

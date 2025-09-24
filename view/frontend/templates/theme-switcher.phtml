@@ -21,7 +21,7 @@ use Loki\Components\Factory\ViewModelFactory;
         name="theme-switcher"
         :value="value"
         @change="submitValue"
-        class="<?= /* @noEscape */ $css('form-select w-full disabled:bg-zinc-100') ?>">
+        class="<?= $escaper->escapeHtmlAttr($css('form-select w-full disabled:bg-zinc-100')) ?>">
         <option value=""> -- <?= $escaper->escapeHtml(__('Select a theme')) ?> --</option>
         <?php foreach ($viewModel->getThemes() as $theme) : ?>
             <?php $selected = ($viewModel->getValue() === $theme->getName()) ? 'selected' : ''; ?>

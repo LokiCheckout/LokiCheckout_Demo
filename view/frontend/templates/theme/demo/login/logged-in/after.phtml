@@ -30,18 +30,18 @@ $showLogoutLink = (bool)$block->getShowLogoutLink();
 $customerName = $escaper->escapeHtml($customerSession->getCustomer()->getName());
 $customerEmail = $escaper->escapeHtml($customerSession->getCustomer()->getEmail());
 ?>
-<p class="<?= /* @noEscape */ $css('') ?>">
+<p class="<?= $escaper->escapeHtmlAttr($css('')) ?>">
     <?= $escaper->escapeHtml(__('You are logged in as %1', $customerName)) ?>
 
     <?php if ($showCustomerEmail) : ?>
-        <em class="<?= /* @noEscape */ $css('', 'email') ?>">
+        <em class="<?= $escaper->escapeHtmlAttr($css('', 'email')) ?>">
             (<?= $escaper->escapeHtml($customerEmail) ?>)
         </em>
     <?php endif; ?>
 </p>
 
 <?php if ($showLogoutLink) : ?>
-    <p class="<?= /* @noEscape */ $css('mr-1', 'logout') ?>">
+    <p class="<?= $escaper->escapeHtmlAttr($css('mr-1', 'logout')) ?>">
         <?= $escaper->escapeHtml(__('Are you not %1?', $customerName)) ?>,
 
         <a href="<?= $escaper->escapeHtml($logoutUrl) ?>">

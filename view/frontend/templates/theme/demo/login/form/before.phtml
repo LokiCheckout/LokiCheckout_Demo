@@ -11,6 +11,6 @@ use Magento\Framework\View\Element\Template;
 /** @var CssClass $css */
 
 ?>
-<span class="<?= /* @noEscape */ $css('', 'span') ?>">
+<span class="<?= $escaper->escapeHtmlAttr($css('', 'span')) ?>">
     <?= $escaper->escapeHtml(__('Are you a regular shopper?')) ?>
 </span>
