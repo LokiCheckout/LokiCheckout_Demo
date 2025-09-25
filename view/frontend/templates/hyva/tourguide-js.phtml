@@ -1,9 +1,11 @@
 <?php
 declare(strict_types=1);
 
+use Magento\Framework\Escaper;
 use Magento\Framework\View\Element\Template;
 
 /** @version 2.0.12 */
+/** @var Escaper $escaper */
 /** @var Template $block */
 ?>
 <script src="<?= $escaper->escapeUrl($block->getViewFileUrl("LokiCheckout_Demo::js/tour.js")) ?>" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

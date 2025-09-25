@@ -3,8 +3,10 @@ declare(strict_types=1);
 
 /** @version 2.0.12 */
 
+use Magento\Framework\Escaper;
 use Magento\Framework\View\Element\Template;
 
+/** @var Escaper $escaper */
 /** @var Template $block */
 ?>
 <div class="<?= $escaper->escapeHtmlAttr($css('p-2 bg-orange-100 text-orange-800', '')) ?>">
