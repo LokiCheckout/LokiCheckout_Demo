@@ -20,7 +20,7 @@ use Loki\Components\Util\Block\ImageRenderer;
 
 <div class="<?= $escaper->escapeHtmlAttr($css('card my-4', '')) ?>">
     <div class="<?= $escaper->escapeHtmlAttr($css('float-left mr-4', 'image')) ?>">
-        <?= $escaper->escapeHtml($imageRenderer->get('LokiCheckout_Demo::images/snake.svg', ['width' => 20, 'height' => 20])) ?>
+        <?= $imageRenderer->get('LokiCheckout_Demo::images/snake.svg', ['width' => 20, 'height' => 20]) ?>
     </div>
     <span class="<?= $escaper->escapeHtmlAttr($css('text-lg font-bold', 'text')) ?>">
         <?= $escaper->escapeHtml(__('Powered by')) ?> <a href="https://loki-checkout.com/">LokiCheckout</a>
