@@ -22,7 +22,7 @@ $icon = $imageRenderer->get('LokiCheckout_Demo::images/loki.svg');
 <div class="<?= $escaper->escapeHtmlAttr($css('loki')) ?>">
     <div class="<?= $escaper->escapeHtmlAttr($css('rounded-lg heading relative bg-stone-800 text-white', 'heading')) ?>">
         <div class="<?= $escaper->escapeHtmlAttr($css('absolute z-0 top-0 left-0 right-0 bottom-0 overflow-hidden opacity-30 rounded-lg', 'heading-overlay')) ?>">
-            <?= $imageRenderer->get('LokiCheckout_Demo::images/ocean.png', [
+            <?= /* @noEscape */ $imageRenderer->get('LokiCheckout_Demo::images/ocean.png', [
                 'class' => $css('w-full h-full object-cover', 'overlay-image'),
                 'alt' => 'Header image'
             ]) ?>
