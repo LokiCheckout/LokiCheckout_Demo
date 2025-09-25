@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.13] - 25 September 2025
+### Fixed
+- Undo escaping of images via imageRenderer
+
 ## [2.0.12] - 24 September 2025
 ### Fixed
 - Add proper ID
