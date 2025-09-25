@@ -16,7 +16,7 @@ use Magento\Framework\View\Element\Template;
 /** @var ViewModelFactory $viewModelFactory */
 /** @var ImageRenderer $imageRenderer */
 
-$icon = $imageRenderer->get('LokiCheckout_Demo::images/loki.svg');
+$iconHtml = $imageRenderer->get('LokiCheckout_Demo::images/loki.svg');
 
 ?>
 <div class="<?= $escaper->escapeHtmlAttr($css('loki')) ?>">
@@ -29,7 +29,9 @@ $icon = $imageRenderer->get('LokiCheckout_Demo::images/loki.svg');
         </div>
 
         <div class="<?= $escaper->escapeHtmlAttr($css('relative z-20 p-8 md:p-32 text-center m-auto md:w-2/3', 'heading-inner')) ?>">
-            <div class="<?= $escaper->escapeHtmlAttr($css('w-32 m-auto', 'heading-icon')) ?>"><?= $escaper->escapeHtml($icon) ?></div>
+            <div class="<?= $escaper->escapeHtmlAttr($css('w-32 m-auto', 'heading-icon')) ?>">
+                <?= /* @noEscape */ $iconHtml ?>
+            </div>
             <h1 class="<?= $escaper->escapeHtmlAttr($css('text-3xl md:text-7xl font-bold mb-8 uppercase', 'heading-header1')) ?>">
                 Loki Checkout
             </h1>
