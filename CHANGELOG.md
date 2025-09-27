@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.15] - 27 September 2025
+### Fixed
+- Fix escaping again
+
 ## [2.0.14] - 27 September 2025
 ### Fixed
 - Fix wrong escaping
