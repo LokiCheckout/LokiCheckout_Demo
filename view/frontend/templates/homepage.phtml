@@ -30,7 +30,7 @@ $iconHtml = $imageRenderer->get('LokiCheckout_Demo::images/loki.svg');
 
         <div class="<?= $escaper->escapeHtmlAttr($css('relative z-20 p-8 md:p-32 text-center m-auto md:w-2/3', 'heading-inner')) ?>">
             <div class="<?= $escaper->escapeHtmlAttr($css('w-32 m-auto', 'heading-icon')) ?>">
-                <?= /* @noEscape */ $iconHtml ?>
+                <?= $escaper->escapeHtml($iconHtml) ?>
             </div>
             <h1 class="<?= $escaper->escapeHtmlAttr($css('text-3xl md:text-7xl font-bold mb-8 uppercase', 'heading-header1')) ?>">
                 Loki Checkout
