@@ -8,6 +8,8 @@
     }
 
     .loki-checkout-payment-methods-item {
+        @apply border border-transparent;
+
         &.active {
             @apply border rounded-md border-sky-300 bg-sky-50;
         }
