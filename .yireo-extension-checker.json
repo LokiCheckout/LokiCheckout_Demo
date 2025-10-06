@@ -1,6 +1,6 @@
 {
   "ignore": [
-    "Loki_CssUtils",
+    "Loki_Flatpickr",
     "loki/magento2-flatpickr",
     "Yireo_AdditionalBlockTemplate",
     "yireo/magento2-additional-block-template"
