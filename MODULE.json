@@ -45,5 +45,6 @@
         "loki-checkout-demo.theme-switcher-mobile"
     ],
     "config": [],
-    "tests": []
+    "tests": [],
+    "phpcs_severity": "8"
 }
