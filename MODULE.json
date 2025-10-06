@@ -2,6 +2,7 @@
     "sequence": [
         "LokiCheckout_Core",
         "Loki_Components",
+        "Loki_CssUtils",
         "Loki_Flatpickr",
         "Magento_Checkout",
         "Magento_Store",
@@ -44,7 +45,5 @@
         "loki-checkout-demo.theme-switcher-mobile"
     ],
     "config": [],
-    "tests": [],
-    "phpcs_severity": "8",
-    "phpstan_level": "5"
+    "tests": []
 }
