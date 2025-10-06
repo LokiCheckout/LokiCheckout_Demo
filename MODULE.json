@@ -44,9 +44,5 @@
         "loki-checkout-demo.theme-switcher-mobile"
     ],
     "config": [],
-    "tests": {
-        "unit": 2,
-        "integration": 0,
-        "functional": 0
-    }
+    "tests": []
 }
