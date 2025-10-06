@@ -3,6 +3,7 @@
     <module name="LokiCheckout_Demo">
         <sequence>
             <module name="LokiCheckout_Core"/>
+            <module name="Loki_CssUtils"/>
             <module name="Loki_Components"/>
             <module name="Loki_Flatpickr"/>
             <module name="Magento_Checkout"/>
