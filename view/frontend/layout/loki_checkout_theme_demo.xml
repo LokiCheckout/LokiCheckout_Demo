@@ -8,13 +8,21 @@
             <container
                 name="loki-checkout.steps.billing.agreements-container"
                 htmlTag="div"
-                htmlClass="card mb-4"
-                after="loki-checkout.payment.methods"
-                before="loki-checkout.steps.billing.buttons"
-            />
+                htmlClass="card my-4"
+            >
+                <block name="loki-checkout.steps.billing.agreements-container.title" class="Magento\Framework\View\Element\Text">
+                    <arguments>
+                        <argument name="text" xsi:type="string">
+                            <![CDATA[<h2 class="text-2xl font-medium mb-4">Terms and Conditions</h2>]]>
+                        </argument>
+                    </arguments>
+                </block>
+            </container>
         </referenceBlock>
 
-        <move element="loki-checkout.agreements" destination="loki-checkout.steps.billing.agreements-container" as="agreements"/>
+        <move element="loki-checkout.agreements" destination="loki-checkout.steps.billing.agreements-container" as="agreements" />
+
+        <move element="loki-checkout.steps.billing.agreements-container" destination="loki-checkout.steps.billing" after="payment-methods"/>
 
         <!-- Move newsletter to below email field -->
         <move element="loki-checkout.newsletter" destination="loki-checkout.customer" as="newsletter"/>
