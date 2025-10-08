@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.17] - 08 October 2025
+### Fixed
+- Beuatify positioning of agreements in Optimized Theme of demo
+- Change green color of valid form fields into b1c2b1
+
 ## [2.0.16] - 06 October 2025
 ### Fixed
 - Fix hover on payment method item to cause little bump in demo-module
