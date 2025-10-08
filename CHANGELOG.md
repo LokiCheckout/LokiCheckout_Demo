@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.18] - 08 October 2025
+### Fixed
+- Move agreements to billing step
+
 ## [2.0.17] - 08 October 2025
 ### Fixed
 - Beuatify positioning of agreements in Optimized Theme of demo
