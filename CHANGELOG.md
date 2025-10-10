@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.19] - 10 October 2025
+### Fixed
+- Implement new x-tooltip directive
+- Add translations
+- Restyle demo login message for WCAG compliance
+
 ## [2.0.18] - 08 October 2025
 ### Fixed
 - Move agreements to billing step
