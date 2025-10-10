@@ -1,14 +1,16 @@
 <?php
 declare(strict_types=1);
 
+use Loki\CssUtils\Util\CssClass;
 use Magento\Framework\Escaper;
 use Magento\Framework\View\Element\Template;
 
 /** @version 2.0.18 */
 /** @var Escaper $escaper */
 /** @var Template $block */
+/** @var CssClass $css */
 ?>
-<div class="<?= $escaper->escapeHtmlAttr($css('p-2 bg-orange-100 text-orange-800', '')) ?>">
+<div class="<?= $escaper->escapeHtmlAttr($css('my-4', '')) ?>">
     <p><strong class="<?= $escaper->escapeHtmlAttr($css('font-bold', 'label')) ?>">Try Demo Customer Access</strong></p>
     <p><span>Email:</span> roni_cost@example.com</p>
     <p><span>Password:</span> roni_cost3@example.com</p>
