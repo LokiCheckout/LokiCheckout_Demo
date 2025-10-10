@@ -12,14 +12,14 @@ use Magento\Framework\View\Element\Template;
 
 $blockId = str_replace('.', '-', $block->getNameInLayout());
 ?>
-<div role="tooltip" class="<?= $escaper->escapeHtmlAttr($css('my-4 tooltip-element', '')) ?>" id="<?= $blockId ?>">
+<div role="tooltip" class="<?= $escaper->escapeHtmlAttr($css('my-4 tooltip-element', '')) ?>" id="<?= $escaper->escapeHtml($blockId) ?>">
     <p>
         <strong
             class="<?= $escaper->escapeHtmlAttr($css('font-bold', 'label')) ?>"
         >
-            <?= __('Try Demo Customer Access') ?>
+            <?= $escaper->escapeHtml(__('Try Demo Customer Access')) ?>
         </strong>
     </p>
-    <p><span><?= __('Email') ?>:</span> roni_cost@example.com</p>
-    <p><span><?= __('Password') ?>:</span> roni_cost3@example.com</p>
+    <p><span><?= $escaper->escapeHtml(__('Email')) ?>:</span> roni_cost@example.com</p>
+    <p><span><?= $escaper->escapeHtml(__('Password')) ?>:</span> roni_cost3@example.com</p>
 </div>
