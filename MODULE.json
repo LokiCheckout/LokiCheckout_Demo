@@ -35,7 +35,6 @@
         "Magento_Vault",
         "Yireo_AdditionalBlockTemplate",
         "Yireo_CspUtilities",
-        "Yireo_HyvaThemeAutoRegistration",
         "Yireo_IntegrationTestHelper"
     ],
     "components": [
