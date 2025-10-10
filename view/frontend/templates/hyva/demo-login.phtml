@@ -11,7 +11,13 @@ use Magento\Framework\View\Element\Template;
 /** @var CssClass $css */
 ?>
 <div class="<?= $escaper->escapeHtmlAttr($css('my-4', '')) ?>">
-    <p><strong class="<?= $escaper->escapeHtmlAttr($css('font-bold', 'label')) ?>">Try Demo Customer Access</strong></p>
-    <p><span>Email:</span> roni_cost@example.com</p>
-    <p><span>Password:</span> roni_cost3@example.com</p>
+    <p>
+        <strong
+            class="<?= $escaper->escapeHtmlAttr($css('font-bold', 'label')) ?>"
+        >
+            <?= __('Try Demo Customer Access') ?>
+        </strong>
+    </p>
+    <p><span><?= __('Email') ?>:</span> roni_cost@example.com</p>
+    <p><span><?= __('Password') ?>:</span> roni_cost3@example.com</p>
 </div>
