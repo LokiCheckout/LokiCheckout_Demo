@@ -5,14 +5,15 @@
             <block name="demo_notice" template="LokiCheckout_Demo::hyva/demo-login.phtml"/>
         </referenceContainer>
 
+        <referenceContainer name="loki-checkout.login.form.after">
+            <block
+                name="loki-checkout.login.form.after.demo-login-notice"
+                template="LokiCheckout_Demo::hyva/demo-login.phtml"/>
+        </referenceContainer>
+
         <referenceBlock name="loki-checkout.login.form">
             <arguments>
-                <argument name="additional_templates" xsi:type="array">
-                    <item name="demo_notice" xsi:type="array">
-                        <item name="template" xsi:type="string">LokiCheckout_Demo::hyva/demo-login.phtml</item>
-                        <item name="position" xsi:type="string">after</item>
-                    </item>
-                </argument>
+                <argument name="tooltip_element" xsi:type="string">loki-checkout-login-form-after-demo-login-notice</argument>
             </arguments>
         </referenceBlock>
     </body>

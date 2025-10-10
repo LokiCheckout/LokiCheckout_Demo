@@ -9,8 +9,10 @@ use Magento\Framework\View\Element\Template;
 /** @var Escaper $escaper */
 /** @var Template $block */
 /** @var CssClass $css */
+
+$blockId = str_replace('.', '-', $block->getNameInLayout());
 ?>
-<div class="<?= $escaper->escapeHtmlAttr($css('my-4', '')) ?>">
+<div role="tooltip" class="<?= $escaper->escapeHtmlAttr($css('my-4 tooltip-element', '')) ?>" id="<?= $blockId ?>">
     <p>
         <strong
             class="<?= $escaper->escapeHtmlAttr($css('font-bold', 'label')) ?>"
