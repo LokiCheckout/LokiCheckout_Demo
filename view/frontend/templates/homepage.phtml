@@ -16,7 +16,7 @@ use Magento\Framework\View\Element\Template;
 /** @var ViewModelFactory $viewModelFactory */
 /** @var ImageRenderer $imageRenderer */
 
-$iconHtml = $imageRenderer->get('LokiCheckout_Demo::images/loki.svg');
+$iconHtml = $imageRenderer->get('LokiCheckout_Demo::images/loki.svg', ['class' => 'w-8 inline']);
 
 ?>
 <div class="<?= $escaper->escapeHtmlAttr($css('loki')) ?>">
@@ -29,11 +29,9 @@ $iconHtml = $imageRenderer->get('LokiCheckout_Demo::images/loki.svg');
         </div>
 
         <div class="<?= $escaper->escapeHtmlAttr($css('relative z-20 p-8 md:p-32 text-center m-auto md:w-2/3', 'heading-inner')) ?>">
-            <div class="<?= $escaper->escapeHtmlAttr($css('w-32 m-auto', 'heading-icon')) ?>">
+            <h1 class="<?= $escaper->escapeHtmlAttr($css('text-3xl md:text-7xl font-bold mb-8', 'heading-header1')) ?>">
                 <?= /* @noEscape */ $iconHtml ?>
-            </div>
-            <h1 class="<?= $escaper->escapeHtmlAttr($css('text-3xl md:text-7xl font-bold mb-8 uppercase', 'heading-header1')) ?>">
-                Loki Checkout
+                loki <span class="font-thin">checkout</span>
             </h1>
             <h2 class="<?= $escaper->escapeHtmlAttr($css('text-xl md:text-3xl font-bold mb-8', 'heading-header2')) ?>">
                 Changing the Magento tide
