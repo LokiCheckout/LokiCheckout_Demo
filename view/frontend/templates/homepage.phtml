@@ -16,7 +16,7 @@ use Magento\Framework\View\Element\Template;
 /** @var ViewModelFactory $viewModelFactory */
 /** @var ImageRenderer $imageRenderer */
 
-$iconHtml = $imageRenderer->get('LokiCheckout_Demo::images/loki.svg', ['class' => 'w-8 inline']);
+$iconHtml = $imageRenderer->get('LokiCheckout_Demo::images/loki.svg', ['class' => 'w-24 inline']);
 
 ?>
 <div class="<?= $escaper->escapeHtmlAttr($css('loki')) ?>">
@@ -49,7 +49,7 @@ $iconHtml = $imageRenderer->get('LokiCheckout_Demo::images/loki.svg', ['class' =
                 <li>Fastest checkout for Luma, Breeze and Hyvä themes</li>
                 <li>High coverage with Playwright, Unit Tests and Integration Tests</li>
                 <li>CSP & PCI compliance (<code>no-eval</code> and <code>no-inline</code>)</li>
-                <li>WCAG 2.1 AAA compliant</li>
+                <li>WCAG 2.2 AAA compliant</li>
             </ul>
 
             <p class="<?= $escaper->escapeHtmlAttr($css('my-8 md:mb-16', 'col-cta')) ?>">
