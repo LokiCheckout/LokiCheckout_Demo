@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.20] - 17 October 2025
+### Fixed
+- Adjust text
+- Optimize demo build
+- Allow overriding SVG attributes if they already exist
+
 ## [2.0.19] - 10 October 2025
 ### Fixed
 - Implement new x-tooltip directive
