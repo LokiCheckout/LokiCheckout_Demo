@@ -19,97 +19,97 @@ use Magento\Framework\View\Element\Template;
 $iconHtml = $imageRenderer->get('LokiCheckout_Demo::images/loki.svg', ['class' => 'w-24 inline']);
 
 ?>
-<div class="<?= $escaper->escapeHtmlAttr($css('loki')) ?>">
-    <div class="<?= $escaper->escapeHtmlAttr($css('rounded-lg heading relative bg-stone-800 text-white', 'heading')) ?>">
-        <div class="<?= $escaper->escapeHtmlAttr($css('absolute z-0 top-0 left-0 right-0 bottom-0 overflow-hidden opacity-30 rounded-lg', 'heading-overlay')) ?>">
+<div class="<?= $escaper->escapeHtml($css('loki')) ?>">
+    <div class="<?= $escaper->escapeHtml($css('rounded-lg heading relative bg-stone-800 text-white', 'heading')) ?>">
+        <div class="<?= $escaper->escapeHtml($css('absolute z-0 top-0 left-0 right-0 bottom-0 overflow-hidden opacity-30 rounded-lg', 'heading-overlay')) ?>">
             <?= /* @noEscape */ $imageRenderer->get('LokiCheckout_Demo::images/ocean.png', [
                 'class' => $css('w-full h-full object-cover', 'overlay-image'),
                 'alt' => 'Header image'
             ]) ?>
         </div>
 
-        <div class="<?= $escaper->escapeHtmlAttr($css('relative z-20 p-8 md:p-32 text-center m-auto md:w-2/3', 'heading-inner')) ?>">
-            <h1 class="<?= $escaper->escapeHtmlAttr($css('text-3xl md:text-7xl font-bold mb-8', 'heading-header1')) ?>">
+        <div class="<?= $escaper->escapeHtml($css('relative z-20 p-8 md:p-32 text-center m-auto md:w-2/3', 'heading-inner')) ?>">
+            <h1 class="<?= $escaper->escapeHtml($css('text-3xl md:text-7xl font-bold mb-8', 'heading-header1')) ?>">
                 <?= /* @noEscape */ $iconHtml ?>
                 loki <span class="font-thin">checkout</span>
             </h1>
-            <h2 class="<?= $escaper->escapeHtmlAttr($css('text-xl md:text-3xl font-bold mb-8', 'heading-header2')) ?>">
+            <h2 class="<?= $escaper->escapeHtml($css('text-xl md:text-3xl font-bold mb-8', 'heading-header2')) ?>">
                 Changing the Magento tide
             </h2>
-            <p class="<?= $escaper->escapeHtmlAttr($css('text-lg md:text-2xl font-regular py-4', 'heading-text')) ?>">
+            <p class="<?= $escaper->escapeHtml($css('text-lg md:text-2xl font-regular py-4', 'heading-text')) ?>">
                 We bring you a fast, extendable Magento checkout - based on Alpine.js, usable in Luma, Breeze and Hyvä themes.
                 Its performance will blow you away. Its developer experience is unmatched. And its foundings are fully open source.
                 We are changing the tide. This is real Magento.
             </p>
-            <p class="<?= $escaper->escapeHtmlAttr($css('py-4 md:py-16', 'cta-text')) ?>">
-                <a href="https://loki-extensions.com/checkout" class="<?= $escaper->escapeHtmlAttr($css('border border-white rounded-sm md:text-xl p-4', 'cta-anchor')) ?>">Get started now</a>
+            <p class="<?= $escaper->escapeHtml($css('py-4 md:py-16', 'cta-text')) ?>">
+                <a href="https://loki-extensions.com/checkout" class="<?= $escaper->escapeHtml($css('border border-white rounded-sm md:text-xl p-4', 'cta-anchor')) ?>">Get started now</a>
             </p>
         </div>
     </div>
 
-    <div class="<?= $escaper->escapeHtmlAttr($css('grid md:grid-cols-2 md:gap-8 py-8', 'col1')) ?>">
-        <div class="<?= $escaper->escapeHtmlAttr($css('md:p-8', 'col-text')) ?>">
-            <h3 class="<?= $escaper->escapeHtmlAttr($css('text-2xl mb-4', 'col-heading')) ?>">Fast, clean and compliant</h3>
-            <ul class="<?= $escaper->escapeHtmlAttr($css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', 'col-list')) ?>">
+    <div class="<?= $escaper->escapeHtml($css('grid md:grid-cols-2 md:gap-8 py-8', 'col1')) ?>">
+        <div class="<?= $escaper->escapeHtml($css('md:p-8', 'col-text')) ?>">
+            <h3 class="<?= $escaper->escapeHtml($css('text-2xl mb-4', 'col-heading')) ?>">Fast, clean and compliant</h3>
+            <ul class="<?= $escaper->escapeHtml($css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', 'col-list')) ?>">
                 <li>Fastest checkout for Luma, Breeze and Hyvä themes</li>
                 <li>High coverage with Playwright, Unit Tests and Integration Tests</li>
                 <li>CSP & PCI compliance (<code>no-eval</code> and <code>no-inline</code>)</li>
                 <li>WCAG 2.2 AAA compliant</li>
             </ul>
 
-            <p class="<?= $escaper->escapeHtmlAttr($css('my-8 md:mb-16', 'col-cta')) ?>">
+            <p class="<?= $escaper->escapeHtml($css('my-8 md:mb-16', 'col-cta')) ?>">
                 <a href="https://loki-extensions.com/docs/checkout/dev"
-                   class="<?= $escaper->escapeHtmlAttr($css('border border-orange-800 bg-orange-600 text-white rounded-sm p-3', 'col-link')) ?>">Dive into our dev-docs</a>
+                   class="<?= $escaper->escapeHtml($css('border border-orange-800 bg-orange-600 text-white rounded-sm p-3', 'col-link')) ?>">Dive into our dev-docs</a>
             </p>
 
-            <h3 class="<?= $escaper->escapeHtmlAttr($css('text-2xl mb-4', 'col-heading')) ?>">Easier technology</h3>
-            <ul class="<?= $escaper->escapeHtmlAttr($css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', 'col-list')) ?>">
+            <h3 class="<?= $escaper->escapeHtml($css('text-2xl mb-4', 'col-heading')) ?>">Easier technology</h3>
+            <ul class="<?= $escaper->escapeHtml($css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', 'col-list')) ?>">
                 <li>Granular components and templates to keep legacy low</li>
                 <li>A familiar Magento stack (XML layout, Blocks and ViewModels)</li>
                 <li>Alpine.js components with stores, utilities and inheritance</li>
                 <li>Loki Components to make AJAX calls and update multiple HTML elements</li>
             </ul>
 
-            <p class="<?= $escaper->escapeHtmlAttr($css('my-8 md:mb-16', 'col-text')) ?>">
+            <p class="<?= $escaper->escapeHtml($css('my-8 md:mb-16', 'col-text')) ?>">
                 <a href="https://loki-extensions.com/checkout/benefits"
-                   class="<?= $escaper->escapeHtmlAttr($css('border border-orange-800 bg-orange-600 text-white rounded-sm p-3', 'col-cta')) ?>">Inspect more benefits</a>
+                   class="<?= $escaper->escapeHtml($css('border border-orange-800 bg-orange-600 text-white rounded-sm p-3', 'col-cta')) ?>">Inspect more benefits</a>
             </p>
         </div>
-        <div class="<?= $escaper->escapeHtmlAttr($css('md:p-8', 'col2')) ?>">
-            <h3 class="<?= $escaper->escapeHtmlAttr($css('text-2xl mb-4', 'col-heading')) ?>">First-party integrations</h3>
-            <ul class="<?= $escaper->escapeHtmlAttr($css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', 'col-listing')) ?>">
+        <div class="<?= $escaper->escapeHtml($css('md:p-8', 'col2')) ?>">
+            <h3 class="<?= $escaper->escapeHtml($css('text-2xl mb-4', 'col-heading')) ?>">First-party integrations</h3>
+            <ul class="<?= $escaper->escapeHtml($css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', 'col-listing')) ?>">
                 <li>Mollie, Buckaroo, PAY, ICEPAY, MultiSafepay and more</li>
                 <li>Post NL, DHL, Sendcloud, MyParcel and more</li>
                 <li>Postcode NL, EU VAT, CoC, Geissweb and more</li>
                 <li>And we are not done yet</li>
             </ul>
 
-            <p class="<?= $escaper->escapeHtmlAttr($css('my-8 md:mb-16', 'col-cta')) ?>">
+            <p class="<?= $escaper->escapeHtml($css('my-8 md:mb-16', 'col-cta')) ?>">
                 <a href="https://loki-extensions.com/docs/checkout/modules"
-                   class="<?= $escaper->escapeHtmlAttr($css('border border-orange-800 bg-orange-600 text-white rounded-sm p-3', 'col-link')) ?>">Browse all modules</a>
+                   class="<?= $escaper->escapeHtml($css('border border-orange-800 bg-orange-600 text-white rounded-sm p-3', 'col-link')) ?>">Browse all modules</a>
             </p>
 
-            <h3 class="<?= $escaper->escapeHtmlAttr($css('text-2xl my-4', 'col-heading')) ?>">True collaboration</h3>
-            <ul class="<?= $escaper->escapeHtmlAttr($css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', 'col-listing')) ?>">
+            <h3 class="<?= $escaper->escapeHtml($css('text-2xl my-4', 'col-heading')) ?>">True collaboration</h3>
+            <ul class="<?= $escaper->escapeHtml($css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', 'col-listing')) ?>">
                 <li>Each license gives involvement from the Loki core team</li>
                 <li>Non-existing integrations can be picked up with priority</li>
                 <li>In-depth support and consultancy guarantees the best solutions</li>
                 <li>Zero template overrides, zero hacks, little legacy, no bs</li>
             </ul>
 
-            <p class="<?= $escaper->escapeHtmlAttr($css('my-8 md:mb-16', 'col-cta')) ?>">
+            <p class="<?= $escaper->escapeHtml($css('my-8 md:mb-16', 'col-cta')) ?>">
                 <a href="https://loki-extensions.com/checkout"
-                   class="<?= $escaper->escapeHtmlAttr($css('border border-orange-800 bg-orange-600 text-white rounded-sm p-3', 'col-link')) ?>">Get in touch</a>
+                   class="<?= $escaper->escapeHtml($css('border border-orange-800 bg-orange-600 text-white rounded-sm p-3', 'col-link')) ?>">Get in touch</a>
             </p>
         </div>
     </div>
 
-    <div class="<?= $escaper->escapeHtmlAttr($css('rounded-lg bg-gradient-to-r from-indigo-900 to-orange-500 text-white text-center py-8 md:py-24', 'cta')) ?>">
-        <h1 class="<?= $escaper->escapeHtmlAttr($css('text-2xl md:text-6xl py-4', 'cta-heading')) ?>">
+    <div class="<?= $escaper->escapeHtml($css('rounded-lg bg-gradient-to-r from-indigo-900 to-orange-500 text-white text-center py-8 md:py-24', 'cta')) ?>">
+        <h1 class="<?= $escaper->escapeHtml($css('text-2xl md:text-6xl py-4', 'cta-heading')) ?>">
             The checkout we actually have been waiting for
         </h1>
-        <p class="<?= $escaper->escapeHtmlAttr($css('py-4 md:py-16', 'cta-text')) ?>">
-            <a href="https://loki-extensions.com/checkout" class="<?= $escaper->escapeHtmlAttr($css('border border-white rounded-sm md:text-xl p-4', 'cta-anchor')) ?>">Get started now</a>
+        <p class="<?= $escaper->escapeHtml($css('py-4 md:py-16', 'cta-text')) ?>">
+            <a href="https://loki-extensions.com/checkout" class="<?= $escaper->escapeHtml($css('border border-white rounded-sm md:text-xl p-4', 'cta-anchor')) ?>">Get started now</a>
         </p>
     </div>
 </div>
