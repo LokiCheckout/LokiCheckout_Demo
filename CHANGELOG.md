@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.22] - 03 November 2025
+### Fixed
+- Update composer keywords
+- Loose constraint with `yireo/magento2-additional-block-template`
+
 ## [2.0.21] - 22 October 2025
 ### Fixed
 - Do not escape `$css()` with `escapeHtmlAttr()` but `escapeHtml()`
