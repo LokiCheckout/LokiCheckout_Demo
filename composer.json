@@ -3,10 +3,9 @@
     "version": "2.0.21",
     "description": "N/A",
     "keywords": [
-        "loki-dev",
-        "loki-checkout",
         "dev",
-        "loki-checkout-core"
+        "loki-checkout",
+        "loki-checkout-category-dev"
     ],
     "homepage": "https://loki-checkout.com/",
     "authors": [
