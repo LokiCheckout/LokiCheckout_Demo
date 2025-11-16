@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+use Loki\Components\Util\Block\ChildRenderer;
 use Magento\Framework\Escaper;
 use Loki\CssUtils\Util\CssClass;
 use Magento\Framework\View\Element\Template;
@@ -9,8 +10,10 @@ use Magento\Framework\View\Element\Template;
 /** @var Escaper $escaper */
 /** @var CssClass $css */
 /** @var Template $block */
+/** @var Escaper $escaper */
+/** @var ChildRenderer $childRenderer */
 
 ?>
 <div class="<?= $escaper->escapeHtml($css('hidden md:block order-12 mx-2', '')) ?>">
-    <?= /* @noEscape */ $block->getChildHtml() ?>
+    <?= /* @noEscape */ $childRenderer->all($block) ?>
 </div>
