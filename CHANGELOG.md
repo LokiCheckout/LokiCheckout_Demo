@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.23] - 21 November 2025
+### Fixed
+- Replace $block->getChildHtml() with $childRenderer->all() including better sorting
+- Add plan-trial keyword to composer file
+
 ## [2.0.22] - 03 November 2025
 ### Fixed
 - Update composer keywords
