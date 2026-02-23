@@ -8,4 +8,11 @@
             </argument>
         </arguments>
     </type>
+    <type name="LokiCheckout\Demo\Component\GridLayout\GridLayoutContext">
+        <arguments>
+            <argument name="parentContexts" xsi:type="array">
+                <item name="checkout" xsi:type="object">LokiCheckout\Core\Component\Base\Generic\CheckoutContext</item>
+            </argument>
+        </arguments>
+    </type>
 </config>

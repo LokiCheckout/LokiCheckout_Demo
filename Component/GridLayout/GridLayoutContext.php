@@ -2,39 +2,12 @@
 
 namespace LokiCheckout\Demo\Component\GridLayout;
 
-use Magento\Checkout\Model\Session as CheckoutSession;
-use Magento\Framework\App\ResponseFactory;
-use Magento\Framework\UrlFactory;
-use LokiCheckout\Core\Config\XmlConfig;
-use Loki\Components\Component\ComponentContextInterface;
+use Loki\Components\Component\AbstractComponentContext;
+use LokiCheckout\Core\Component\Base\Generic\CheckoutContext;
 
-class GridLayoutContext implements ComponentContextInterface
+/**
+ * @mixin CheckoutContext
+ */
+class GridLayoutContext extends AbstractComponentContext
 {
-    public function __construct(
-        private readonly CheckoutSession $checkoutSession,
-        private readonly XmlConfig $xmlConfig,
-        private readonly ResponseFactory $responseFactory,
-        private readonly UrlFactory $urlFactory,
-    ) {
-    }
-
-    public function getXmlConfig(): XmlConfig
-    {
-        return $this->xmlConfig;
-    }
-
-    public function getResponseFactory(): ResponseFactory
-    {
-        return $this->responseFactory;
-    }
-
-    public function getUrlFactory(): UrlFactory
-    {
-        return $this->urlFactory;
-    }
-
-    public function getCheckoutSession(): CheckoutSession
-    {
-        return $this->checkoutSession;
-    }
 }
