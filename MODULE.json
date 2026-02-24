@@ -33,6 +33,7 @@
         "Magento_Sales",
         "Magento_Shipping",
         "Magento_Store",
+        "Magento_Tax",
         "Magento_Vault",
         "Yireo_AdditionalBlockTemplate",
         "Yireo_CspUtilities",
@@ -45,11 +46,5 @@
         "loki-checkout-demo.theme-switcher-mobile"
     ],
     "config": [],
-    "tests": {
-        "unit": 2,
-        "integration": 0,
-        "functional": 0
-    },
-    "phpcs_severity": "8",
-    "phpstan_level": "5"
+    "tests": []
 }
