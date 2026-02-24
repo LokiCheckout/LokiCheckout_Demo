@@ -9,12 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.0.24] - 24 February 2026
 ### Fixed
 - Rewrite ComponentContext to AbstractComponentContext
-- Copy generic CI/CD files
-- Copy generic CI/CD files
 
 ## [2.0.23] - 21 November 2025
 ### Fixed
-- Replace $block->getChildHtml() with $childRenderer->all() including better sorting
+- Replace `$block->getChildHtml()` with `$childRenderer->all()` including better sorting
 - Add plan-trial keyword to composer file
 
 ## [2.0.22] - 03 November 2025
