@@ -46,5 +46,21 @@
         "loki-checkout-demo.theme-switcher-mobile"
     ],
     "config": [],
-    "tests": []
+    "tests": {
+        "unit": 2,
+        "integration": 0,
+        "functional": 0
+    },
+    "module_name": "LokiCheckout_Demo",
+    "composer_name": "loki-checkout/magento2-demo",
+    "php_versions": [
+        "8.1",
+        "8.2",
+        "8.3",
+        "8.4"
+    ],
+    "skip_magento_versions": [],
+    "skip_css_utils": false,
+    "phpcs_severity": 10,
+    "phpstan_level": 1
 }
