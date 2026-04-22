@@ -7,8 +7,7 @@
         "Loki_Flatpickr",
         "Magento_Checkout",
         "Magento_Store",
-        "Yireo_AdditionalBlockTemplate",
-        "Yireo_IntegrationTestHelper"
+        "Yireo_AdditionalBlockTemplate"
     ],
     "modules": [
         "LokiCheckout_Core",
@@ -36,8 +35,7 @@
         "Magento_Tax",
         "Magento_Vault",
         "Yireo_AdditionalBlockTemplate",
-        "Yireo_CspUtilities",
-        "Yireo_IntegrationTestHelper"
+        "Yireo_CspUtilities"
     ],
     "components": [
         "loki-checkout-demo.grid-layout-switcher",
