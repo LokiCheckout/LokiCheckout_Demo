@@ -37,9 +37,10 @@ class GridLayoutRepository extends ComponentRepository
         $gridLayout = (string)$value;
         $this->getContext()->getCheckoutSession()->setCurrentGridLayout($gridLayout);
 
-        $this->messageManager->addNoticeMessage('Switching to '.$gridLayout.' grid layout');
+        $msg = 'Switching to '.$gridLayout.' grid layout';
+        $this->messageManager->addNoticeMessage($msg);
 
         $url = $this->getContext()->getUrlFactory()->create()->getUrl('checkout');
-        throw new RedirectException($url);
+        throw (new RedirectException())->setUrl($url);
     }
 }

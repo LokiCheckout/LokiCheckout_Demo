@@ -37,9 +37,10 @@ class ThemeRepository extends ComponentRepository
         $theme = (string)$value;
         $this->getContext()->getCheckoutSession()->setCurrentTheme($theme);
 
-        $this->messageManager->addNoticeMessage('Switching to '.$theme.' theme');
+        $msg = 'Switching to '.$theme.' theme';
+        $this->messageManager->addNoticeMessage($msg);
 
         $url = $this->getContext()->getUrlFactory()->create()->getUrl('checkout');
-        throw new RedirectException($url);
+        throw (new RedirectException())->setUrl($url);
     }
 }
