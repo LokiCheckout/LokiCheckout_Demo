@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.25] - 22 April 2026
+### Fixed
+- Add message to RedirectException
+- Remove dep with `Yireo_IntegrationTestHelper`
+
 ## [2.0.24] - 24 February 2026
 ### Fixed
 - Rewrite ComponentContext to AbstractComponentContext
