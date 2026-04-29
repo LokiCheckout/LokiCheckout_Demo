@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.26] - 29 April 2026
+### Fixed
+- Only display agreements block if enabled in config
+- Do not scale active buttons
+- Enhance animation of method selection
+- Fix broken active CSS
+
 ## [2.0.25] - 22 April 2026
 ### Fixed
 - Add message to RedirectException
