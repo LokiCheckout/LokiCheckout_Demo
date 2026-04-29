@@ -16,7 +16,11 @@
                 </argument>
             </arguments>
 
-            <block name="loki-checkout.steps.billing.agreements-container.title" class="Magento\Framework\View\Element\Text">
+            <block
+                ifconfig="checkout/options/enable_agreements"
+                name="loki-checkout.steps.billing.agreements-container.title"
+                class="Magento\Framework\View\Element\Text"
+            >
                 <arguments>
                     <argument name="text" xsi:type="string">
                         <![CDATA[<h2 class="text-2xl font-medium mb-4">Terms and Conditions</h2>]]>
