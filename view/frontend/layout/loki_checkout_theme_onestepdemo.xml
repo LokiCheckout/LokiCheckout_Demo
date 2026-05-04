@@ -12,6 +12,8 @@
                 </argument>
             </arguments>
         </referenceBlock>
+
+        <block name="loki-components.utils.field-completed" template="LokiCheckout_Demo::utils/field-completed.phtml"/>
     </body>
 </page>
 
