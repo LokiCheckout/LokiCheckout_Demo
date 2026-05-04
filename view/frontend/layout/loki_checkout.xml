@@ -97,6 +97,20 @@
             </arguments>
         </referenceBlock>
 
+        <block name="loki-checkout.shipping.methods.lokisimpleshipping_lokisimpleshipping">
+            <arguments>
+                <argument name="icon" xsi:type="string">LokiCheckout_Demo::images/loki.svg</argument>
+                <argument name="icon_attributes" xsi:type="array">
+                    <item name="width" xsi:type="string">30</item>
+                    <item name="height" xsi:type="string">30</item>
+                </argument>
+            </arguments>
+        </block>
 
+        <block name="loki-checkout.shipping.methods.flatrate_flatrate">
+            <arguments>
+                <argument name="icon" xsi:type="string">LokiCheckout_Demo::images/truck.svg</argument>
+            </arguments>
+        </block>
     </body>
 </page>
