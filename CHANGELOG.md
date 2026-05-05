@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.27] - 05 May 2026
+### Fixed
+- Enhance colors of methods
+- Add round checkbox on completed fields
+- Optimize icons
+- Add new theme `onestepdemo`
+
 ## [2.0.26] - 29 April 2026
 ### Fixed
 - Only display agreements block if enabled in config
