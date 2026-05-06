@@ -99,6 +99,7 @@
 
         <block name="loki-checkout.shipping.methods.lokisimpleshipping_lokisimpleshipping">
             <arguments>
+                <argument name="description" xsi:type="string">Pickup locations that are simply managed from the Magento Admin Panel</argument>
                 <argument name="icon" xsi:type="string">LokiCheckout_Demo::images/loki.svg</argument>
                 <argument name="icon_attributes" xsi:type="array">
                     <item name="width" xsi:type="string">30</item>
