@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.28] - 11 May 2026
+### Fixed
+- Simplify gaps
+- Make Loki icon on homepage white again
+
 ## [2.0.27] - 05 May 2026
 ### Fixed
 - Enhance colors of methods
