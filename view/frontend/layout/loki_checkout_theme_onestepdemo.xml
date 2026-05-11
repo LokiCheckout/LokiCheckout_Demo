@@ -14,6 +14,11 @@
         </referenceBlock>
 
         <block name="loki-components.utils.field-completed" template="LokiCheckout_Demo::utils/field-completed.phtml"/>
+
+        <!-- Additional styling -->
+        <referenceContainer name="before.body.end">
+            <block template="LokiCheckout_Demo::theme/demo/style.phtml"/>
+        </referenceContainer>
     </body>
 </page>
 
