@@ -1,7 +1,7 @@
 {
     "name": "loki-checkout/magento2-demo",
     "version": "2.0.28",
-    "description": "N/A",
+    "description": "Demo module providing various visual enhancements and a tourguide",
     "keywords": [
         "loki-checkout",
         "loki-checkout-plan-trial",
