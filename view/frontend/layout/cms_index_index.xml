@@ -5,9 +5,11 @@
     </head>
 
     <body>
+        <!--
         <referenceContainer name="main" remove="true"/>
+        -->
 
-        <referenceContainer name="columns">
+        <referenceContainer name="content">
             <block name="loki-demo.banner" template="LokiCheckout_Demo::homepage.phtml"/>
         </referenceContainer>
     </body>
