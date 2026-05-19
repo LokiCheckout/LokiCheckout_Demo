@@ -8,4 +8,4 @@ use Magento\Framework\View\Element\Template;
 /** @var Escaper $escaper */
 /** @var Template $block */
 ?>
-<link rel="stylesheet" href="<?= $escaper->escapeUrl($block->getViewFileUrl("LokiCheckout_Demo::css/tour.css")) ?>">
+<link fetchpriority="low" rel="stylesheet" href="<?= $escaper->escapeUrl($block->getViewFileUrl("LokiCheckout_Demo::css/tour.css")) ?>">
