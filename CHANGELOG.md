@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.29] - 19 May 2026
+### Fixed
+- Load tourguide CSS with fetchpriority=low
+
 ## [2.0.28] - 11 May 2026
 ### Fixed
 - Simplify gaps
