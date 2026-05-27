@@ -40,8 +40,8 @@
     "components": [
         "loki-checkout-demo.grid-layout-switcher",
         "loki-checkout-demo.grid-layout-switcher-mobile",
-        "loki-checkout-demo.theme-switcher",
-        "loki-checkout-demo.theme-switcher-mobile"
+        "loki-checkout-demo.skin-switcher",
+        "loki-checkout-demo.skin-switcher-mobile"
     ],
     "config": [],
     "tests": {

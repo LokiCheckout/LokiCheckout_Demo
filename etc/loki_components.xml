@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Loki_Components:etc/loki_components.xsd">
     <component
-        name="loki-checkout-demo.theme-switcher"
-        context="LokiCheckout\Demo\Component\Theme\ThemeContext"
-        viewModel="LokiCheckout\Demo\Component\Theme\ThemeViewModel"
-        repository="LokiCheckout\Demo\Component\Theme\ThemeRepository"
+        name="loki-checkout-demo.skin-switcher"
+        context="LokiCheckout\Demo\Component\Skin\SkinContext"
+        viewModel="LokiCheckout\Demo\Component\Skin\SkinViewModel"
+        repository="LokiCheckout\Demo\Component\Skin\SkinRepository"
     />
 
     <component
-        name="loki-checkout-demo.theme-switcher-mobile"
-        context="LokiCheckout\Demo\Component\Theme\ThemeContext"
-        viewModel="LokiCheckout\Demo\Component\Theme\ThemeViewModel"
-        repository="LokiCheckout\Demo\Component\Theme\ThemeRepository"
+        name="loki-checkout-demo.skin-switcher-mobile"
+        context="LokiCheckout\Demo\Component\Skin\SkinContext"
+        viewModel="LokiCheckout\Demo\Component\Skin\SkinViewModel"
+        repository="LokiCheckout\Demo\Component\Skin\SkinRepository"
     />
 
     <component

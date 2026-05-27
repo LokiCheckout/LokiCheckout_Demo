@@ -4,9 +4,9 @@
         <referenceContainer name="header-wrapper">
             <container htmlTag="div" htmlClass="loki">
                 <container htmlTag="div" htmlClass="flex float-right">
-                    <block template="LokiCheckout_Demo::theme-switcher-container.phtml">
-                        <block name="loki-checkout-demo.theme-switcher" as="theme-switcher"
-                               template="LokiCheckout_Demo::theme-switcher.phtml"
+                    <block template="LokiCheckout_Demo::skin-switcher-container.phtml">
+                        <block name="loki-checkout-demo.skin-switcher" as="skin-switcher"
+                               template="LokiCheckout_Demo::skin-switcher.phtml"
                         />
                     </block>
 

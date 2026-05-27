@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:LokiCheckout_Core:etc/loki_checkout.xsd">
-    <themes>
-        <theme name="onestepdemo" label="OneStep Checkout (demo)" parent="onestep">
-        </theme>
-    </themes>
+    <skins>
+        <skin name="onestepdemo" label="OneStep Checkout (demo)" parent="onestep"/>
+    </skins>
 
     <grid_layouts>
         <grid_layout name="dutch_demo_grid" label="Dutch demo grid">

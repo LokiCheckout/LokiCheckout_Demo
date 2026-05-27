@@ -22,11 +22,11 @@ class OverrideConfigFromSessionPlugin
         return $result;
     }
 
-    public function afterGetTheme(Config $subject, string $result): string
+    public function afterGetSkin(Config $subject, string $result): string
     {
-        $sessionTheme = (string)$this->checkoutSession->getCurrentTheme();
-        if (!empty($sessionTheme)) {
-            return $sessionTheme;
+        $currentSkin = (string)$this->checkoutSession->getCurrentSkin();
+        if (!empty($currentSkin)) {
+            return $currentSkin;
         }
 
         return $result;
