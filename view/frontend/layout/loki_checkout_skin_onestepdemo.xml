@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
+    <update handle="loki_checkout_skin_onestep"/>
+
+    <body>
+        <referenceBlock name="loki-checkout.steps.one">
+            <arguments>
+                <argument name="css_classes" xsi:type="array">
+                    <item name="block" xsi:type="array">
+                        <item name="default" xsi:type="string">grid gap-8</item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+
+        <block name="loki-components.utils.field-completed" template="LokiCheckout_Demo::utils/field-completed.phtml"/>
+
+        <!-- Additional styling -->
+        <referenceContainer name="before.body.end">
+            <block template="LokiCheckout_Demo::skin/demo/style.phtml"/>
+        </referenceContainer>
+    </body>
+</page>
+

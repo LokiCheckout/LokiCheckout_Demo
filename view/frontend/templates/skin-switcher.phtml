@@ -1,0 +1,35 @@
+<?php
+declare(strict_types=1);
+
+use Loki\Components\Component\ComponentViewModelInterface;
+use Loki\CssUtils\Util\CssClass;
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+use LokiCheckout\Demo\Component\Skin\SkinViewModel;
+use Loki\Components\Factory\ViewModelFactory;
+
+/** @version 2.0.29 */
+/** @var ComponentViewModelInterface $viewModel */
+/** @var Escaper $escaper */
+/** @var Template $block */
+/** @var ViewModelFactory $viewModelFactory */
+/** @var SkinViewModel $viewModel */
+/** @var CssClass $css */
+
+?>
+<div class="mb-2 md:mb-0">
+    <select
+        aria-label="<?= $escaper->escapeHtml(__('Select a skin')) ?>"
+        name="skin-switcher"
+        :value="value"
+        @change="submitValue"
+        class="<?= $escaper->escapeHtml($css('form-select w-full disabled:bg-zinc-100')) ?>">
+        <option value=""> -- <?= $escaper->escapeHtml(__('Select a skin')) ?> --</option>
+        <?php foreach ($viewModel->getSkins() as $skin) : ?>
+            <?php $selected = ($viewModel->getValue() === $skin->getName()) ? 'selected' : ''; ?>
+            <option <?= $escaper->escapeHtml($selected) ?> value="<?= $escaper->escapeHtml($skin->getName()) ?>">
+                <?= $escaper->escapeHtml($skin->getLabel()) ?>
+            </option>
+        <?php endforeach; ?>
+    </select>
+</div>
