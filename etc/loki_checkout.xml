@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:LokiCheckout_Core:etc/loki_checkout.xsd">
     <skins>
-        <skin name="onestepdemo" label="OneStep Checkout (demo)" parent="onestep"/>
+        <skin name="onestep_demo" label="One Step Skin (demo)" parent="onestep"/>
     </skins>
 
     <grid_layouts>
