@@ -15,7 +15,9 @@ class SkinViewModel extends FieldViewModel
      */
     public function getSkins(): array
     {
-        return $this->getContext()->getXmlConfig()->getSkins();
+        $skins = $this->getContext()->getXmlConfig()->getSkins();
+        usort($skins, fn (Skin $a, Skin $b) => $a->getLabel() <=> $b->getLabel());
+        return $skins;
     }
 
     public function getFieldLabel(): string
