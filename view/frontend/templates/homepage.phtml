@@ -18,31 +18,35 @@ use Magento\Framework\View\Element\Template;
 
 $iconHtml = $imageRenderer->get('LokiCheckout_Demo::images/loki.svg', ['class' => 'fill-white w-24 inline']);
 
+$url = $block->getUrl('loki_checkout_demo/index/addtocart');
+
 ?>
 <div class="<?= $escaper->escapeHtml($css('loki')) ?>">
     <div class="<?= $escaper->escapeHtml($css('rounded-lg heading relative bg-stone-800 text-white', 'heading')) ?>">
-        <div class="<?= $escaper->escapeHtml($css('absolute z-0 top-0 left-0 right-0 bottom-0 overflow-hidden opacity-30 rounded-lg', 'heading-overlay')) ?>">
-            <?= /* @noEscape */ $imageRenderer->get('LokiCheckout_Demo::images/ocean.png', [
+        <div class="<?= $escaper->escapeHtml($css('absolute z-0 top-0 left-0 right-0 bottom-0 overflow-hidden opacity-60 rounded-lg', 'heading-overlay')) ?>">
+            <?= /* @noEscape */ $imageRenderer->get('LokiCheckout_Demo::images/rocket-1.jpg', [
                 'class' => $css('w-full h-full object-cover', 'overlay-image'),
                 'alt' => 'Header image'
             ]) ?>
         </div>
 
-        <div class="<?= $escaper->escapeHtml($css('relative z-20 p-8 md:p-32 text-center m-auto md:w-2/3', 'heading-inner')) ?>">
+        <div class="<?= $escaper->escapeHtml($css('relative z-20 p-8 md:p-32 text-left md:w-2/3', 'heading-inner')) ?>">
             <h1 class="<?= $escaper->escapeHtml($css('text-3xl md:text-7xl font-bold mb-8', 'heading-header1')) ?>">
                 <?= /* @noEscape */ $iconHtml ?>
                 loki <span class="font-thin">checkout</span>
             </h1>
-            <h2 class="<?= $escaper->escapeHtml($css('text-xl md:text-3xl font-bold mb-8', 'heading-header2')) ?>">
-                Changing the Magento tide
-            </h2>
             <p class="<?= $escaper->escapeHtml($css('text-lg md:text-2xl font-regular py-4', 'heading-text')) ?>">
                 We bring you a fast, extendable Magento checkout - based on Alpine.js, usable in Luma, Breeze and Hyvä themes.
                 Its performance will blow you away. Its developer experience is unmatched. And its foundings are fully open source.
                 We are changing the tide. This is real Magento.
             </p>
-            <p class="<?= $escaper->escapeHtml($css('py-4 md:py-16', 'cta-text')) ?>">
-                <a href="https://loki-extensions.com/checkout" class="<?= $escaper->escapeHtml($css('border border-white rounded-sm md:text-xl p-4', 'cta-anchor')) ?>">Get started now</a>
+            <p class="<?= $escaper->escapeHtml($css('pt-4 md:pt-16 flex gap-4', 'cta-text')) ?>">
+                <a href="<?= $escaper->escapeHtml($url) ?>" class="<?= $escaper->escapeHtml($css('border border-white rounded-sm md:text-xl p-4', 'cta-anchor')) ?>">
+                    Proceed to the demo checkout
+                </a>
+                <a href="https://loki-checkout.com/" class="<?= $escaper->escapeHtml($css('border border-white rounded-sm md:text-xl p-4', 'cta-anchor')) ?>">
+                    Visit our site
+                </a>
             </p>
         </div>
     </div>
