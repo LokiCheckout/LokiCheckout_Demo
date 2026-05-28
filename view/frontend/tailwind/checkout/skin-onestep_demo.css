@@ -1,0 +1,48 @@
+@layer components {
+    .loki-checkout.skin-onestep_demo {
+        .field-type-input, .field-type-text, .field-type-select {
+            label.scope-label {
+                position: absolute;
+                top: -15px;
+                left: 6px;
+                z-index: 3;
+                background-color: white;
+                font-size: 70%;
+                padding: 4px;
+                color: #555;
+            }
+        }
+
+        .loki-checkout-shipping-methods-item {
+            @apply rounded-md border border-sky-200 transition-all duration-200 ease-out;
+
+            &:hover {
+                @apply border-sky-300 bg-sky-100;
+            }
+
+            &.active {
+                @apply border rounded-md border-sky-300 bg-sky-50;
+
+                &:hover {
+                    @apply border-sky-400 bg-sky-100;
+                }
+            }
+        }
+
+        .loki-checkout-payment-methods-item {
+            @apply rounded-md border border-sky-200 transition-all duration-200 ease-out;
+
+            &:hover {
+                @apply border-sky-300 bg-sky-100;
+            }
+
+            &.active {
+                @apply border rounded-md border-sky-300 bg-sky-50;
+
+                &:hover {
+                    @apply border-sky-400 bg-sky-100;
+                }
+            }
+        }
+    }
+}
