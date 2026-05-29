@@ -10,13 +10,15 @@ use Magento\Framework\View\Element\Template;
 
 /** @version 2.0.29 */
 /** @var Escaper $escaper */
-/** @var TemplateRenderer $imageRenderer */
+/** @var TemplateRenderer $templateRenderer */
 /** @var Template $block */
 /** @var CssClass $css */
 /** @var ViewModelFactory $viewModelFactory */
 /** @var ImageRenderer $imageRenderer */
 
 $iconHtml = $imageRenderer->get('LokiCheckout_Demo::images/loki.svg', ['class' => 'fill-white w-24 inline']);
+$linkIcon = $imageRenderer->get('LokiCheckout_Demo::icon/arrow-up-right-from-square.svg', ['class' => 'w-6 inline']);
+$addtocartIcon = $imageRenderer->get('LokiCheckout_Demo::icon/cart-plus.svg', ['class' => 'w-6 inline']);
 
 $url = $block->getUrl('loki_checkout_demo/index/addtocart');
 
@@ -41,11 +43,13 @@ $url = $block->getUrl('loki_checkout_demo/index/addtocart');
                 We are changing the tide. This is real Magento.
             </p>
             <p class="<?= $escaper->escapeHtml($css('pt-4 md:pt-16 flex gap-4', 'cta-text')) ?>">
-                <a href="<?= $escaper->escapeHtml($url) ?>" class="<?= $escaper->escapeHtml($css('border border-white rounded-sm md:text-xl p-4', 'cta-anchor')) ?>">
-                    Proceed to the demo checkout
+                <a href="<?= $escaper->escapeHtml($url) ?>" class="<?= $escaper->escapeHtml($css('border border-white rounded-sm md:text-xl p-4 hover:bg-white hover:text-black fill-white hover:fill-black', 'cta-anchor')) ?>">
+                    <?= $addtocartIcon ?>
+                    To the demo checkout
                 </a>
-                <a href="https://loki-checkout.com/" class="<?= $escaper->escapeHtml($css('border border-white rounded-sm md:text-xl p-4', 'cta-anchor')) ?>">
-                    Visit our site
+                <a href="https://loki-checkout.com/" class="<?= $escaper->escapeHtml($css('border border-white rounded-sm md:text-xl p-4 hover:bg-white hover:text-black fill-white  hover:fill-black', 'cta-anchor')) ?>">
+                    <?= $linkIcon ?>
+                    To our main site
                 </a>
             </p>
         </div>
@@ -62,8 +66,10 @@ $url = $block->getUrl('loki_checkout_demo/index/addtocart');
             </ul>
 
             <p class="<?= $escaper->escapeHtml($css('my-8 md:mb-16', 'col-cta')) ?>">
-                <a href="https://loki-extensions.com/docs/checkout/dev"
-                   class="<?= $escaper->escapeHtml($css('border border-orange-800 bg-orange-600 text-white rounded-sm p-3', 'col-link')) ?>">Dive into our dev-docs</a>
+                <?= $templateRenderer->html($block, 'LokiCheckout_Demo::homepage/button.phtml', [
+                    'label' => 'Dive into our dev-docs',
+                    'url' => 'https://docs.loki-extensions.com/checkout/dev',
+                ]) ?>
             </p>
 
             <h3 class="<?= $escaper->escapeHtml($css('text-2xl mb-4', 'col-heading')) ?>">Easier technology</h3>
@@ -75,22 +81,26 @@ $url = $block->getUrl('loki_checkout_demo/index/addtocart');
             </ul>
 
             <p class="<?= $escaper->escapeHtml($css('my-8 md:mb-16', 'col-text')) ?>">
-                <a href="https://loki-extensions.com/checkout/benefits"
-                   class="<?= $escaper->escapeHtml($css('border border-orange-800 bg-orange-600 text-white rounded-sm p-3', 'col-cta')) ?>">Inspect more benefits</a>
+                <?= $templateRenderer->html($block, 'LokiCheckout_Demo::homepage/button.phtml', [
+                    'label' => 'Inspect more features',
+                    'url' => 'https://loki-extensions.com/features',
+                ]) ?>
             </p>
         </div>
         <div class="<?= $escaper->escapeHtml($css('md:p-8', 'col2')) ?>">
             <h3 class="<?= $escaper->escapeHtml($css('text-2xl mb-4', 'col-heading')) ?>">First-party integrations</h3>
             <ul class="<?= $escaper->escapeHtml($css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', 'col-listing')) ?>">
-                <li>Mollie, Buckaroo, PAY, ICEPAY, MultiSafepay and more</li>
-                <li>Post NL, DHL, Sendcloud, MyParcel and more</li>
-                <li>Postcode NL, EU VAT, CoC, Geissweb and more</li>
+                <li>Buckaroo, Stripe, Mollie, Braintree, PAY, MultiSafepay and more</li>
+                <li>Post NL, ShipperHQ, DHL, Sendcloud, MyParcel and more</li>
+                <li>Address autocompletion, EU VAT, CoC, maps and more</li>
                 <li>And we are not done yet</li>
             </ul>
 
             <p class="<?= $escaper->escapeHtml($css('my-8 md:mb-16', 'col-cta')) ?>">
-                <a href="https://loki-extensions.com/docs/checkout/modules"
-                   class="<?= $escaper->escapeHtml($css('border border-orange-800 bg-orange-600 text-white rounded-sm p-3', 'col-link')) ?>">Browse all modules</a>
+                <?= $templateRenderer->html($block, 'LokiCheckout_Demo::homepage/button.phtml', [
+                    'label' => 'Browse all modules',
+                    'url' => 'https://loki-checkout.com/integrations/modules',
+                ]) ?>
             </p>
 
             <h3 class="<?= $escaper->escapeHtml($css('text-2xl my-4', 'col-heading')) ?>">True collaboration</h3>
@@ -102,18 +112,11 @@ $url = $block->getUrl('loki_checkout_demo/index/addtocart');
             </ul>
 
             <p class="<?= $escaper->escapeHtml($css('my-8 md:mb-16', 'col-cta')) ?>">
-                <a href="https://loki-extensions.com/checkout"
-                   class="<?= $escaper->escapeHtml($css('border border-orange-800 bg-orange-600 text-white rounded-sm p-3', 'col-link')) ?>">Get in touch</a>
+                <?= $templateRenderer->html($block, 'LokiCheckout_Demo::homepage/button.phtml', [
+                    'label' => 'Get in touch',
+                    'url' => 'https://loki-checkout.com/contact',
+                ]) ?>
             </p>
         </div>
-    </div>
-
-    <div class="<?= $escaper->escapeHtml($css('rounded-lg bg-gradient-to-r from-indigo-900 to-orange-500 text-white text-center py-8 md:py-24', 'cta')) ?>">
-        <h1 class="<?= $escaper->escapeHtml($css('text-2xl md:text-6xl py-4', 'cta-heading')) ?>">
-            The checkout we actually have been waiting for
-        </h1>
-        <p class="<?= $escaper->escapeHtml($css('py-4 md:py-16', 'cta-text')) ?>">
-            <a href="https://loki-extensions.com/checkout" class="<?= $escaper->escapeHtml($css('border border-white rounded-sm md:text-xl p-4', 'cta-anchor')) ?>">Get started now</a>
-        </p>
     </div>
 </div>

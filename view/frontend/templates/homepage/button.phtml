@@ -1,0 +1,18 @@
+<?php
+declare(strict_types=1);
+
+use Loki\CssUtils\Util\CssClass;
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+
+/** @var Template $block */
+/** @var Escaper $escaper */
+/** @var CssClass $css */
+
+$url = $block->getData('url');
+$label = $block->getData('label');
+
+?>
+<a href="<?= $url ?>"
+   class="<?= $escaper->escapeHtml($css('btn btn-primary', 'col-link')) ?>"><?= $label ?>
+</a>

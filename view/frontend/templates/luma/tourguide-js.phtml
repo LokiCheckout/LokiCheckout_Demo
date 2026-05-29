@@ -7,9 +7,15 @@ use Magento\Framework\View\Element\Template;
 /** @var Template $block */
 ?>
 <script>
-    require(['LokiCheckout_Demo/js/tour'], function(tourguide) {
+    if (typeof require !== 'undefined') {
+        require(['LokiCheckout_Demo/js/tour'], function (tourguide) {
+            window.tg = new tourguide.TourGuideClient({
+                backdropColor: "rgba(20,20,21,0.24)"
+            });
+        });
+    } else {
         window.tg = new tourguide.TourGuideClient({
             backdropColor: "rgba(20,20,21,0.24)"
         });
-    });
+    }
 </script>
