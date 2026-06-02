@@ -16,5 +16,5 @@ $label = $block->getData('label');
 
 ?>
 <a href="<?= $url ?>"
-   class="<?= $escaper->escapeHtml($css('btn btn-primary', 'col-link')) ?>"><?= $label ?>
+   class="<?= $escaper->escapeHtml($css('btn btn-primary', 'col-link')) ?>"><?= $escaper->escapeHtml($label) ?>
 </a>

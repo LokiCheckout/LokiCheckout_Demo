@@ -44,11 +44,11 @@ $url = $block->getUrl('loki_checkout_demo/index/addtocart');
             </p>
             <p class="<?= $escaper->escapeHtml($css('pt-4 md:pt-16 flex gap-4', 'cta-text')) ?>">
                 <a href="<?= $escaper->escapeHtml($url) ?>" class="<?= $escaper->escapeHtml($css('border border-white rounded-sm md:text-xl p-4 hover:bg-white hover:text-black fill-white hover:fill-black', 'cta-anchor')) ?>">
-                    <?= $addtocartIcon ?>
+                    <?= /* @noEscape */ $addtocartIcon ?>
                     To the demo checkout
                 </a>
                 <a href="https://loki-checkout.com/" class="<?= $escaper->escapeHtml($css('border border-white rounded-sm md:text-xl p-4 hover:bg-white hover:text-black fill-white  hover:fill-black', 'cta-anchor')) ?>">
-                    <?= $linkIcon ?>
+                    <?= /* @noEscape */ $linkIcon ?>
                     To our main site
                 </a>
             </p>
