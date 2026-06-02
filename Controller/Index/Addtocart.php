@@ -21,6 +21,7 @@ class Addtocart implements HttpGetActionInterface
         try {
             $this->addToCartManager->execute($this->request->getParams());
         } catch (Exception $e) {
+            return $this->redirectFactory->create()->setUrl('/checkout');
         }
 
 
