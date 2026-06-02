@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.30] - 02 June 2026
+### Fixed
+- Beautify homepage settings
+- Add-to-cart button from homepage
+- Add new demo homepage image
+- Alphabetically sort skins
+- Add label within border of input for `onestep_demo` skin
+- Rename `onestepdemo` skin to `onestep_demo`
+- Rename `theme` to `skin`
+
 ## [2.0.29] - 19 May 2026
 ### Fixed
 - Load tourguide CSS with fetchpriority=low
