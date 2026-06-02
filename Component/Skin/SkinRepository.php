@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace LokiCheckout\Demo\Component\skin;
+namespace LokiCheckout\Demo\Component\Skin;
 
 use LokiCheckout\Core\Config\Config;
 use Magento\Framework\Message\ManagerInterface as MessageManager;
