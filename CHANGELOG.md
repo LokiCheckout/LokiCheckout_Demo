@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.31] - 11 June 2026
+### Fixed
+- Add demo of custom gender
+- Fix CSP issue with inline event handler with tourguide button
+
 ## [2.0.30] - 02 June 2026
 ### Fixed
 - Beautify homepage settings
