@@ -1,6 +1,6 @@
 {
     "name": "loki-checkout/magento2-demo",
-    "version": "2.0.31",
+    "version": "2.0.32",
     "description": "Demo module providing various visual enhancements and a tourguide",
     "keywords": [
         "loki-checkout",

@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.32] - 17 June 2026
+### Fixed
+- Enable payment method lazy loading in the OneStep Demo skin
+
 ## [2.0.31] - 11 June 2026
 ### Fixed
 - Add demo of custom gender
