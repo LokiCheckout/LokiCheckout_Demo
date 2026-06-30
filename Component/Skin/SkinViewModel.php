@@ -2,6 +2,7 @@
 
 namespace LokiCheckout\Demo\Component\Skin;
 
+use Loki\Components\Attribute\JsProperty;
 use LokiCheckout\Core\Config\XmlConfig\Value\Skin;
 use Loki\Field\Component\Base\Field\FieldViewModel;
 
