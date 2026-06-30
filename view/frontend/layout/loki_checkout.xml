@@ -113,5 +113,11 @@
                 <argument name="icon" xsi:type="string">LokiCheckout_Demo::images/truck.svg</argument>
             </arguments>
         </block>
+
+        <block name="loki-checkout.shipping.methods.tablerate_bestway">
+            <arguments>
+                <argument name="icon" xsi:type="string">LokiCheckout_Demo::images/truck.svg</argument>
+            </arguments>
+        </block>
     </body>
 </page>
