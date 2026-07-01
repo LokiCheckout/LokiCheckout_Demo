@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.33] - 01 July 2026
+### Fixed
+- Increment `loki/magento2-components` to 2.6
+- Remove gender options for NL because they suck
+- Implement JsProperty attribute
+- Add icon to tablerates method
+
 ## [2.0.32] - 17 June 2026
 ### Fixed
 - Enable payment method lazy loading in the OneStep Demo skin
