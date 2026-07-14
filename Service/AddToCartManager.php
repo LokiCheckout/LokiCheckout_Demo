@@ -2,7 +2,7 @@
 
 namespace LokiCheckout\Demo\Service;
 
-use LokiCheckout\FunctionalTests\Util\ProductFromConfig;
+use LokiCheckout\Demo\Util\ProductFromConfig;
 use Magento\Catalog\Api\Data\ProductInterface;
 use Magento\Catalog\Api\ProductRepositoryInterface;
 use Magento\Checkout\Model\Session as CheckoutSession;
