@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.34] - 14 July 2026
+### Fixed
+- Remove dep with LokiCheckout_FunctionalTests
+
 ## [2.0.33] - 01 July 2026
 ### Fixed
 - Increment `loki/magento2-components` to 2.6
