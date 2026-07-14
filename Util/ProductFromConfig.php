@@ -8,7 +8,6 @@ use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\Api\SortOrder;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductCollectionFactory;
-use Magento\InventoryCatalog\Model\ResourceModel\AddStockDataToCollection;
 
 class ProductFromConfig
 {
@@ -16,7 +15,6 @@ class ProductFromConfig
         private ProductRepositoryInterface $productRepository,
         private SearchCriteriaBuilder $searchCriteriaBuilder,
         private ProductCollectionFactory $productCollectionFactory,
-        private AddStockDataToCollection $addStockDataToCollection
     ) {
     }
 
