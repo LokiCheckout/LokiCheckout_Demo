@@ -26,6 +26,7 @@ class ProductFromConfig
             try {
                 return $this->productRepository->get((string)$config['sku']);
             } catch (NoSuchEntityException $e) {
+                unset($config['sku']);
             }
         }
 
@@ -33,6 +34,7 @@ class ProductFromConfig
             try {
                 return $this->productRepository->getById((int)$config['id']);
             } catch (NoSuchEntityException $e) {
+                unset($config['id']);
             }
         }
 
