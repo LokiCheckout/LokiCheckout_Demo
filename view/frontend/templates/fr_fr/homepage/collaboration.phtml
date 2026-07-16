@@ -1,0 +1,19 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\Escaper;
+use Loki\CssUtils\Util\CssClass;
+use Magento\Framework\View\Element\Template;
+
+/** @var Escaper $escaper */
+/** @var Template $block */
+/** @var CssClass $css */
+
+?>
+<h3 class="<?= $escaper->escapeHtml($css('text-2xl my-4', 'col-heading')) ?>">Une véritable collaboration</h3>
+<ul class="<?= $escaper->escapeHtml($css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', 'col-listing')) ?>">
+    <li>Chaque licence garantit l'implication de l'équipe principale de Loki</li>
+    <li>Les intégrations inexistantes peuvent être prises en charge en priorité</li>
+    <li>Un support et un conseil approfondis garantissent les meilleures solutions</li>
+    <li>Aucune surcharge de template, aucun hack, peu de legacy, pas de blabla</li>
+</ul>

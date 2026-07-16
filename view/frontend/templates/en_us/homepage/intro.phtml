@@ -1,0 +1,17 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\Escaper;
+use Loki\CssUtils\Util\CssClass;
+use Magento\Framework\View\Element\Template;
+
+/** @var Escaper $escaper */
+/** @var Template $block */
+/** @var CssClass $css */
+
+?>
+<p class="<?= $escaper->escapeHtml($css('text-lg md:text-2xl font-regular py-4', 'heading-text')) ?>">
+    We bring you a fast, extendable Magento checkout - based on Alpine.js, usable in Luma, Breeze and Hyvä themes.
+    Its performance will blow you away. Its developer experience is unmatched. And its foundings are fully open source.
+    We are changing the tide. This is real Magento.
+</p>

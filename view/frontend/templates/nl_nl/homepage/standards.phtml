@@ -1,0 +1,19 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\Escaper;
+use Loki\CssUtils\Util\CssClass;
+use Magento\Framework\View\Element\Template;
+
+/** @var Escaper $escaper */
+/** @var Template $block */
+/** @var CssClass $css */
+
+?>
+<h3 class="<?= $escaper->escapeHtml($css('text-2xl mb-4', 'col-heading')) ?>">Snel, schoon en compliant</h3>
+<ul class="<?= $escaper->escapeHtml($css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', 'col-list')) ?>">
+    <li>Snelste checkout voor Luma-, Breeze- en Hyvä-thema's</li>
+    <li>Hoge dekking met Playwright, unittests en integratietests</li>
+    <li>CSP- & PCI-compliance (<code>no-eval</code> en <code>no-inline</code>)</li>
+    <li>WCAG 2.2 AAA-compliant</li>
+</ul>

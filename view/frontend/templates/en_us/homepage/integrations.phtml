@@ -1,0 +1,19 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\Escaper;
+use Loki\CssUtils\Util\CssClass;
+use Magento\Framework\View\Element\Template;
+
+/** @var Escaper $escaper */
+/** @var Template $block */
+/** @var CssClass $css */
+
+?>
+<h3 class="<?= $escaper->escapeHtml($css('text-2xl mb-4', 'col-heading')) ?>">First-party integrations</h3>
+<ul class="<?= $escaper->escapeHtml($css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', 'col-listing')) ?>">
+    <li>Buckaroo, Stripe, Mollie, Braintree, PAY, MultiSafepay and more</li>
+    <li>Post NL, ShipperHQ, DHL, Sendcloud, MyParcel and more</li>
+    <li>Address autocompletion, EU VAT, CoC, maps and more</li>
+    <li>And we are not done yet</li>
+</ul>

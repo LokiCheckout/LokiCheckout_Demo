@@ -10,11 +10,11 @@ use Magento\Framework\View\Element\Template;
 
 /** @version 2.0.35 */
 /** @var Escaper $escaper */
-/** @var TemplateRenderer $templateRenderer */
 /** @var Template $block */
 /** @var CssClass $css */
 /** @var ViewModelFactory $viewModelFactory */
 /** @var ImageRenderer $imageRenderer */
+/** @var TemplateRenderer $templateRenderer */
 
 $iconHtml = $imageRenderer->get('LokiCheckout_Demo::images/loki.svg', ['class' => 'fill-white w-24 inline']);
 $linkIcon = $imageRenderer->get('LokiCheckout_Demo::icon/arrow-up-right-from-square.svg', ['class' => 'w-6 inline']);
@@ -22,6 +22,7 @@ $addtocartIcon = $imageRenderer->get('LokiCheckout_Demo::icon/cart-plus.svg', ['
 
 $url = $block->getUrl('loki_checkout_demo/index/addtocart');
 
+$localeViewModel = $viewModelFactory->create(\LokiCheckout\Demo\ViewModel\Locale::class);
 ?>
 <div class="<?= $escaper->escapeHtml($css('loki')) ?>">
     <div class="<?= $escaper->escapeHtml($css('rounded-lg heading relative bg-stone-800 text-white', 'heading')) ?>">
@@ -37,19 +38,15 @@ $url = $block->getUrl('loki_checkout_demo/index/addtocart');
                 <?= /* @noEscape */ $iconHtml ?>
                 loki <span class="font-thin">checkout</span>
             </h1>
-            <p class="<?= $escaper->escapeHtml($css('text-lg md:text-2xl font-regular py-4', 'heading-text')) ?>">
-                We bring you a fast, extendable Magento checkout - based on Alpine.js, usable in Luma, Breeze and Hyvä themes.
-                Its performance will blow you away. Its developer experience is unmatched. And its foundings are fully open source.
-                We are changing the tide. This is real Magento.
-            </p>
+            <?= $localeViewModel->render($block, 'homepage/intro') ?>
             <p class="<?= $escaper->escapeHtml($css('pt-4 md:pt-16 flex gap-4', 'cta-text')) ?>">
                 <a href="<?= $escaper->escapeHtml($url) ?>" class="<?= $escaper->escapeHtml($css('border border-white rounded-sm md:text-xl p-4 hover:bg-white hover:text-black fill-white hover:fill-black', 'cta-anchor')) ?>">
                     <?= /* @noEscape */ $addtocartIcon ?>
-                    To the demo checkout
+                    <?= __('To the demo checkout') ?>
                 </a>
                 <a href="https://loki-checkout.com/" class="<?= $escaper->escapeHtml($css('border border-white rounded-sm md:text-xl p-4 hover:bg-white hover:text-black fill-white  hover:fill-black', 'cta-anchor')) ?>">
                     <?= /* @noEscape */ $linkIcon ?>
-                    To our main site
+                    <?= __('To our main site') ?>
                 </a>
             </p>
         </div>
@@ -57,63 +54,36 @@ $url = $block->getUrl('loki_checkout_demo/index/addtocart');
 
     <div class="<?= $escaper->escapeHtml($css('grid md:grid-cols-2 md:gap-8 py-8', 'col1')) ?>">
         <div class="<?= $escaper->escapeHtml($css('md:p-8', 'col-text')) ?>">
-            <h3 class="<?= $escaper->escapeHtml($css('text-2xl mb-4', 'col-heading')) ?>">Fast, clean and compliant</h3>
-            <ul class="<?= $escaper->escapeHtml($css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', 'col-list')) ?>">
-                <li>Fastest checkout for Luma, Breeze and Hyvä themes</li>
-                <li>High coverage with Playwright, Unit Tests and Integration Tests</li>
-                <li>CSP & PCI compliance (<code>no-eval</code> and <code>no-inline</code>)</li>
-                <li>WCAG 2.2 AAA compliant</li>
-            </ul>
 
+            <?= $localeViewModel->render($block, 'homepage/standards') ?>
             <p class="<?= $escaper->escapeHtml($css('my-8 md:mb-16', 'col-cta')) ?>">
                 <?= $templateRenderer->html($block, 'LokiCheckout_Demo::homepage/button.phtml', [
-                    'label' => 'Dive into our dev-docs',
+                    'label' => __('Dive into our documentation'),
                     'url' => 'https://docs.loki-extensions.com/checkout/dev',
                 ]) ?>
             </p>
 
-            <h3 class="<?= $escaper->escapeHtml($css('text-2xl mb-4', 'col-heading')) ?>">Easier technology</h3>
-            <ul class="<?= $escaper->escapeHtml($css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', 'col-list')) ?>">
-                <li>Granular components and templates to keep legacy low</li>
-                <li>A familiar Magento stack (XML layout, Blocks and ViewModels)</li>
-                <li>Alpine.js components with stores, utilities and inheritance</li>
-                <li>Loki Components to make AJAX calls and update multiple HTML elements</li>
-            </ul>
-
+            <?= $localeViewModel->render($block, 'homepage/technology') ?>
             <p class="<?= $escaper->escapeHtml($css('my-8 md:mb-16', 'col-text')) ?>">
                 <?= $templateRenderer->html($block, 'LokiCheckout_Demo::homepage/button.phtml', [
-                    'label' => 'Inspect more features',
+                    'label' => __('Inspect more features'),
                     'url' => 'https://loki-extensions.com/features',
                 ]) ?>
             </p>
         </div>
         <div class="<?= $escaper->escapeHtml($css('md:p-8', 'col2')) ?>">
-            <h3 class="<?= $escaper->escapeHtml($css('text-2xl mb-4', 'col-heading')) ?>">First-party integrations</h3>
-            <ul class="<?= $escaper->escapeHtml($css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', 'col-listing')) ?>">
-                <li>Buckaroo, Stripe, Mollie, Braintree, PAY, MultiSafepay and more</li>
-                <li>Post NL, ShipperHQ, DHL, Sendcloud, MyParcel and more</li>
-                <li>Address autocompletion, EU VAT, CoC, maps and more</li>
-                <li>And we are not done yet</li>
-            </ul>
-
+            <?= $localeViewModel->render($block, 'homepage/integrations') ?>
             <p class="<?= $escaper->escapeHtml($css('my-8 md:mb-16', 'col-cta')) ?>">
                 <?= $templateRenderer->html($block, 'LokiCheckout_Demo::homepage/button.phtml', [
-                    'label' => 'Browse all modules',
+                    'label' => __('Browse all modules'),
                     'url' => 'https://loki-checkout.com/integrations/modules',
                 ]) ?>
             </p>
 
-            <h3 class="<?= $escaper->escapeHtml($css('text-2xl my-4', 'col-heading')) ?>">True collaboration</h3>
-            <ul class="<?= $escaper->escapeHtml($css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', 'col-listing')) ?>">
-                <li>Each license gives involvement from the Loki core team</li>
-                <li>Non-existing integrations can be picked up with priority</li>
-                <li>In-depth support and consultancy guarantees the best solutions</li>
-                <li>Zero template overrides, zero hacks, little legacy, no bs</li>
-            </ul>
-
+            <?= $localeViewModel->render($block, 'homepage/collaboration') ?>
             <p class="<?= $escaper->escapeHtml($css('my-8 md:mb-16', 'col-cta')) ?>">
                 <?= $templateRenderer->html($block, 'LokiCheckout_Demo::homepage/button.phtml', [
-                    'label' => 'Get in touch',
+                    'label' => __('Get in touch'),
                     'url' => 'https://loki-checkout.com/contact',
                 ]) ?>
             </p>

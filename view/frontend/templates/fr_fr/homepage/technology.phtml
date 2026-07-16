@@ -1,0 +1,19 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\Escaper;
+use Loki\CssUtils\Util\CssClass;
+use Magento\Framework\View\Element\Template;
+
+/** @var Escaper $escaper */
+/** @var Template $block */
+/** @var CssClass $css */
+
+?>
+<h3 class="<?= $escaper->escapeHtml($css('text-2xl mb-4', 'col-heading')) ?>">Une technologie plus simple</h3>
+<ul class="<?= $escaper->escapeHtml($css('mb-4 marker:text-orange-600 list-outside list-disc ml-6', 'col-list')) ?>">
+    <li>Des composants et templates granulaires pour limiter le legacy</li>
+    <li>Une stack Magento familière (layout XML, Blocks et ViewModels)</li>
+    <li>Des composants Alpine.js avec stores, utilitaires et héritage</li>
+    <li>Loki Components pour effectuer des appels AJAX et mettre à jour plusieurs éléments HTML</li>
+</ul>
