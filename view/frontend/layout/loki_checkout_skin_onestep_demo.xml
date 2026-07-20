@@ -14,6 +14,22 @@
             </arguments>
         </referenceBlock>
 
+        <referenceBlock name="loki-checkout.shipping.methods.item">
+            <arguments>
+                <argument name="css_classes" xsi:type="array">
+                    <item name="label" xsi:type="array">
+                        <item name="default" xsi:type="string">flex gap-4 md:gap-6 items-center</item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+
+        <referenceBlock name="loki-checkout.shipping.methods.lokisimpleshipping_lokisimpleshipping.form">
+            <arguments>
+                <argument name="hide_map" xsi:type="boolean">true</argument>
+            </arguments>
+        </referenceBlock>
+
         <block name="loki-components.utils.field-completed" template="LokiCheckout_Demo::utils/field-completed.phtml"/>
 
         <referenceContainer name="before.body.end">
