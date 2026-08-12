@@ -38,15 +38,15 @@ $localeViewModel = $viewModelFactory->create(\LokiCheckout\Demo\ViewModel\Locale
                 <?= /* @noEscape */ $iconHtml ?>
                 loki <span class="font-thin">checkout</span>
             </h1>
-            <?= $localeViewModel->render($block, 'homepage/intro') ?>
+            <?= $escaper->escapeHtml($localeViewModel->render($block, 'homepage/intro')) ?>
             <p class="<?= $escaper->escapeHtml($css('pt-4 md:pt-16 flex gap-4', 'cta-text')) ?>">
                 <a href="<?= $escaper->escapeHtml($url) ?>" class="<?= $escaper->escapeHtml($css('border border-white rounded-sm md:text-xl p-4 hover:bg-white hover:text-black fill-white hover:fill-black', 'cta-anchor')) ?>">
                     <?= /* @noEscape */ $addtocartIcon ?>
-                    <?= __('To the demo checkout') ?>
+                    <?= $escaper->escapeHtml(__('To the demo checkout')) ?>
                 </a>
                 <a href="https://loki-checkout.com/" class="<?= $escaper->escapeHtml($css('border border-white rounded-sm md:text-xl p-4 hover:bg-white hover:text-black fill-white  hover:fill-black', 'cta-anchor')) ?>">
                     <?= /* @noEscape */ $linkIcon ?>
-                    <?= __('To our main site') ?>
+                    <?= $escaper->escapeHtml(__('To our main site')) ?>
                 </a>
             </p>
         </div>
@@ -55,34 +55,38 @@ $localeViewModel = $viewModelFactory->create(\LokiCheckout\Demo\ViewModel\Locale
     <div class="<?= $escaper->escapeHtml($css('grid md:grid-cols-2 md:gap-8 py-8', 'col1')) ?>">
         <div class="<?= $escaper->escapeHtml($css('md:p-8', 'col-text')) ?>">
 
-            <?= $localeViewModel->render($block, 'homepage/standards') ?>
+            <?= $escaper->escapeHtml($localeViewModel->render($block, 'homepage/standards')) ?>
             <p class="<?= $escaper->escapeHtml($css('my-8 md:mb-16', 'col-cta')) ?>">
-                <?= $templateRenderer->html($block, 'LokiCheckout_Demo::homepage/button.phtml', [
+                <?= /* @noEscape */
+            $templateRenderer->html($block, 'LokiCheckout_Demo::homepage/button.phtml', [
                     'label' => __('Dive into our documentation'),
                     'url' => 'https://docs.loki-extensions.com/checkout/dev',
                 ]) ?>
             </p>
 
-            <?= $localeViewModel->render($block, 'homepage/technology') ?>
+            <?= $escaper->escapeHtml($localeViewModel->render($block, 'homepage/technology')) ?>
             <p class="<?= $escaper->escapeHtml($css('my-8 md:mb-16', 'col-text')) ?>">
-                <?= $templateRenderer->html($block, 'LokiCheckout_Demo::homepage/button.phtml', [
+                <?= /* @noEscape */
+                $templateRenderer->html($block, 'LokiCheckout_Demo::homepage/button.phtml', [
                     'label' => __('Inspect more features'),
                     'url' => 'https://loki-extensions.com/features',
                 ]) ?>
             </p>
         </div>
         <div class="<?= $escaper->escapeHtml($css('md:p-8', 'col2')) ?>">
-            <?= $localeViewModel->render($block, 'homepage/integrations') ?>
+            <?= $escaper->escapeHtml($localeViewModel->render($block, 'homepage/integrations')) ?>
             <p class="<?= $escaper->escapeHtml($css('my-8 md:mb-16', 'col-cta')) ?>">
-                <?= $templateRenderer->html($block, 'LokiCheckout_Demo::homepage/button.phtml', [
+                <?= /* @noEscape */
+                $templateRenderer->html($block, 'LokiCheckout_Demo::homepage/button.phtml', [
                     'label' => __('Browse all modules'),
                     'url' => 'https://loki-checkout.com/integrations/modules',
                 ]) ?>
             </p>
 
-            <?= $localeViewModel->render($block, 'homepage/collaboration') ?>
+            <?= $escaper->escapeHtml($localeViewModel->render($block, 'homepage/collaboration')) ?>
             <p class="<?= $escaper->escapeHtml($css('my-8 md:mb-16', 'col-cta')) ?>">
-                <?= $templateRenderer->html($block, 'LokiCheckout_Demo::homepage/button.phtml', [
+                <?= /* @noEscape */
+                $templateRenderer->html($block, 'LokiCheckout_Demo::homepage/button.phtml', [
                     'label' => __('Get in touch'),
                     'url' => 'https://loki-checkout.com/contact',
                 ]) ?>
