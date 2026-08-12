@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.36] - 12 August 2026
+### Fixed
+- Styling changes
+- Add translations of homepage content
+
 ## [2.0.35] - 14 July 2026
 ### Fixed
 - Remove dep with MSI
