@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Security
+- Demo features are now disabled by default and require `loki_checkout/demo/enabled`
+- Add-to-cart controller is POST-only with form key validation and validated parameters
+- Skin and grid layout values are validated against the XML configuration
+- Only enabled, visible, salable products of the current website are added to the cart
+- Fix escaping of URLs and double-escaping of customer data in templates
 
 ## [2.0.36] - 12 August 2026
 ### Fixed
