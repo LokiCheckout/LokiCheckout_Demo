@@ -14,6 +14,6 @@ $url = $block->getData('url');
 $label = $block->getData('label');
 
 ?>
-<a href="<?= /* @noEscape */ $url ?>"
-   class="<?= $escaper->escapeHtml($css('btn btn-primary', 'col-link')) ?>"><?= $escaper->escapeHtml($label) ?>
+<a href="<?= $escaper->escapeUrl((string)$url) ?>"
+   class="<?= $escaper->escapeHtml($css('btn btn-primary', 'col-link')) ?>"><?= $escaper->escapeHtml((string)$label) ?>
 </a>

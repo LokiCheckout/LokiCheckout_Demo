@@ -16,9 +16,7 @@ use LokiCheckout\Core\ViewModel\CheckoutState;
 
 $checkoutState = $viewModelFactory->create(CheckoutState::class);
 $customerSession = $checkoutState->getCustomerSession();
-$customerName = $escaper->escapeHtml(
-    $customerSession->getCustomer()->getName()
-);
+$customerName = (string)$customerSession->getCustomer()->getName();
 
 $showLogoutLink = (bool)$block->getShowLogoutLink();
 $logoutUrl = $block->getUrl('customer/account/logout');
@@ -32,7 +30,7 @@ if (false === $showLogoutLink) {
 
     <a
         class="<?= $escaper->escapeHtml($css('underline font-medium hover:no-underline', 'logout')) ?>"
-        href="<?= $escaper->escapeHtml($logoutUrl) ?>">
+        href="<?= $escaper->escapeUrl($logoutUrl) ?>">
         <?= $escaper->escapeHtml(__('Sign Out')) ?>
     </a>
 </p>
