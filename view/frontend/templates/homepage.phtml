@@ -39,16 +39,19 @@ $localeViewModel = $viewModelFactory->create(\LokiCheckout\Demo\ViewModel\Locale
                 loki <span class="font-thin">checkout</span>
             </h1>
             <?= /* @noEscape */ $localeViewModel->render($block, 'homepage/intro') ?>
-            <p class="<?= $escaper->escapeHtml($css('pt-4 md:pt-16 flex gap-4', 'cta-text')) ?>">
-                <a href="<?= $escaper->escapeHtml($url) ?>" class="<?= $escaper->escapeHtml($css('border border-white rounded-sm md:text-xl p-4 hover:bg-white hover:text-black fill-white hover:fill-black', 'cta-anchor')) ?>">
-                    <?= /* @noEscape */ $addtocartIcon ?>
-                    <?= $escaper->escapeHtml(__('To the demo checkout')) ?>
-                </a>
+            <div class="<?= $escaper->escapeHtml($css('pt-4 md:pt-16 flex gap-4', 'cta-text')) ?>">
+                <form method="post" action="<?= $escaper->escapeUrl($url) ?>">
+                    <?= /* @noEscape */ $block->getBlockHtml('formkey') ?>
+                    <button type="submit" class="<?= $escaper->escapeHtml($css('border border-white rounded-sm md:text-xl p-4 hover:bg-white hover:text-black fill-white hover:fill-black', 'cta-anchor')) ?>">
+                        <?= /* @noEscape */ $addtocartIcon ?>
+                        <?= $escaper->escapeHtml(__('To the demo checkout')) ?>
+                    </button>
+                </form>
                 <a href="https://loki-checkout.com/" class="<?= $escaper->escapeHtml($css('border border-white rounded-sm md:text-xl p-4 hover:bg-white hover:text-black fill-white  hover:fill-black', 'cta-anchor')) ?>">
                     <?= /* @noEscape */ $linkIcon ?>
                     <?= $escaper->escapeHtml(__('To our main site')) ?>
                 </a>
-            </p>
+            </div>
         </div>
     </div>
 
