@@ -8,6 +8,8 @@ use Loki\Components\Component\AbstractComponentContext;
 use Loki\Components\Component\ComponentInterface;
 use Loki\Components\Exception\RedirectException;
 use LokiCheckout\Core\Config\Config;
+use LokiCheckout\Core\Config\XmlConfig;
+use LokiCheckout\Core\Config\XmlConfig\Value\GridLayout;
 use LokiCheckout\Core\Test\Unit\Stub\CheckoutSessionStub;
 use LokiCheckout\Demo\Component\GridLayout\GridLayoutContext;
 use LokiCheckout\Demo\Component\GridLayout\GridLayoutRepository;
@@ -35,7 +37,8 @@ final class GridLayoutRepositoryTest extends TestCase
 
         $messageManager = $this->createMock(ManagerInterface::class);
         $config = $this->createMock(Config::class);
-        $repository = new GridLayoutRepository($messageManager, $config);
+        $xmlConfig = $this->createMock(XmlConfig::class);
+        $repository = new GridLayoutRepository($messageManager, $config, $xmlConfig);
         $repository->setComponent($component);
 
         $this->assertEquals('foobar', $repository->getValue());
@@ -61,10 +64,30 @@ final class GridLayoutRepositoryTest extends TestCase
 
         $messageManager = $this->createMock(ManagerInterface::class);
         $config = $this->createMock(Config::class);
-        $repository = new GridLayoutRepository($messageManager, $config);
+        $xmlConfig = $this->createMock(XmlConfig::class);
+        $xmlConfig->method('getGridLayouts')->willReturn(['foobar' => $this->createMock(GridLayout::class)]);
+        $repository = new GridLayoutRepository($messageManager, $config, $xmlConfig);
         $repository->setComponent($component);
 
         $this->expectException(RedirectException::class);
         $repository->saveValue('foobar');
+    }
+
+    final public function testSaveValueWithUnknownGridLayout()
+    {
+        $component = $this->createMock(ComponentInterface::class);
+        $component->expects($this->never())->method('getContext');
+
+        $messageManager = $this->createMock(ManagerInterface::class);
+        $messageManager->expects($this->once())->method('addErrorMessage');
+        $messageManager->expects($this->never())->method('addNoticeMessage');
+
+        $config = $this->createMock(Config::class);
+        $xmlConfig = $this->createMock(XmlConfig::class);
+        $xmlConfig->method('getGridLayouts')->willReturn(['default_grid' => $this->createMock(GridLayout::class)]);
+        $repository = new GridLayoutRepository($messageManager, $config, $xmlConfig);
+        $repository->setComponent($component);
+
+        $repository->saveValue('<script>alert(1)</script>');
     }
 }
