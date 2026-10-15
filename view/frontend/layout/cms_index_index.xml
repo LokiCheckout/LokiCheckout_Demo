@@ -10,7 +10,7 @@
         -->
 
         <referenceContainer name="content">
-            <block name="loki-demo.banner" template="LokiCheckout_Demo::homepage.phtml"/>
+            <block name="loki-demo.banner" ifconfig="loki_checkout/demo/enabled" template="LokiCheckout_Demo::homepage.phtml"/>
         </referenceContainer>
     </body>
 </page>

@@ -14,7 +14,7 @@
         </referenceBlock>
 
         <referenceContainer name="loki-checkout.sidebar">
-            <block template="LokiCheckout_Demo::powered-by.phtml" before="-"/>
+            <block ifconfig="loki_checkout/demo/enabled" template="LokiCheckout_Demo::powered-by.phtml" before="-"/>
         </referenceContainer>
 
         <referenceContainer name="content">
@@ -22,11 +22,13 @@
                 <container name="loki-checkout-demo.mobile-actions-inner" htmlTag="div" htmlClass="block md:hidden">
                     <block
                         name="loki-checkout-demo.skin-switcher-mobile"
+                        ifconfig="loki_checkout/demo/enabled"
                         template="LokiCheckout_Demo::skin-switcher.phtml"
                     />
 
                     <block
                         name="loki-checkout-demo.grid-layout-switcher-mobile"
+                        ifconfig="loki_checkout/demo/enabled"
                         template="LokiCheckout_Demo::grid-layout-switcher.phtml"
                     />
                 </container>
@@ -35,6 +37,7 @@
 
         <referenceBlock name="loki.script">
             <block name="loki-checkout-demo.tourguide-css"
+                   ifconfig="loki_checkout/demo/enabled"
                    template="LokiCheckout_Demo::tourguide-css.phtml"
             />
         </referenceBlock>

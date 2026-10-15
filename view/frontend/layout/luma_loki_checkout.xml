@@ -4,19 +4,19 @@
         <referenceContainer name="header-wrapper">
             <container htmlTag="div" htmlClass="loki">
                 <container htmlTag="div" htmlClass="flex float-right">
-                    <block template="LokiCheckout_Demo::skin-switcher-container.phtml">
-                        <block name="loki-checkout-demo.skin-switcher" as="skin-switcher"
+                    <block ifconfig="loki_checkout/demo/enabled" template="LokiCheckout_Demo::skin-switcher-container.phtml">
+                        <block name="loki-checkout-demo.skin-switcher" as="skin-switcher" ifconfig="loki_checkout/demo/enabled"
                                template="LokiCheckout_Demo::skin-switcher.phtml"
                         />
                     </block>
 
-                    <block template="LokiCheckout_Demo::grid-layout-switcher-container.phtml">
-                        <block name="loki-checkout-demo.grid-layout-switcher" as="grid-layout-switcher"
+                    <block ifconfig="loki_checkout/demo/enabled" template="LokiCheckout_Demo::grid-layout-switcher-container.phtml">
+                        <block name="loki-checkout-demo.grid-layout-switcher" as="grid-layout-switcher" ifconfig="loki_checkout/demo/enabled"
                                template="LokiCheckout_Demo::grid-layout-switcher.phtml"
                         />
                     </block>
 
-                    <block name="loki-checkout-demo.tourguide-start"
+                    <block name="loki-checkout-demo.tourguide-start" ifconfig="loki_checkout/demo/enabled"
                            template="LokiCheckout_Demo::tourguide-start.phtml"
                     />
                 </container>
@@ -24,7 +24,7 @@
         </referenceContainer>
 
         <referenceBlock name="loki.script">
-            <block name="loki-checkout-demo.tourguide-js"
+            <block name="loki-checkout-demo.tourguide-js" ifconfig="loki_checkout/demo/enabled"
                    template="LokiCheckout_Demo::luma/tourguide-js.phtml"
             />
         </referenceBlock>

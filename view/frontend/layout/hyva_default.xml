@@ -2,12 +2,13 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
     <body>
         <referenceContainer name="customer.login.container">
-            <block name="demo_notice" template="LokiCheckout_Demo::hyva/demo-login.phtml"/>
+            <block name="demo_notice" ifconfig="loki_checkout/demo/enabled" template="LokiCheckout_Demo::hyva/demo-login.phtml"/>
         </referenceContainer>
 
         <referenceContainer name="loki-checkout.login.form.after">
             <block
                 name="loki-checkout.login.form.after.demo-login-notice"
+                ifconfig="loki_checkout/demo/enabled"
                 template="LokiCheckout_Demo::hyva/demo-login.phtml"/>
         </referenceContainer>
 

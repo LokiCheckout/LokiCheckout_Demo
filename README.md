@@ -21,6 +21,11 @@ Next, enable this module:
 bin/magento module:enable LokiCheckout_Demo
 ```
 
+All demo features are disabled by default. Enable them on a demo site only:
+```bash
+bin/magento config:set loki_checkout/demo/enabled 1
+```
+
 
 
 ## Current status

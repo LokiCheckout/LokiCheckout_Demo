@@ -3,19 +3,19 @@
     <body>
         <referenceContainer name="header-content.additional">
             <container name="loki-checkout-demo.actions" htmlTag="div" htmlClass="loki flex float-right" before="-">
-                <block template="LokiCheckout_Demo::skin-switcher-container.phtml">
-                    <block name="loki-checkout-demo.skin-switcher" as="skin-switcher"
+                <block ifconfig="loki_checkout/demo/enabled" template="LokiCheckout_Demo::skin-switcher-container.phtml">
+                    <block name="loki-checkout-demo.skin-switcher" as="skin-switcher" ifconfig="loki_checkout/demo/enabled"
                            template="LokiCheckout_Demo::skin-switcher.phtml"
                     />
                 </block>
 
-                <block template="LokiCheckout_Demo::grid-layout-switcher-container.phtml">
-                    <block name="loki-checkout-demo.grid-layout-switcher" as="grid-layout-switcher"
+                <block ifconfig="loki_checkout/demo/enabled" template="LokiCheckout_Demo::grid-layout-switcher-container.phtml">
+                    <block name="loki-checkout-demo.grid-layout-switcher" as="grid-layout-switcher" ifconfig="loki_checkout/demo/enabled"
                            template="LokiCheckout_Demo::grid-layout-switcher.phtml"
                     />
                 </block>
 
-                <block name="loki-checkout-demo.tourguide-start"
+                <block name="loki-checkout-demo.tourguide-start" ifconfig="loki_checkout/demo/enabled"
                        template="LokiCheckout_Demo::tourguide-start.phtml"
                 />
             </container>
@@ -24,6 +24,7 @@
         <referenceBlock name="loki.script">
             <block
                 name="loki-checkout-demo.tourguide-js"
+                ifconfig="loki_checkout/demo/enabled"
                 template="LokiCheckout_Demo::hyva/tourguide-js.phtml"
             />
         </referenceBlock>
