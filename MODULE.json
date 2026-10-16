@@ -4,8 +4,11 @@
         "LokiCheckout_DevProfiles",
         "Loki_Components",
         "Loki_CssUtils",
+        "Loki_CssUtils",
+        "Magento_Backend",
         "Magento_Catalog",
         "Magento_Checkout",
+        "Magento_Config",
         "Magento_Quote",
         "Magento_Store"
     ],
@@ -55,9 +58,15 @@
         "loki-checkout-demo.skin-switcher",
         "loki-checkout-demo.skin-switcher-mobile"
     ],
-    "config": [],
+    "config": [
+        {
+            "path": "loki_checkout/demo/enabled",
+            "label": "Demo > Enable demo features",
+            "description": "Enables the demo add-to-cart route, the skin and grid layout switchers, the tourguide, the demo login notice and the demo homepage. Never enable this on a production shop."
+        }
+    ],
     "tests": {
-        "unit": 2,
+        "unit": 3,
         "integration": 0,
         "functional": 0
     },
